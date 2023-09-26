@@ -1,0 +1,144 @@
+// import scss files
+@import "./fonts";
+@import "./icons";
+@import "../components/layouts/Navbar/navbar";
+@import "../components/commons/MovieSlider/movie-slider";
+@import "../pages/News/news";
+@import "../pages/Home/home";
+
+// common styles
+:root {
+  --primary: #d96c2c;
+  --heading: #000000;
+  --text: #737373;
+  --light: #e0e0e0;
+  --primary-font: Space Grotesk;
+  --font-size: 16px;
+  --line-height: 1.86em;
+  --letter-spacing: 0px;
+  --secondary-font: Space Grotesk;
+  --width-sidebar: 370px;
+  --main-content: calc(100% - 370px);
+  --container-width: 1190px;
+  --boxed-offset: 20px;
+  --woo-layout: layout_1c;
+  --woo-width-sidebar: 320px;
+  --woo-main-content: calc(100% - 320px);
+}
+
+html {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text);
+  font-family: var(--primary-font);
+  letter-spacing: var(--letter-spacing);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  clear: both;
+  margin: 1em 0 0.5em 0px;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.21;
+}
+
+h2 {
+  font-size: 1.7411em;
+  line-height: 1.21;
+}
+
+h3 {
+  font-size: 1.5157em;
+}
+
+h4 {
+  font-size: 1.3195em;
+}
+
+h5 {
+  font-size: 1.1487em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+p {
+  line-height: var(--line-height);
+  margin: 0 0 2em;
+
+  &:empty {
+    height: 0;
+    margin: 0;
+  }
+}
+
+address {
+  font-style: italic;
+  margin: 0 0 24px;
+}
+
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: italic;
+}
+
+pre {
+  border: 1px solid #d1d1d1;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.3125;
+  margin: 1.75em 0 1.75em 0;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.75em;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin: 0 0 1em;
+}
+
+// end of common styles
