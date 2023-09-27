@@ -1,4 +1,5 @@
 import Carousel from './Carousel';
+import TrailerSlider from './Carousel/TrailerSlider';
 
 function MovieSlider() {
     return (
@@ -28,6 +29,7 @@ function MovieSlider() {
                 </div>
                 <Carousel />
             </div>
+            <TrailerSlider />
         </section>
     );
 }

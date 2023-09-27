@@ -8,7 +8,7 @@
             right: 0;
             height: 895.977px;
             object-fit: cover;
-            /* opacity: 0.5 !important; */
+            opacity: 0.5 !important;
         }
     }
 
@@ -70,7 +70,7 @@
             bottom: -10px;
             width: 110%;
             height: 15px;
-            background-image: url(/images/underline-heading-entire.png);
+            background-image: url('../assets/images/underline-heading-entire.png');
             background-position: bottom;
             background-repeat: no-repeat;
             background-size: cover;
@@ -105,7 +105,7 @@
     .button-wrapper {
         margin-bottom: 230px;
 
-        .btn {
+        .cs-btn {
             margin: 0 15px 15px 0;
             padding: 17px 50px;
             font-size: 15px;
@@ -138,6 +138,169 @@
         &:hover {
             background-color: var(--primary) !important;
             color: #fff !important;
+        }
+    }
+
+    .movie-trailer-wrapper {
+        right: 0;
+        bottom: 0;
+        max-width: 658px;
+        padding: 60px 55px 50px 135px;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 10px 60px rgba(255, 255, 255, 0.1);
+
+        .arrow-trailers-img {
+            left: 55px;
+        }
+
+        .text-trailer {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .movie-trailer-slider {
+            margin-bottom: 0;
+
+            .slick-list {
+                order: 2;
+                position: relative;
+                display: block;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+
+            .slick-slider .slick-track,
+            .slick-slider .slick-list {
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                -o-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            .slick-track {
+                position: relative;
+                top: 0;
+                left: 0;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .slick-track:before,
+            .slick-track:after {
+                display: table;
+                content: '';
+            }
+
+            .slick-initialized .slick-slide {
+                display: block;
+            }
+
+            .slick-slide {
+                display: none;
+                float: left;
+                height: 100%;
+                min-height: 1px;
+            }
+        }
+
+        .slick-slider {
+            position: relative;
+            display: block;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -khtml-user-select: none;
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .movie-trailer-media {
+            margin-right: 20px;
+
+            img {
+                height: 104px;
+                border: 2px solid #fff;
+            }
+
+            .btn-trailer-video {
+                transition: all 0.5s ease;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+                z-index: 2;
+
+                i {
+                    transition: all 0.3s ease;
+                    display: inline-flex;
+                    font-size: 12px;
+                    color: #000;
+                }
+            }
+        }
+
+        .text-trailer {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .slick-dots {
+            margin: 0 15px 25px 0;
+            text-align: right;
+
+            li {
+                margin: 0;
+                position: relative;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding: 0;
+                cursor: pointer;
+
+                button {
+                    font-size: 0px;
+                    line-height: 0;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    color: transparent;
+                    padding: 5px;
+                    border-width: 0px;
+                    border-style: initial;
+                    border-color: initial;
+                    border-image: initial;
+                    outline: none;
+                    background: transparent;
+
+                    &:before {
+                        font-family: slick;
+                        line-height: 20px;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 20px;
+                        height: 20px;
+                        content: '•';
+                        text-align: center;
+                        opacity: 0.25;
+                        -webkit-font-smoothing: antialiased;
+                        font-size: 8px;
+                        color: #fff;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,4 +1,6 @@
-function CarouselInfo() {
+import PropTypes from 'prop-types';
+
+function CarouselInfo({ category, title, director }) {
     return (
         <>
             <div className="movie-social-sharing d-flex">
@@ -46,35 +48,32 @@ function CarouselInfo() {
                 </div>
                 <div className="movie-main-item position-relative">
                     <div className="movie-heading position-relative">
-                        <h3 className="movie-category">Thriller Movie</h3>
+                        <h3 className="movie-category">{category} Movie</h3>
 
                         <a
                             href="https://demo.ovatheme.com/aovis/movie/love-nightmare/"
-                            title="Love Nightmare"
+                            title={title}
                             tabIndex="-1"
                         >
-                            <h1 className="movie-title text-white text-capitalize">
-                                Wrong Turns Part 2
-                            </h1>
+                            <h1 className="movie-title text-white text-capitalize">{title}</h1>
                         </a>
                     </div>
 
-                    <p className="movie-excerpt text-white">
-                        Writen and Directed by Aleesha Rose / Ireland 2023
-                    </p>
+                    <p className="movie-excerpt text-white">Writen and Directed by {director}</p>
 
                     <div className="button-wrapper">
                         <a
                             href="https://demo.ovatheme.com/aovis/movie/love-nightmare/"
-                            title="Love Nightmare"
+                            title={title}
                             tabIndex="-1"
+                            style={{ paddingRight: '4.12px' }}
                         >
-                            <button className="btn btn-more-info" tabIndex="-1">
+                            <button className="cs-btn btn-more-info" tabIndex="-1">
                                 More Info
                             </button>
                         </a>
 
-                        <button className="btn btn-booking" data-movie-id="1024" tabIndex="-1">
+                        <button className="cs-btn btn-booking" data-movie-id="1024" tabIndex="-1">
                             Get Ticket
                         </button>
                     </div>
@@ -83,5 +82,11 @@ function CarouselInfo() {
         </>
     );
 }
+
+CarouselInfo.propTypes = {
+    category: PropTypes.string,
+    title: PropTypes.string,
+    director: PropTypes.string,
+};
 
 export default CarouselInfo;

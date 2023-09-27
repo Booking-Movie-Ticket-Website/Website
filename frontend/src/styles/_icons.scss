@@ -18,6 +18,11 @@
   font-weight: 900;
 }
 
+.fa.fa-facebook, .fa.fa-twitter {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
 [class^="ovaicon-"]:before,
 [class*=" ovaicon-"]:before {
   font-family: ovaicon !important;
@@ -2519,6 +2524,10 @@ i[class*=" flaticon-"]:before {
 }
 
 .fa-facebook-f:before {
+  content: "\f39e";
+}
+
+.fa.fa-facebook:before {
   content: "\f39e";
 }
 

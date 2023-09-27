@@ -5,6 +5,7 @@
 @import '../components/commons/MovieSlider/movie-slider';
 @import '../pages/News/news';
 @import '../pages/Home/home';
+@import '../components/commons/MovieSlider/Carousel/TrailerSlider/SlickSlide/slick';
 
 // common styles
 :root {
@@ -184,7 +185,7 @@ input[type='submit'] {
     margin: 0;
 }
 
-.btn,
+.cs-btn,
 .button {
     border-radius: 0px;
     padding: 12px 25px;
