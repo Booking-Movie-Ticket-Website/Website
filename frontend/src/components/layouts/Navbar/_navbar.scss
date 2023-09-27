@@ -1,0 +1,99 @@
+body {
+    background-color: #000;
+}
+
+.navbar {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #ffffff26;
+    transition:
+        background 0.3s,
+        border 0.3s,
+        border-radius 0.3s,
+        box-shadow 0.3s;
+    padding: 30px 40px 30px 40px !important;
+
+    .nav-link {
+        font-size: 16px;
+        line-height: 1.2em;
+        padding: 10px 24px 10px 24px !important;
+        font-weight: 400;
+
+        &:hover {
+            color: var(--primary) !important;
+        }
+    }
+
+    .nav-link.active {
+        color: var(--primary) !important;
+    }
+
+    .has-submenu::after {
+        content: '';
+        font-family: 'ovaicon';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        vertical-align: middle;
+        margin-left: 0.7em;
+        font-size: 0.5em;
+        font-weight: 500;
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -webkit-transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-btns {
+        > div {
+            i {
+                font-size: 24px;
+                width: 1em;
+                height: 1em;
+            }
+
+            &:hover {
+                i {
+                    color: var(--primary) !important;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 15px 0px !important;
+
+        li {
+            min-width: 260px;
+            display: block;
+            position: relative;
+            text-align: left;
+
+            &:hover {
+                a {
+                    background-color: rgba(0, 0, 0, 0.03);
+                    color: var(--primary) !important;
+                }
+            }
+        }
+
+        .dropdown-item {
+            padding: 8px 25px 8px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.5;
+            text-transform: capitalize;
+            color: var(--text);
+        }
+
+        .dropdown-item.active {
+            background-color: #fff;
+            color: var(--primary) !important;
+        }
+    }
+}
