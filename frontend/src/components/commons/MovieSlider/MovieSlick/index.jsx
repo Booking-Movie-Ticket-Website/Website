@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 
-function CarouselInfo({ category, title, director }) {
+function MovieSlick({ src, category, title, director }) {
     return (
-        <>
+        <div className="carousel-item position-relative active">
+            <img src={src} className="d-block w-100" alt="" />
             <div className="movie-social-sharing d-flex">
                 <span className="text-share text-white d-inline-block">Share</span>
                 <span className="line d-inline-block"></span>
@@ -49,7 +50,6 @@ function CarouselInfo({ category, title, director }) {
                 <div className="movie-main-item position-relative">
                     <div className="movie-heading position-relative">
                         <h3 className="movie-category">{category} Movie</h3>
-
                         <a
                             href="https://demo.ovatheme.com/aovis/movie/love-nightmare/"
                             title={title}
@@ -58,9 +58,7 @@ function CarouselInfo({ category, title, director }) {
                             <h1 className="movie-title text-white text-capitalize">{title}</h1>
                         </a>
                     </div>
-
                     <p className="movie-excerpt text-white">Writen and Directed by {director}</p>
-
                     <div className="button-wrapper">
                         <a
                             href="https://demo.ovatheme.com/aovis/movie/love-nightmare/"
@@ -79,14 +77,15 @@ function CarouselInfo({ category, title, director }) {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 
-CarouselInfo.propTypes = {
-    category: PropTypes.string,
-    title: PropTypes.string,
-    director: PropTypes.string,
+MovieSlick.propTypes = {
+    src: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    director: PropTypes.string.isRequired,
 };
 
-export default CarouselInfo;
+export default MovieSlick;

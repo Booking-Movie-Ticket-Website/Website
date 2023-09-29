@@ -1,6 +1,27 @@
 import logo from '~/assets/images/logo-white.png';
+import { useState, useEffect } from 'react';
 
 function Navbar() {
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        function handleScroll() {
+            if (window.scrollY > 100) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const navbarClass = `navbar navbar-expand-lg ${isSticky ? 'is-sticky' : ''} bg-transparent`;
+
     return (
         <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
             <div className="container">

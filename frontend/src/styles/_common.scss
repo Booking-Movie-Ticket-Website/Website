@@ -5,7 +5,9 @@
 @import '../components/commons/MovieSlider/movie-slider';
 @import '../pages/News/news';
 @import '../pages/Home/home';
-@import '../components/commons/MovieSlider/Carousel/TrailerSlider/SlickSlide/slick';
+@import '../components/commons/MovieSlider/slick';
+@import '../components/commons/NowPlaying/now-playing';
+@import './mixins';
 
 // common styles
 :root {
@@ -47,6 +49,7 @@ body {
     color: var(--text);
     font-family: var(--primary-font);
     letter-spacing: var(--letter-spacing);
+    background-color: #fff;
 }
 
 h1,
@@ -142,14 +145,12 @@ hr {
     margin: 0 0 1em;
 }
 
-body .App {
-    min-height: calc(100vh - 200px);
+section {
+    position: relative;
 }
 
-.container {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
+body .App {
+    min-height: calc(100vh - 200px);
 }
 
 body .row_site {
@@ -190,6 +191,42 @@ input[type='submit'] {
     border-radius: 0px;
     padding: 12px 25px;
     line-height: 1.5em;
+}
+
+.container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.background-overlay,
+.background-slideshow {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.widget-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    > .widget-element {
+        width: 100%;
+    }
+}
+
+.widget-container {
+    transition:
+        background 0.3s,
+        border 0.3s,
+        border-radius 0.3s,
+        box-shadow 0.3s,
+        transform var(--e-transform-transition-duration, 0.4s);
 }
 
 // end of common styles

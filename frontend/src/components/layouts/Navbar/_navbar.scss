@@ -1,7 +1,3 @@
-body {
-    background-color: #000;
-}
-
 .navbar {
     border-style: solid;
     border-width: 0px 0px 1px 0px;
@@ -96,4 +92,23 @@ body {
             color: var(--primary) !important;
         }
     }
+}
+
+.header_sticky.sticky_bg_dark.active_sticky {
+    background-color: #000000;
+}
+
+.header_sticky.active_sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -webkit-animation: sticky 0.7s;
+    animation: sticky 0.7s;
 }
