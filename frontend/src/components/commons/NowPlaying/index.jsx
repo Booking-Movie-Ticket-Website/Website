@@ -1,6 +1,16 @@
 import bgFilm01 from '~/assets/images/bg-film-01.png';
+import Slider from 'react-slick';
+import CarouselItem from './CarouselItem';
 
 function NowPlaying() {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 200,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        arrows: false,
+    };
     return (
         <section id="now-playing-movies">
             <div className="container">
@@ -106,7 +116,46 @@ function NowPlaying() {
                             className="inner-section widget-element"
                             style={{ padding: '110px 0px 110px 0px' }}
                         >
-                            <div className="container-1190"></div>
+                            <div className="container-1190">
+                                <div className="row">
+                                    <div className="col px-0">
+                                        <div className="widget-wrapper px-0">
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-heading ova-heading-template1">
+                                                        <div className="icon">
+                                                            <i
+                                                                aria-hidden="true"
+                                                                className="flaticon flaticon-film-roll"
+                                                            ></i>
+                                                        </div>
+                                                        <div className="top-heading ">
+                                                            <h3 className="sub-title ">
+                                                                Watch New Movies
+                                                            </h3>
+
+                                                            <h2 className="title">
+                                                                Movies Now Playing
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <Slider {...settings}>
+                                                        <CarouselItem />
+                                                        <CarouselItem />
+                                                        <CarouselItem />
+                                                        <CarouselItem />
+                                                        <CarouselItem />
+                                                    </Slider>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>

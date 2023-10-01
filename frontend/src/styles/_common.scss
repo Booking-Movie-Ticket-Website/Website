@@ -8,6 +8,11 @@
 @import '../components/commons/MovieSlider/slick';
 @import '../components/commons/NowPlaying/now-playing';
 @import './mixins';
+@import '../components/commons/NowPlaying/CarouselItem/item-template1';
+@import '../components/commons/TopFeatured/TopFeaturedItem/item-template2';
+@import '../components/commons/TopFeatured/top-featured';
+@import '../components/commons/TopFeatured/ova-counter';
+@import '../components/commons/TopFeatured/odometer.scss';
 
 // common styles
 :root {
@@ -31,6 +36,7 @@
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -186,6 +192,25 @@ input[type='submit'] {
     margin: 0;
 }
 
+.main-page {
+    transition:
+        background 0.3s,
+        border 0.3s,
+        border-radius 0.3s,
+        box-shadow 0.3s;
+    margin-top: -100px;
+    margin-bottom: 0px;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+}
+
 .cs-btn,
 .button {
     border-radius: 0px;
@@ -193,10 +218,54 @@ input[type='submit'] {
     line-height: 1.5em;
 }
 
+.button:focus,
+.button:hover,
+.button:visited {
+    color: #fff;
+}
+
+.button-text {
+    flex-grow: 1;
+    order: 10;
+    display: inline-block;
+}
+
+.button-wrapper {
+    .button {
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 700;
+        background-color: var(--primary);
+        border-radius: 0;
+        padding: 17px 51px;
+
+        &:hover {
+            background-color: var(--heading);
+        }
+    }
+}
+
 .container {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.container-1440 {
+    max-width: 1440px;
+}
+
+.container-1190 {
+    max-width: 1190px;
+}
+
+[class^='container-'] {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .background-overlay,
@@ -227,6 +296,103 @@ input[type='submit'] {
         border-radius 0.3s,
         box-shadow 0.3s,
         transform var(--e-transform-transition-duration, 0.4s);
+}
+
+.widget-element:not(:last-child) {
+    margin-block-end: 20px;
+    margin-bottom: 20px;
+}
+
+#top-featured-movies,
+#now-playing-movies {
+    .slick-list {
+        margin-right: -10px;
+        margin-left: -10px;
+        padding: 10px;
+        width: calc(100% + 20px);
+        position: relative;
+        overflow: hidden;
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+    }
+}
+
+// button trailer
+.btn-trailer-video {
+    transition: all 0.5s ease;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    border-radius: 0;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--primary);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        transition: all 0.5s ease;
+        background-color: var(--heading);
+        box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.3);
+    }
+    i {
+        display: none;
+    }
+}
+
+// trailer video popup
+.mb_trailer_video_popup {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+
+    .modal-container {
+        line-height: 0;
+        width: 85%;
+        max-height: 90%;
+        max-width: 1500px;
+        position: relative;
+
+        .modal {
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding-top: 56.25%;
+
+            i {
+                position: absolute;
+                right: -10px;
+                top: -35px;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #ffffff;
+                font-weight: 600;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+
+            iframe {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
 }
 
 // end of common styles

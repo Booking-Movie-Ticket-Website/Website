@@ -50,6 +50,45 @@ i[class*=' flaticon-']:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.ova-heading i,
+.ova-heading svg,
+.ova-heading path {
+    display: inline-block;
+    font-size: 24px;
+    width: 1em;
+    height: 1em;
+    color: var(--primary);
+    fill: var(--primary);
+    margin-bottom: 13px;
+}
+
+.ova-heading {
+    text-align: center;
+    position: relative;
+
+    .top-heading {
+        display: inline-block;
+        position: relative;
+
+        .sub-title {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text);
+            line-height: 1.2;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            margin: 0;
+            font-size: 50px;
+            line-height: 1.2;
+            white-space: pre-line;
+        }
+    }
+}
+
 .ova-icon-box {
     background-color: var(--heading);
     padding: 25px 25px 25px 45px;

@@ -1,29 +1,20 @@
 import logo from '~/assets/images/logo-white.png';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 function Navbar() {
-    const [isSticky, setIsSticky] = useState(false);
-
     useEffect(() => {
-        function handleScroll() {
-            if (window.scrollY > 100) {
-                setIsSticky(true);
+        window.onscroll = function () {
+            const header = document.getElementById('header');
+            if (document.documentElement.scrollTop > 100) {
+                header.classList.add('active_sticky', 'sticky_bg_dark');
             } else {
-                setIsSticky(false);
+                header.classList.remove('active_sticky', 'sticky_bg_dark');
             }
-        }
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
-    const navbarClass = `navbar navbar-expand-lg ${isSticky ? 'is-sticky' : ''} bg-transparent`;
-
     return (
-        <nav className="navbar navbar-expand-lg fixed-top bg-transparent">
+        <nav id="header" className="navbar navbar-expand-lg header_sticky">
             <div className="container">
                 <a className="navbar-brand p-0 m-0" href="/" style={{ width: '14%' }}>
                     <img src={logo} alt="site icon" style={{ width: '108px' }} />

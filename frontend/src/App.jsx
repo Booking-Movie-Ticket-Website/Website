@@ -3,6 +3,8 @@ import Layout from './pages/Layout';
 import Home from './pages/Home';
 import News from './pages/News';
 import NoPage from './pages/NoPage';
+import $ from 'jquery';
+window.$ = $;
 
 function App() {
     return (

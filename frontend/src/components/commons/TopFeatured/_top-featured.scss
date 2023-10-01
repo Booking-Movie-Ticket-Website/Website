@@ -1,0 +1,62 @@
+#top-featured-movies {
+    background-color: #f3f3f3;
+    transition:
+        background 0.3s,
+        border 0.3s,
+        border-radius 0.3s,
+        box-shadow 0.3s;
+    padding: 110px 0px 110px 0px;
+
+    .background-overlay {
+        background-image: url(../assets/images/seat-bg.png);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.1;
+        mix-blend-mode: luminosity;
+        transition:
+            background 0.3s,
+            border-radius 0.3s,
+            opacity 0.3s;
+    }
+
+    .widget-wrapper {
+        padding: 10px;
+    }
+
+    .slick-track {
+        transition: all 0s ease 0s;
+        width: 1210px !important;
+
+        .slick-slide {
+            width: 383.333px !important;
+            margin-right: 20px;
+        }
+    }
+
+    .widget-exploring {
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-color: #000000;
+        transition:
+            background 0.3s,
+            border 0.3s,
+            border-radius 0.3s,
+            box-shadow 0.3s;
+        padding: 10px 0px 10px 0px;
+    }
+
+    .ova-counter .odometer {
+        font-size: 20px;
+        line-height: 1em;
+        color: #d96c2c;
+    }
+
+    .button-wrapper {
+        .button {
+            font-size: 13px;
+            line-height: 2.3em;
+            padding: 2px 20px 2px 20px;
+        }
+    }
+}
