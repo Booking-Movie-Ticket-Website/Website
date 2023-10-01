@@ -13,7 +13,13 @@
 @import '../components/commons/TopFeatured/top-featured';
 @import '../components/commons/TopFeatured/ova-counter';
 @import '../components/commons/TopFeatured/odometer.scss';
-
+@import '../components/commons/Feedbacks/feedbacks';
+@import '../components/commons/Feedbacks/owlcarousel';
+@import '../components/commons/Feedbacks/FeedbackItem/heading';
+@import '../components/commons/Feedbacks/FeedbackItem/testimonial';
+@import '../components/commons/ComingSoon/coming-soon';
+@import '../components/layouts/Footer/footer';
+@import '../styles/logo';
 // common styles
 :root {
     --primary: #d96c2c;
@@ -157,6 +163,7 @@ section {
 
 body .App {
     min-height: calc(100vh - 200px);
+    position: relative;
 }
 
 body .row_site {
@@ -207,8 +214,12 @@ input[type='submit'] {
     margin: 0;
 }
 
-.col {
+.col,
+[class^='col-'] {
     padding: 0;
+    > .widget-wrapper {
+        padding: 10px;
+    }
 }
 
 .cs-btn,
@@ -245,10 +256,27 @@ input[type='submit'] {
     }
 }
 
+.button {
+    display: inline-block;
+    line-height: 1;
+    background-color: #69727d;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    color: #fff;
+    fill: #fff;
+    text-align: center;
+    transition: all 0.3s;
+}
+
 .container {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.container-1500 {
+    max-width: 1500px;
 }
 
 .container-1440 {

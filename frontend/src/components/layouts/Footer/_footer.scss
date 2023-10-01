@@ -1,0 +1,29 @@
+#footer {
+    position: absolute;
+    z-index: 9999;
+    bottom: -375px;
+    left: 0;
+    right: 0;
+    transition:
+        background 0.3s,
+        border 0.3s,
+        border-radius 0.3s,
+        box-shadow 0.3s;
+    background-color: #000;
+
+    .widget-element.top-element {
+        border-style: solid;
+        border-width: 0px 0px 1px 0px;
+        border-color: #ffffff26;
+        transition:
+            background 0.3s,
+            border 0.3s,
+            border-radius 0.3s,
+            box-shadow 0.3s;
+        padding: 20px 0px 30px 0px;
+    }
+
+    .widget-element.bot-element {
+        padding: 90px 0px 50px 0px;
+    }
+}

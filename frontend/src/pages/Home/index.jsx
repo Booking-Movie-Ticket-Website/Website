@@ -1,3 +1,5 @@
+import ComingSoon from '~/components/commons/ComingSoon';
+import Feedbacks from '~/components/commons/Feedbacks';
 import MovieSlider from '~/components/commons/MovieSlider';
 import NowPlaying from '~/components/commons/NowPlaying';
 import Separator from '~/components/commons/Separator';
@@ -10,6 +12,8 @@ function Home() {
             <Separator />
             <NowPlaying />
             <TopFeatured />
+            <Feedbacks />
+            <ComingSoon />
         </>
     );
 }

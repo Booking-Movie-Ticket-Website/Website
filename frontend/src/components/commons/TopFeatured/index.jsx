@@ -65,7 +65,10 @@ function TopFeatured() {
                                     </div>
                                 </section>
                                 <div className="widget-element">
-                                    <div className="widget-container">
+                                    <div
+                                        className="widget-container"
+                                        style={{ marginBottom: '20px' }}
+                                    >
                                         <Slider {...settings}>
                                             <TopFeaturedItem />
                                             <TopFeaturedItem />
@@ -74,11 +77,14 @@ function TopFeatured() {
                                     </div>
                                 </div>
                                 <section className="widget-element d-flex justify-content-center align-items-center">
-                                    <div className="widget-container" style={{ maxWidth: '622px' }}>
+                                    <div
+                                        className="widget-container w-100"
+                                        style={{ maxWidth: '622px' }}
+                                    >
                                         <div className="row">
                                             <div className="col">
                                                 <div className="widget-wrapper widget-exploring align-items-center justify-content-center flex-nowrap">
-                                                    <div className="widget-element mb-0">
+                                                    <div className="widget-element mb-0 w-auto">
                                                         <div className="widget-container">
                                                             <div
                                                                 className="ova-counter template1 justify-content-center"
@@ -124,15 +130,18 @@ function TopFeatured() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="widget-element mb-0">
-                                                        <div className="widget-container">
+                                                    <div className="widget-element mb-0 w-auto">
+                                                        <div
+                                                            className="widget-container"
+                                                            style={{ margin: '0px 30px 0px 10px' }}
+                                                        >
                                                             <p className="m-0">
                                                                 more comedy &amp; horror movies you
                                                                 can explore
                                                             </p>
                                                         </div>
                                                     </div>
-                                                    <div className="widget-element">
+                                                    <div className="widget-element w-auto">
                                                         <div className="button-wrapper">
                                                             <a
                                                                 className="button button-link size-sm d-inline-block"
