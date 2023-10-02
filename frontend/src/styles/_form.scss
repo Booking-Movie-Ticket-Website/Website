@@ -1,0 +1,329 @@
+// Layout
+$desktop: 1024px;
+$tablet: 768px;
+$handle: 568px;
+
+// Menu
+$submenu-bg-color: #fff;
+
+$line-height-form: 1.5em;
+
+// Input
+$border-radius-input: 0px;
+$padding-input: 12px 15px;
+
+// Button Submit should like Input
+$border-radius-btn: 0px;
+$padding-btn: 12px 25px;
+
+// Button style use for blog and modern button
+$border-radius-btn-2: 0px;
+$padding-btn-2: 12px 25px;
+
+// background fields in form
+$border-field-color: #e0e0e0;
+$background-field: #ffffff;
+
+button,
+input,
+select,
+textarea {
+    color: var(--text);
+    line-height: $line-height-form;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+textarea,
+.input-text {
+    border-radius: $border-radius-input;
+    padding: $padding-input;
+    border-color: $border-field-color;
+    background-color: $background-field;
+    color: var(--text);
+    border-width: 1px;
+    border-style: solid;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-weight: normal;
+    outline: 0;
+    transition: all ease-in-out 0.3s;
+    font-size: 1em;
+    &::placeholder {
+        color: var(--text);
+    }
+    &:focus {
+        color: var(--heading);
+    }
+    .form-light & {
+        color: #fff;
+        &::placeholder {
+            color: #fff;
+        }
+    }
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+    border: 1px solid;
+    border-radius: $border-radius-btn;
+    padding: $padding-btn;
+    font-size: 1em;
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+
+    @include transaction(all, 0.3s, linear);
+    &:hover {
+        background-color: transparent;
+        border-color: var(--primary);
+        color: var(--primary);
+    }
+}
+
+select {
+    &:not([size]):not([multiple]) {
+        background-color: $background-field;
+        color: var(--text);
+        border: 1px solid $border-field-color;
+        border-radius: $border-radius-input;
+        padding: $padding-input;
+        max-width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        appearance: none;
+        width: 100%;
+        background-image: url('./assets/img/base/select-arrow.svg');
+        background-position: calc(100% - 12px) center;
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+    }
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    width: 100%;
+}
+
+label {
+    font-weight: 400;
+}
+
+label.inline {
+    input {
+        width: auto;
+    }
+}
+
+/*Placeholver*/
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.5s 0.5s ease;
+    -moz-transition: opacity 0.5s 0.5s ease;
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
+}
+
+input,
+textarea {
+    &::-webkit-input-placeholder {
+        /* Edge */
+        opacity: 0.5;
+    }
+
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        opacity: 0.5;
+    }
+
+    &::placeholder {
+        opacity: 0.5;
+    }
+}
+
+// Contact Form 7
+// Style message error contact form
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+    border-color: red;
+    color: red;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color: green;
+}
+
+.ova-ctform7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 767px) {
+        align-items: flex-start;
+    }
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+
+        .ova_wrap_input {
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .ova_wrap_input {
+        width: 100%;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .ova-submit {
+        display: inline-block;
+        margin-top: 20px;
+
+        input[type='submit'] {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+            padding: 18px 50px;
+            border: 2px solid transparent;
+            position: relative;
+
+            &:hover {
+                border-color: var(--primary);
+            }
+        }
+
+        .wpcf7-spinner {
+            position: absolute;
+        }
+    }
+
+    textarea {
+        height: 168px;
+    }
+
+    input,
+    textarea {
+        border-radius: 0;
+        border: none;
+    }
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    textarea {
+        font-size: 14px;
+        line-height: 1.2;
+        color: var(--text);
+        width: 100%;
+        padding: 19px 30px;
+        background-color: #f3f3f3;
+
+        &::placeholder {
+            opacity: 1;
+        }
+    }
+}
+
+// MC4WP
+.ova-subscribe-form-wrapper {
+    .ova-subscribe-form {
+        position: relative;
+        margin-bottom: 15px;
+
+        input[type='email'] {
+            width: 100%;
+            border-radius: 0;
+            background-color: #fff;
+            padding: 13px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text);
+            line-height: 2.1;
+        }
+
+        button {
+            position: absolute;
+            right: 5px;
+            bottom: 50%;
+            background: #fff;
+            border-color: #fff;
+            display: inline-flex;
+            padding: 15px;
+            transform: translateY(50%);
+
+            &:hover {
+                i {
+                    @include transaction(all, 0.3s, linear);
+                    color: var(--primary);
+                }
+            }
+
+            i {
+                @include transaction(all, 0.3s, linear);
+                color: #000;
+                font-size: 14px;
+            }
+        }
+    }
+
+    label {
+        display: inline-flex;
+        align-items: center;
+
+        input[type='radio'] {
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            margin: 0 10px 0 0;
+        }
+        a {
+            @include transaction(all, 0.3s, linear);
+            color: var(--text);
+            line-height: 1.4;
+
+            &:hover {
+                @include transaction(all, 0.3s, linear);
+                color: var(--primary);
+            }
+        }
+    }
+}

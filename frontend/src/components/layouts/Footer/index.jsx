@@ -5,115 +5,105 @@ function Footer() {
                 <div className="row">
                     <div className="col">
                         <div className="widget-wrapper">
-                            <section className="widget-element top-element">
+                            <section className="widget-element top-element mb-0">
                                 <div className="widget-container container-1190">
-                                    <div className="col-6">
-                                        <div className="widget-wrapper">
-                                            <div className="widget-element">
-                                                <div className="widget-container"></div>
-                                                <div className="brand_el">
-                                                    <a href="https://demo.ovatheme.com/aovis/ ">
-                                                        <img
-                                                            src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                            alt="Aovis – Film &amp; Movie Booking WordPress Theme"
-                                                            className="logo_desktop"
-                                                            style={{
-                                                                width: '108px',
-                                                                height: 'auto',
-                                                            }}
-                                                        />
+                                    <div className="row align-items-center">
+                                        <div className="col-6">
+                                            <div className="widget-wrapper">
+                                                <div className="widget-element">
+                                                    <div className="widget-container"></div>
+                                                    <div className="brand_el">
+                                                        <a href="https://demo.ovatheme.com/aovis/ ">
+                                                            <img
+                                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
+                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
+                                                                className="logo_desktop"
+                                                                style={{
+                                                                    width: '108px',
+                                                                    height: 'auto',
+                                                                }}
+                                                            />
 
-                                                        <img
-                                                            src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                            alt="Aovis – Film &amp; Movie Booking WordPress Theme"
-                                                            className="logo_mobile"
-                                                            style={{
-                                                                width: '108px',
-                                                                height: 'auto',
-                                                            }}
-                                                        />
+                                                            <img
+                                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
+                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
+                                                                className="logo_mobile"
+                                                                style={{
+                                                                    width: '108px',
+                                                                    height: 'auto',
+                                                                }}
+                                                            />
 
-                                                        <img
-                                                            src="https://demo.ovatheme.com/aovis/wp-content/plugins/elementor/assets/images/placeholder.png"
-                                                            alt="Aovis – Film &amp; Movie Booking WordPress Theme"
-                                                            className="logo_sticky"
-                                                            style={{
-                                                                width: 'auto',
-                                                                height: 'auto',
-                                                            }}
-                                                        />
-                                                    </a>
+                                                            <img
+                                                                src="https://demo.ovatheme.com/aovis/wp-content/plugins/elementor/assets/images/placeholder.png"
+                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
+                                                                className="logo_sticky"
+                                                                style={{
+                                                                    width: 'auto',
+                                                                    height: 'auto',
+                                                                }}
+                                                            />
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="col-6">
-                                        <div className="widget-wrapper">
-                                            <div className="widget-element">
-                                                <div className="widget-container">
-                                                    <a href="https://demo.ovatheme.com/aovis/about/">
-                                                        Help
-                                                    </a>{' '}
-                                                    /{' '}
-                                                    <a href="https://demo.ovatheme.com/aovis/privacy-policy/">
-                                                        Privacy Policy
-                                                    </a>{' '}
+                                        <div className="col-6">
+                                            <div className="widget-wrapper justify-content-end align-items-center">
+                                                <div className="widget-element w-auto m-0">
+                                                    <div className="widget-container">
+                                                        <a className="link" href="/about/">
+                                                            Help
+                                                        </a>{' '}
+                                                        /{' '}
+                                                        <a className="link" href="/privacy-policy/">
+                                                            Privacy Policy
+                                                        </a>{' '}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="widget-element">
-                                                <div className="elementor-widget-container">
-                                                    <style>
-                                                        {`.elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container,.elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container{line-height:1;font-size:0}.elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid{display:inline-grid}.elementor-widget-social-icons .elementor-grid{grid-column-gap:var(--grid-column-gap,5px);grid-row-gap:var(--grid-row-gap,5px);grid-template-columns:var(--grid-template-columns);justify-content:var(--justify-content,center);justify-items:var(--justify-content,center)}.elementor-icon.elementor-social-icon{font-size:var(--icon-size,25px);line-height:var(--icon-size,25px);width:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)));height:calc(var(--icon-size, 25px) + (2 * var(--icon-padding, .5em)))}.elementor-social-icon{--e-social-icon-icon-color:#fff;display:inline-flex;background-color:#69727d;align-items:center;justify-content:center;text-align:center;cursor:pointer}.elementor-social-icon i{color:var(--e-social-icon-icon-color)}.elementor-social-icon svg{fill:var(--e-social-icon-icon-color)}.elementor-social-icon:last-child{margin:0}.elementor-social-icon:hover{opacity:.9;color:#fff}.elementor-social-icon-android{background-color:#a4c639}.elementor-social-icon-apple{background-color:#999}.elementor-social-icon-behance{background-color:#1769ff}.elementor-social-icon-bitbucket{background-color:#205081}.elementor-social-icon-codepen{background-color:#000}.elementor-social-icon-delicious{background-color:#39f}.elementor-social-icon-deviantart{background-color:#05cc47}.elementor-social-icon-digg{background-color:#005be2}.elementor-social-icon-dribbble{background-color:#ea4c89}.elementor-social-icon-elementor{background-color:#d30c5c}.elementor-social-icon-envelope{background-color:#ea4335}.elementor-social-icon-facebook,.elementor-social-icon-facebook-f{background-color:#3b5998}.elementor-social-icon-flickr{background-color:#0063dc}.elementor-social-icon-foursquare{background-color:#2d5be3}.elementor-social-icon-free-code-camp,.elementor-social-icon-freecodecamp{background-color:#006400}.elementor-social-icon-github{background-color:#333}.elementor-social-icon-gitlab{background-color:#e24329}.elementor-social-icon-globe{background-color:#69727d}.elementor-social-icon-google-plus,.elementor-social-icon-google-plus-g{background-color:#dd4b39}.elementor-social-icon-houzz{background-color:#7ac142}.elementor-social-icon-instagram{background-color:#262626}.elementor-social-icon-jsfiddle{background-color:#487aa2}.elementor-social-icon-link{background-color:#818a91}.elementor-social-icon-linkedin,.elementor-social-icon-linkedin-in{background-color:#0077b5}.elementor-social-icon-medium{background-color:#00ab6b}.elementor-social-icon-meetup{background-color:#ec1c40}.elementor-social-icon-mixcloud{background-color:#273a4b}.elementor-social-icon-odnoklassniki{background-color:#f4731c}.elementor-social-icon-pinterest{background-color:#bd081c}.elementor-social-icon-product-hunt{background-color:#da552f}.elementor-social-icon-reddit{background-color:#ff4500}.elementor-social-icon-rss{background-color:#f26522}.elementor-social-icon-shopping-cart{background-color:#4caf50}.elementor-social-icon-skype{background-color:#00aff0}.elementor-social-icon-slideshare{background-color:#0077b5}.elementor-social-icon-snapchat{background-color:#fffc00}.elementor-social-icon-soundcloud{background-color:#f80}.elementor-social-icon-spotify{background-color:#2ebd59}.elementor-social-icon-stack-overflow{background-color:#fe7a15}.elementor-social-icon-steam{background-color:#00adee}.elementor-social-icon-stumbleupon{background-color:#eb4924}.elementor-social-icon-telegram{background-color:#2ca5e0}.elementor-social-icon-thumb-tack{background-color:#1aa1d8}.elementor-social-icon-tripadvisor{background-color:#589442}.elementor-social-icon-tumblr{background-color:#35465c}.elementor-social-icon-twitch{background-color:#6441a5}.elementor-social-icon-twitter{background-color:#1da1f2}.elementor-social-icon-viber{background-color:#665cac}.elementor-social-icon-vimeo{background-color:#1ab7ea}.elementor-social-icon-vk{background-color:#45668e}.elementor-social-icon-weibo{background-color:#dd2430}.elementor-social-icon-weixin{background-color:#31a918}.elementor-social-icon-whatsapp{background-color:#25d366}.elementor-social-icon-wordpress{background-color:#21759b}.elementor-social-icon-xing{background-color:#026466}.elementor-social-icon-yelp{background-color:#af0606}.elementor-social-icon-youtube{background-color:#cd201f}.elementor-social-icon-500px{background-color:#0099e5}.elementor-shape-rounded .elementor-icon.elementor-social-icon{border-radius:10%}.elementor-shape-circle .elementor-icon.elementor-social-icon{border-radius:50%}`}
-                                                    </style>
-                                                    <div className="elementor-social-icons-wrapper elementor-grid">
-                                                        <span className="elementor-grid-item">
-                                                            <a
-                                                                className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-float elementor-repeater-item-48ef142"
-                                                                href="#"
-                                                                target="_blank"
-                                                            >
-                                                                <span className="elementor-screen-only">
-                                                                    Twitter
-                                                                </span>
-                                                                <i className="fab fa-twitter"></i>{' '}
-                                                            </a>
-                                                        </span>
-                                                        <span className="elementor-grid-item">
-                                                            <a
-                                                                className="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-float elementor-repeater-item-2b85ff4"
-                                                                href="#"
-                                                                target="_blank"
-                                                            >
-                                                                <span className="elementor-screen-only">
-                                                                    Facebook
-                                                                </span>
-                                                                <i className="fab fa-facebook"></i>{' '}
-                                                            </a>
-                                                        </span>
-                                                        <span className="elementor-grid-item">
-                                                            <a
-                                                                className="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-animation-float elementor-repeater-item-fb63f27"
-                                                                href="#"
-                                                                target="_blank"
-                                                            >
-                                                                <span className="elementor-screen-only">
-                                                                    Pinterest
-                                                                </span>
-                                                                <i className="fab fa-pinterest"></i>{' '}
-                                                            </a>
-                                                        </span>
-                                                        <span className="elementor-grid-item">
-                                                            <a
-                                                                className="elementor-icon elementor-social-icon elementor-social-icon-ovaicon-instagram-1 elementor-animation-float elementor-repeater-item-4a7c865"
-                                                                href="#"
-                                                                target="_blank"
-                                                            >
-                                                                <span className="elementor-screen-only">
-                                                                    Ovaicon-instagram-1
-                                                                </span>
-                                                                <i className="ovaicon ovaicon-instagram-1"></i>{' '}
-                                                            </a>
-                                                        </span>
+                                                <div
+                                                    className="widget-element w-auto"
+                                                    style={{ marginLeft: '32px' }}
+                                                >
+                                                    <div className="widget-container">
+                                                        <div className="social-icons-wrapper d-grid">
+                                                            <span className="grid-item">
+                                                                <a
+                                                                    className="icon social-icon social-icon-twitter animation-float repeater-item-48ef142"
+                                                                    href="#"
+                                                                    target="_blank"
+                                                                >
+                                                                    <i className="fab fa-twitter"></i>{' '}
+                                                                </a>
+                                                            </span>
+                                                            <span className="grid-item">
+                                                                <a
+                                                                    className="icon social-icon social-icon-facebook animation-float repeater-item-2b85ff4"
+                                                                    href="#"
+                                                                    target="_blank"
+                                                                >
+                                                                    <i className="fab fa-facebook"></i>{' '}
+                                                                </a>
+                                                            </span>
+                                                            <span className="grid-item">
+                                                                <a
+                                                                    className="icon social-icon social-icon-pinterest animation-float repeater-item-fb63f27"
+                                                                    href="#"
+                                                                    target="_blank"
+                                                                >
+                                                                    <i className="fab fa-pinterest"></i>{' '}
+                                                                </a>
+                                                            </span>
+                                                            <span className="grid-item">
+                                                                <a
+                                                                    className="icon social-icon social-icon-ovaicon-instagram-1 animation-float repeater-item-4a7c865"
+                                                                    href="#"
+                                                                    target="_blank"
+                                                                >
+                                                                    <i className="ovaicon ovaicon-instagram-1"></i>{' '}
+                                                                </a>
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,14 +111,282 @@ function Footer() {
                                     </div>
                                 </div>
                             </section>
-                            <section className="widget-element bot-element">
-                                <div className="container-1190 row">
+                            <section className="widget-element bot-element ">
+                                <div className="container-1190 row align-items-start">
                                     <div className="col-30">
-                                        <div className="widget-wrapper"></div>
+                                        <div
+                                            className="widget-wrapper"
+                                            style={{ marginRight: '30px' }}
+                                        >
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    Buy movie tickets easily with Aovis system
+                                                    nationwide
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="button-wrapper">
+                                                        <a
+                                                            className="button button-link size-sm"
+                                                            href="#"
+                                                        >
+                                                            <span className="button-content-wrapper">
+                                                                <span className="button-text">
+                                                                    Get Your Ticket
+                                                                </span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="col-20"></div>
-                                    <div className="col-25"></div>
-                                    <div className="col-25"></div>
+                                    <div className="col-20">
+                                        <div
+                                            className="widget-wrapper"
+                                            style={{ marginLeft: '30px' }}
+                                        >
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-heading ova-heading-template1">
+                                                        <div className="icon"></div>
+
+                                                        <div className="top-heading has-square-corner">
+                                                            <h2
+                                                                className="title"
+                                                                style={{
+                                                                    fontSize: '20px',
+                                                                    lineHeight: '1em',
+                                                                }}
+                                                            >
+                                                                Movies
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-menu-footer">
+                                                        <ul
+                                                            id="menu-footer-menu-movies"
+                                                            className="menu"
+                                                        >
+                                                            <li
+                                                                id="menu-item-3203"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3203"
+                                                            >
+                                                                <a href="/action/">Action</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3204"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3204"
+                                                            >
+                                                                <a href="/adventure/">Adventure</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3205"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3205"
+                                                            >
+                                                                <a href="/animation/">Animation</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3206"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3206"
+                                                            >
+                                                                <a href="/comedy/">Comedy</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3207"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3207"
+                                                            >
+                                                                <a href="/crime/">Crime</a>
+                                                            </li>
+                                                        </ul>{' '}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-25">
+                                        <div
+                                            className="widget-wrapper"
+                                            style={{ marginLeft: '30px' }}
+                                        >
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-heading ova-heading-template1">
+                                                        <div className="icon"></div>
+
+                                                        <div className="top-heading has-square-corner">
+                                                            <h2
+                                                                className="title"
+                                                                style={{
+                                                                    fontSize: '20px',
+                                                                    lineHeight: '1em',
+                                                                }}
+                                                            >
+                                                                Links
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-menu-footer">
+                                                        <ul
+                                                            id="menu-footer-menu-movies"
+                                                            className="menu"
+                                                        >
+                                                            <li
+                                                                id="menu-item-3203"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3203"
+                                                            >
+                                                                <a href="/action/">About</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3204"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3204"
+                                                            >
+                                                                <a href="/adventure/">My account</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3205"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3205"
+                                                            >
+                                                                <a href="/animation/">News</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3206"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3206"
+                                                            >
+                                                                <a href="/comedy/">Latest Events</a>
+                                                            </li>
+                                                            <li
+                                                                id="menu-item-3207"
+                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3207"
+                                                            >
+                                                                <a href="/crime/">Contact</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-25">
+                                        <div className="widget-wrapper">
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="ova-heading ova-heading-template1">
+                                                        <div className="icon"></div>
+                                                        <div className="top-heading has-square-corner">
+                                                            <h2
+                                                                className="title"
+                                                                style={{
+                                                                    fontSize: '20px',
+                                                                    lineHeight: '1em',
+                                                                }}
+                                                            >
+                                                                Newsletter
+                                                            </h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    Subscribe to Leitmotif newsletter this very day.
+                                                </div>
+                                            </div>
+                                            <div className="widget-element">
+                                                <div className="widget-container">
+                                                    <div className="shortcode">
+                                                        <form
+                                                            id="mc4wp-form-1"
+                                                            className="mc4wp-form mc4wp-form-184"
+                                                            method="post"
+                                                            data-id="184"
+                                                            data-name="Footer"
+                                                        >
+                                                            <div className="mc4wp-form-fields">
+                                                                <div className="ova-subscribe-form-wrapper ">
+                                                                    <div className="ova-subscribe-form">
+                                                                        <input
+                                                                            type="email"
+                                                                            name="EMAIL"
+                                                                            placeholder="Email Address"
+                                                                            required=""
+                                                                        />
+                                                                        <button
+                                                                            type="submit"
+                                                                            value=""
+                                                                        >
+                                                                            <i className="fas fa-location-arrow"></i>
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <label>
+                                                                        <input
+                                                                            name="AGREE_TO_TERMS"
+                                                                            type="radio"
+                                                                            value="1"
+                                                                            required=""
+                                                                        />
+                                                                        <a href="/privacy-policy/">
+                                                                            I agree to all terms and
+                                                                            policies of the company
+                                                                        </a>
+                                                                    </label>
+                                                                </div>
+                                                                <p style={{ display: 'none' }}>
+                                                                    <label>List choice</label>
+                                                                    <label>
+                                                                        <input
+                                                                            name="_mc4wp_lists[]"
+                                                                            type="checkbox"
+                                                                            value="Ovatheme"
+                                                                            checked="true"
+                                                                        />
+                                                                        <span>Ovatheme</span>
+                                                                    </label>
+                                                                </p>
+                                                            </div>
+                                                            <label style={{ display: 'none' }}>
+                                                                Leave this field empty if you are
+                                                                human:
+                                                                <input
+                                                                    type="text"
+                                                                    name="_mc4wp_honeypot"
+                                                                    value=""
+                                                                    tabIndex="-1"
+                                                                    autoComplete="off"
+                                                                />
+                                                            </label>
+                                                            <input
+                                                                type="hidden"
+                                                                name="_mc4wp_timestamp"
+                                                                value="1696249419"
+                                                            />
+                                                            <input
+                                                                type="hidden"
+                                                                name="_mc4wp_form_id"
+                                                                value="184"
+                                                            />
+                                                            <input
+                                                                type="hidden"
+                                                                name="_mc4wp_form_element_id"
+                                                                value="mc4wp-form-1"
+                                                            />
+                                                            <div className="mc4wp-response"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </section>
                         </div>

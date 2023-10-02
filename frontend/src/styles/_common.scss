@@ -20,6 +20,8 @@
 @import '../components/commons/ComingSoon/coming-soon';
 @import '../components/layouts/Footer/footer';
 @import '../styles/logo';
+@import './form';
+
 // common styles
 :root {
     --primary: #d96c2c;
@@ -38,6 +40,13 @@
     --woo-layout: layout_1c;
     --woo-width-sidebar: 320px;
     --woo-main-content: calc(100% - 320px);
+
+    --grid-template-columns: repeat(4, auto);
+    --icon-size: 14px;
+    --grid-column-gap: 10px;
+    --grid-row-gap: 0px;
+    --icon-padding: 1.2em;
+    --e-social-icon-icon-color: #fff;
 }
 
 html {
@@ -220,6 +229,18 @@ input[type='submit'] {
     > .widget-wrapper {
         padding: 10px;
     }
+}
+
+.col-30 {
+    width: 30%;
+}
+
+.col-20 {
+    width: 20%;
+}
+
+.col-25 {
+    width: 25%;
 }
 
 .cs-btn,
@@ -421,6 +442,21 @@ input[type='submit'] {
             }
         }
     }
+}
+
+.screen-only,
+.screen-reader-text,
+.screen-reader-text span,
+.ui-helper-hidden-accessible {
+    position: absolute;
+    top: -10000em;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 // end of common styles
