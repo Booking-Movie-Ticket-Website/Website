@@ -21,6 +21,11 @@
 @import '../components/layouts/Footer/footer';
 @import '../styles/logo';
 @import './form';
+@import '../components/commons/Banner/banner';
+@import '../components/commons/PostHeading/post-heading';
+@import '../components/commons/Posts/posts';
+@import '../components/commons/Posts/blog';
+@import '../components/commons/Promotion/promotion';
 
 // common styles
 :root {
@@ -274,7 +279,16 @@ input[type='submit'] {
         &:hover {
             background-color: var(--heading);
         }
+
+        .button-content-wrapper {
+            align-items: center;
+        }
     }
+}
+
+.button-content-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .button {
@@ -345,6 +359,10 @@ input[type='submit'] {
         border-radius 0.3s,
         box-shadow 0.3s,
         transform var(--e-transform-transition-duration, 0.4s);
+}
+
+.widget-element {
+    position: relative;
 }
 
 .widget-element:not(:last-child) {

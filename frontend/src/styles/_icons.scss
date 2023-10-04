@@ -254,10 +254,13 @@ i[class*=' flaticon-']:before {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        -webkit-mask-image: url('assets/img/mask-image/mask-image-iconbox.png');
-        mask-image: url('assets/img/mask-image/mask-image-iconbox.png');
+        -webkit-mask-image: url(../assets/images/mask-image-iconbox.png);
+        mask-image: url(../assets/images/mask-image-iconbox.png);
+        mask-size: cover;
         -webkit-mask-size: cover;
+        mask-position: center center;
         -webkit-mask-position: center center;
+        mask-repeat: no-repeat;
         -webkit-mask-repeat: no-repeat;
 
         @media (max-width: 1024px) {
