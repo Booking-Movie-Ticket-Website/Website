@@ -1,7 +1,7 @@
 // import scss files
 @import './fonts';
 @import './icons';
-@import '../components/layouts/Navbar/navbar';
+@import '../components/layouts/Header/header';
 @import '../components/commons/MovieSlider/movie-slider';
 @import '../pages/News/news';
 @import '../pages/Home/home';
@@ -26,6 +26,12 @@
 @import '../components/commons/Posts/posts';
 @import '../components/commons/Posts/blog';
 @import '../components/commons/Promotion/promotion';
+@import './elementor';
+@import './responsive';
+@import './menu';
+@import './search-popup';
+@import './normalize';
+@import './menu-canvas';
 
 // common styles
 :root {
@@ -213,7 +219,7 @@ input[type='submit'] {
     margin: 0;
 }
 
-.main-page {
+.inside-content {
     transition:
         background 0.3s,
         border 0.3s,
@@ -322,14 +328,14 @@ input[type='submit'] {
     max-width: 1190px;
 }
 
-[class^='container-'] {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-}
+// [class^='container-'] {
+//     display: flex;
+//     margin-right: auto;
+//     margin-left: auto;
+//     position: relative;
+//     justify-content: center;
+//     align-items: center;
+// }
 
 .background-overlay,
 .background-slideshow {

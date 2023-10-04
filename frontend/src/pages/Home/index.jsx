@@ -11,7 +11,7 @@ import TopFeatured from '~/components/commons/TopFeatured';
 
 function Home() {
     return (
-        <>
+        <div id="home-page">
             <MovieSlider />
             <Separator />
             <NowPlaying />
@@ -22,7 +22,7 @@ function Home() {
             <PostHeading />
             <Posts />
             <Promotion />
-        </>
+        </div>
     );
 }
 
