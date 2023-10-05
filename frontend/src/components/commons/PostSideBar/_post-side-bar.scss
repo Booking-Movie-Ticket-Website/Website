@@ -1,0 +1,8 @@
+.search-input {
+    :focus-within {
+        outline: none;
+    }
+    ::placeholder {
+        color: white;
+    }
+}
