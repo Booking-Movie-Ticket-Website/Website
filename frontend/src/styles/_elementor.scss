@@ -210,10 +210,18 @@
         height: 1em;
         position: relative;
         display: block;
+
+        &:hover {
+            color: var(--primary);
+        }
     }
 }
 
 .elementor-34 {
+    .elementor-element.elementor-element-2aa6835 {
+        width: 50%;
+    }
+
     .elementor-element.elementor-element-947ac0b,
     .elementor-element.elementor-element-417694b {
         width: auto;
@@ -240,6 +248,10 @@
         .ova_wrap_search_popup i {
             font-size: 24px;
             color: #ffffff;
+
+            &:hover {
+                color: var(--primary);
+            }
         }
 
         > .elementor-widget-container {
