@@ -45,42 +45,55 @@ function MovieSlider() {
     };
 
     return (
-        <section id="movie-slider">
-            <Slider {...sliderSettings1} style={{ height: ' 895.977px' }}>
-                <MovieSlick
-                    src={banner1}
-                    title="Wrong Turns Part 2"
-                    category="Thriller"
-                    director="Aleesha Rose / Ireland 2023"
-                />
-                <MovieSlick
-                    src={banner2}
-                    title="The Witcher Season 2"
-                    category="Action"
-                    director="Aleesha Rose / Ireland 2023"
-                />
-                <MovieSlick
-                    src={banner3}
-                    title="Love Nightmare"
-                    category="Adventure"
-                    director="Aleesha Rose / Ireland 2023"
-                />
-            </Slider>
-            <div className="d-block position-absolute w-100 movie-trailer-wrapper">
+        <>
+            <div
+                className="mb-movie-main-slider-wrapper main-wrapper-template1"
+                style={{ visibility: 'visible', opacity: '1' }}
+            >
+                <Slider
+                    {...sliderSettings1}
+                    className="mb-movie-main-slider main-template1"
+                    style={{ height: ' 895.977px' }}
+                    data-options='{"items":2,"autoplayHoverPause":true,"loop":false,"autoplay":true,"autoplayTimeout":6900,"smartSpeed":500,"rtl":false,"template":"template1"}'
+                >
+                    <MovieSlick
+                        src={banner1}
+                        title="Wrong Turns Part 2"
+                        category="Thriller"
+                        director="Aleesha Rose / Ireland 2023"
+                    />
+                    <MovieSlick
+                        src={banner2}
+                        title="The Witcher Season 2"
+                        category="Action"
+                        director="Aleesha Rose / Ireland 2023"
+                    />
+                    <MovieSlick
+                        src={banner3}
+                        title="Love Nightmare"
+                        category="Adventure"
+                        director="Aleesha Rose / Ireland 2023"
+                    />
+                </Slider>
+            </div>
+            <div
+                className="mb-movie-trailer-slider-wrapper trailer-template1"
+                style={{ display: 'block' }}
+            >
                 <img
                     decoding="async"
                     className="arrow-trailers-img position-absolute"
                     src={arrowArrowWatchTrailer}
                     alt="Arrow watch trailer"
                 />
-                <span className="text-trailer position-absolute text-white">Trailers</span>
-                <Slider {...sliderSettings2} className="movie-trailer-slider d-flex flex-column">
+                <span className="text-trailer">Trailers</span>
+                <Slider {...sliderSettings2} className="movie-trailer-slider">
                     <TrailerSlick src={trailer1} />
                     <TrailerSlick src={trailer2} />
                     <TrailerSlick src={trailer3} />
                 </Slider>
             </div>
-        </section>
+        </>
     );
 }
 

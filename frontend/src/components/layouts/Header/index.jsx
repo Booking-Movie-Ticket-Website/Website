@@ -5,8 +5,9 @@ function Header() {
 
     useEffect(() => {
         window.onscroll = function () {
-            const header = document.getElementById('header');
-            if (document.documentElement.scrollTop > 100) {
+            const header = document.querySelector('.header_sticky');
+            const height = header.offsetHeight;
+            if (document.documentElement.scrollTop > height) {
                 header.classList.add('active_sticky', 'sticky_bg_dark');
             } else {
                 header.classList.remove('active_sticky', 'sticky_bg_dark');
