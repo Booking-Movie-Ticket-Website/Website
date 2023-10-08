@@ -3,7 +3,7 @@ import postSmallImage from "~/assets/images/blog-4-150x150.jpg"
 function PostSideBar() {
     return <div className="" style={{width: '23vw'}}>
     <div className="d-flex justify-content-between px-4 py-4 align-items-center bg-primary search-input">
-      <input type="text" name="" id="" className="border-0 bg-primary search-input text-white"  placeholder="Search ..." />
+      <input type="text" name="" id="" className="border-0 bg-primary text-white" placeholder="Search ..." />
       <i className="icon ovaicon-search text-white mr-2"></i>
     </div>
     <div className="my-4 p-4 bg-anti-flash-white">

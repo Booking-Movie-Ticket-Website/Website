@@ -8,6 +8,13 @@ $custom-colors: (
     'anti-flash-white': #f3f3f3,
 );
 
+$spacers: (
+    6: $spacer * 4,
+    7: $spacer * 6,
+    8: $spacer * 8,
+    9: $spacer * 10,
+);
+
 $theme-colors: map-merge($custom-colors, $theme-colors);
 
 @import '/node_modules/bootstrap/scss/bootstrap';
@@ -27,6 +34,16 @@ $utilities: map-merge(
             class: w,
             values: (
                 fit: fit-content,
+                30: 30%,
+                40: 40%,
+            ),
+        ),
+        'height': (
+            property: height,
+            class: h,
+            values: (
+                40vh: 40vh,
+                50vh: 50vh,
             ),
         ),
         'font-family': (
