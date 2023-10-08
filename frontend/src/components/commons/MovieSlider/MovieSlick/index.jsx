@@ -63,11 +63,7 @@ function MovieSlick({ src, category, title, director }) {
                     <div className="movie-heading">
                         <h3 className="movie-category">{category} </h3>
 
-                        <a
-                            href="https://demo.ovatheme.com/aovis/movie/wrong-turns-part-2/"
-                            title={title}
-                            tabIndex="-1"
-                        >
+                        <a href="/" title={title} tabIndex="-1">
                             <h1 className="movie-title">{title} </h1>
                         </a>
                     </div>
@@ -75,17 +71,13 @@ function MovieSlick({ src, category, title, director }) {
                     <p className="movie-excerpt">Writen and Directed by {director} </p>
 
                     <div className="button-wrapper">
-                        <a
-                            href="https://demo.ovatheme.com/aovis/movie/wrong-turns-part-2/"
-                            title={title}
-                            tabIndex="-1"
-                        >
-                            <button className="btn btn-more-info" tabIndex="-1">
+                        <a href="/" title={title} tabIndex="-1">
+                            <button className="cs-btn btn-more-info" tabIndex="-1">
                                 More Info{' '}
                             </button>
                         </a>
 
-                        <button className="btn btn-booking" data-movie-id="842" tabIndex="-1">
+                        <button className="cs-btn btn-booking" data-movie-id="842" tabIndex="-1">
                             Get Ticket{' '}
                         </button>
                     </div>

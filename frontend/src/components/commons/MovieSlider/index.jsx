@@ -13,6 +13,7 @@ import TrailerSlick from './TrailerSlick';
 function MovieSlider() {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
+
     const slider1 = useRef(null);
     const slider2 = useRef(null);
 
@@ -29,6 +30,7 @@ function MovieSlider() {
         infinite: true,
         autoplaySpeed: 10000,
         slideToScroll: 2,
+        adaptiveHeight: true,
     };
 
     const sliderSettings2 = {
@@ -53,7 +55,6 @@ function MovieSlider() {
                 <Slider
                     {...sliderSettings1}
                     className="mb-movie-main-slider main-template1"
-                    style={{ height: ' 895.977px' }}
                     data-options='{"items":2,"autoplayHoverPause":true,"loop":false,"autoplay":true,"autoplayTimeout":6900,"smartSpeed":500,"rtl":false,"template":"template1"}'
                 >
                     <MovieSlick
@@ -82,12 +83,12 @@ function MovieSlider() {
             >
                 <img
                     decoding="async"
-                    className="arrow-trailers-img position-absolute"
+                    className="arrow-trailers-img"
                     src={arrowArrowWatchTrailer}
                     alt="Arrow watch trailer"
                 />
                 <span className="text-trailer">Trailers</span>
-                <Slider {...sliderSettings2} className="movie-trailer-slider">
+                <Slider {...sliderSettings2} className="mb-movie-trailer-slider slick-dotted">
                     <TrailerSlick src={trailer1} />
                     <TrailerSlick src={trailer2} />
                     <TrailerSlick src={trailer3} />

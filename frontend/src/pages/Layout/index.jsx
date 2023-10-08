@@ -5,11 +5,14 @@ import Footer from '~/components/layouts/Footer';
 function Layout() {
     return (
         <div className="App">
-            <Header />
+            <div className="inside-content">
+                <Header />
 
-            <Outlet />
-
-            <Footer />
+                <Outlet />
+            </div>
+            <div className="wrap_footer">
+                <Footer />
+            </div>
         </div>
     );
 }

@@ -1,4 +1,4 @@
-function TopFeaturedItem() {
+function MovieItem() {
     return (
         <div className="mb-movie-item item-template2">
             <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title="The Fifth Day">
@@ -22,12 +22,11 @@ function TopFeaturedItem() {
                 <div className="categories-and-time">
                     <div className="movie-category">
                         <a href="https://demo.ovatheme.com/aovis/movie_cat/comedy/" title="Comedy">
-                            {' '}
                             Comedy
-                        </a>
+                        </a>{' '}
                     </div>
 
-                    <span className="running-time"> 180 Mins</span>
+                    <span className="running-time">180 Mins</span>
                 </div>
 
                 <div className="button-wrapper">
@@ -43,7 +42,7 @@ function TopFeaturedItem() {
                     </div>
 
                     <button className="btn btn-booking" data-movie-id="4311">
-                        Get Ticket
+                        Get Ticket{' '}
                     </button>
                 </div>
             </div>
@@ -51,4 +50,4 @@ function TopFeaturedItem() {
     );
 }
 
-export default TopFeaturedItem;
+export default MovieItem;

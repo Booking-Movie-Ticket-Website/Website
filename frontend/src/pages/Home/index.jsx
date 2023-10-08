@@ -1,6 +1,9 @@
 // import MovieSlider from '~/components/commons/MovieSlider';
 
+import LinesHeader from '~/components/commons/LinesHeader';
 import MovieSlider from '~/components/commons/MovieSlider';
+import MoviesNowPlaying from '~/components/commons/MoviesNowPlaying';
+import TopFeaturedMovies from '~/components/commons/TopFeaturedMovies';
 
 function Home() {
     return (
@@ -11,6 +14,7 @@ function Home() {
             data-element-id="24"
         >
             <section
+                id="movie-slider"
                 className="elementor-section elementor-top-section elementor-element elementor-element-1dd1e82 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
                 data-id="1dd1e82"
                 data-element_type="section"
@@ -38,6 +42,9 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <LinesHeader />
+            <MoviesNowPlaying />
+            <TopFeaturedMovies />
         </div>
     );
 }

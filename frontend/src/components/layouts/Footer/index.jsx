@@ -1,17 +1,43 @@
 function Footer() {
     return (
-        <footer id="footer">
-            <div className="container-1190">
-                <div className="row">
-                    <div className="col">
-                        <div className="widget-wrapper">
-                            <section className="widget-element top-element mb-0">
-                                <div className="widget-container container-1190">
-                                    <div className="row align-items-center">
-                                        <div className="col-6">
-                                            <div className="widget-wrapper">
-                                                <div className="widget-element">
-                                                    <div className="widget-container"></div>
+        <footer
+            id="footer"
+            data-elementor-type="wp-post"
+            data-elementor-id="159"
+            className="elementor elementor-159"
+        >
+            <section
+                className="elementor-section elementor-top-section elementor-element elementor-element-258b10b elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="258b10b"
+                data-element_type="section"
+                data-settings='{"background_background":"classic"}'
+            >
+                <div className="elementor-container elementor-column-gap-default">
+                    <div
+                        className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-57eb3c2"
+                        data-id="57eb3c2"
+                        data-element_type="column"
+                    >
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                            <section
+                                className="elementor-section elementor-inner-section elementor-element elementor-element-795e95e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="795e95e"
+                                data-element_type="section"
+                            >
+                                <div className="elementor-container elementor-column-gap-no">
+                                    <div
+                                        className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-4ab32c6"
+                                        data-id="4ab32c6"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-5f2ead5 elementor-widget__width-auto elementor-widget elementor-widget-ova_logo"
+                                                data-id="5f2ead5"
+                                                data-element_type="widget"
+                                                data-widget_type="ova_logo.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="brand_el">
                                                         <a href="https://demo.ovatheme.com/aovis/ ">
                                                             <img
@@ -48,62 +74,80 @@ function Footer() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-6">
-                                            <div className="widget-wrapper justify-content-end align-items-center">
-                                                <div className="widget-element w-auto m-0">
-                                                    <div className="widget-container">
-                                                        <a className="link" href="/about/">
-                                                            Help
-                                                        </a>{' '}
-                                                        /{' '}
-                                                        <a className="link" href="/privacy-policy/">
-                                                            Privacy Policy
-                                                        </a>{' '}
-                                                    </div>
+                                    </div>
+                                    <div
+                                        className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5317ab9"
+                                        data-id="5317ab9"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-7863967 elementor-widget__width-auto elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor"
+                                                data-id="7863967"
+                                                data-element_type="widget"
+                                                data-widget_type="text-editor.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    <a href="/about">Help</a> /{' '}
+                                                    <a href="/privacy-policy">Privacy Policy</a>{' '}
                                                 </div>
-                                                <div
-                                                    className="widget-element w-auto"
-                                                    style={{ marginLeft: '32px' }}
-                                                >
-                                                    <div className="widget-container">
-                                                        <div className="social-icons-wrapper d-grid">
-                                                            <span className="grid-item">
-                                                                <a
-                                                                    className="icon social-icon social-icon-twitter animation-float repeater-item-48ef142"
-                                                                    href="#"
-                                                                    target="_blank"
-                                                                >
-                                                                    <i className="fab fa-twitter"></i>{' '}
-                                                                </a>
-                                                            </span>
-                                                            <span className="grid-item">
-                                                                <a
-                                                                    className="icon social-icon social-icon-facebook animation-float repeater-item-2b85ff4"
-                                                                    href="#"
-                                                                    target="_blank"
-                                                                >
-                                                                    <i className="fab fa-facebook"></i>{' '}
-                                                                </a>
-                                                            </span>
-                                                            <span className="grid-item">
-                                                                <a
-                                                                    className="icon social-icon social-icon-pinterest animation-float repeater-item-fb63f27"
-                                                                    href="#"
-                                                                    target="_blank"
-                                                                >
-                                                                    <i className="fab fa-pinterest"></i>{' '}
-                                                                </a>
-                                                            </span>
-                                                            <span className="grid-item">
-                                                                <a
-                                                                    className="icon social-icon social-icon-ovaicon-instagram-1 animation-float repeater-item-4a7c865"
-                                                                    href="#"
-                                                                    target="_blank"
-                                                                >
-                                                                    <i className="ovaicon ovaicon-instagram-1"></i>{' '}
-                                                                </a>
-                                                            </span>
-                                                        </div>
+                                            </div>
+                                            <div
+                                                className="elementor-element elementor-element-7656713 elementor-grid-4 elementor-widget__width-auto elementor-widget-tablet__width-auto elementor-shape-rounded e-grid-align-center elementor-widget elementor-widget-social-icons"
+                                                data-id="7656713"
+                                                data-element_type="widget"
+                                                data-widget_type="social-icons.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    <div className="elementor-social-icons-wrapper elementor-grid">
+                                                        <span className="elementor-grid-item">
+                                                            <a
+                                                                className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-animation-float elementor-repeater-item-48ef142"
+                                                                href="#"
+                                                                target="_blank"
+                                                            >
+                                                                <span className="elementor-screen-only">
+                                                                    Twitter
+                                                                </span>
+                                                                <i className="fab fa-twitter"></i>{' '}
+                                                            </a>
+                                                        </span>
+                                                        <span className="elementor-grid-item">
+                                                            <a
+                                                                className="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-animation-float elementor-repeater-item-2b85ff4"
+                                                                href="#"
+                                                                target="_blank"
+                                                            >
+                                                                <span className="elementor-screen-only">
+                                                                    Facebook
+                                                                </span>
+                                                                <i className="fab fa-facebook"></i>{' '}
+                                                            </a>
+                                                        </span>
+                                                        <span className="elementor-grid-item">
+                                                            <a
+                                                                className="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-animation-float elementor-repeater-item-fb63f27"
+                                                                href="#"
+                                                                target="_blank"
+                                                            >
+                                                                <span className="elementor-screen-only">
+                                                                    Pinterest
+                                                                </span>
+                                                                <i className="fab fa-pinterest"></i>{' '}
+                                                            </a>
+                                                        </span>
+                                                        <span className="elementor-grid-item">
+                                                            <a
+                                                                className="elementor-icon elementor-social-icon elementor-social-icon-ovaicon-instagram-1 elementor-animation-float elementor-repeater-item-4a7c865"
+                                                                href="#"
+                                                                target="_blank"
+                                                            >
+                                                                <span className="elementor-screen-only">
+                                                                    Ovaicon-instagram-1
+                                                                </span>
+                                                                <i className="ovaicon ovaicon-instagram-1"></i>{' '}
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -111,28 +155,43 @@ function Footer() {
                                     </div>
                                 </div>
                             </section>
-                            <section className="widget-element bot-element ">
-                                <div className="container-1190 row align-items-start">
-                                    <div className="col-30">
-                                        <div
-                                            className="widget-wrapper"
-                                            style={{ marginRight: '30px' }}
-                                        >
-                                            <div className="widget-element">
-                                                <div className="widget-container">
-                                                    Buy movie tickets easily with Aovis system
-                                                    nationwide
+                            <section
+                                className="elementor-section elementor-inner-section elementor-element elementor-element-9d7926d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                data-id="9d7926d"
+                                data-element_type="section"
+                            >
+                                <div className="elementor-container elementor-column-gap-no">
+                                    <div
+                                        className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-602e797"
+                                        data-id="602e797"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-7ecb24f elementor-widget elementor-widget-text-editor"
+                                                data-id="7ecb24f"
+                                                data-element_type="widget"
+                                                data-widget_type="text-editor.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    Buy movie tickets easily with CineWorld system
+                                                    nationwide{' '}
                                                 </div>
                                             </div>
-                                            <div className="widget-element">
-                                                <div className="widget-container">
-                                                    <div className="button-wrapper">
+                                            <div
+                                                className="elementor-element elementor-element-d99ffb0 elementor-widget elementor-widget-button"
+                                                data-id="d99ffb0"
+                                                data-element_type="widget"
+                                                data-widget_type="button.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    <div className="elementor-button-wrapper">
                                                         <a
-                                                            className="button button-link size-sm"
+                                                            className="elementor-button elementor-button-link elementor-size-sm"
                                                             href="#"
                                                         >
-                                                            <span className="button-content-wrapper">
-                                                                <span className="button-text">
+                                                            <span className="elementor-button-content-wrapper">
+                                                                <span className="elementor-button-text">
                                                                     Get Your Ticket
                                                                 </span>
                                                             </span>
@@ -142,32 +201,35 @@ function Footer() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-20">
-                                        <div
-                                            className="widget-wrapper"
-                                            style={{ marginLeft: '30px' }}
-                                        >
-                                            <div className="widget-element">
-                                                <div className="widget-container">
+                                    <div
+                                        className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-571e2f5"
+                                        data-id="571e2f5"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-2f4d8b9 elementor-widget elementor-widget-aovis_elementor_heading"
+                                                data-id="2f4d8b9"
+                                                data-element_type="widget"
+                                                data-widget_type="aovis_elementor_heading.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="ova-heading ova-heading-template1">
                                                         <div className="icon"></div>
 
                                                         <div className="top-heading has-square-corner">
-                                                            <h2
-                                                                className="title"
-                                                                style={{
-                                                                    fontSize: '20px',
-                                                                    lineHeight: '1em',
-                                                                }}
-                                                            >
-                                                                Movies
-                                                            </h2>
+                                                            <h2 className="title">Movies</h2>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="widget-element">
-                                                <div className="widget-container">
+                                            <div
+                                                className="elementor-element elementor-element-96d0199 elementor-widget elementor-widget-aovis_elementor_menu_footer"
+                                                data-id="96d0199"
+                                                data-element_type="widget"
+                                                data-widget_type="aovis_elementor_menu_footer.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="ova-menu-footer">
                                                         <ul
                                                             id="menu-footer-menu-movies"
@@ -177,31 +239,39 @@ function Footer() {
                                                                 id="menu-item-3203"
                                                                 className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3203"
                                                             >
-                                                                <a href="/action/">Action</a>
+                                                                <a href="/movie_cat/action">
+                                                                    Action
+                                                                </a>
                                                             </li>
                                                             <li
                                                                 id="menu-item-3204"
                                                                 className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3204"
                                                             >
-                                                                <a href="/adventure/">Adventure</a>
+                                                                <a href="/movie_cat/adventure">
+                                                                    Adventure
+                                                                </a>
                                                             </li>
                                                             <li
                                                                 id="menu-item-3205"
                                                                 className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3205"
                                                             >
-                                                                <a href="/animation/">Animation</a>
+                                                                <a href="/movie_cat/animation">
+                                                                    Animation
+                                                                </a>
                                                             </li>
                                                             <li
                                                                 id="menu-item-3206"
                                                                 className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3206"
                                                             >
-                                                                <a href="/comedy/">Comedy</a>
+                                                                <a href="/movie_cat/comedy">
+                                                                    Comedy
+                                                                </a>
                                                             </li>
                                                             <li
                                                                 id="menu-item-3207"
                                                                 className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3207"
                                                             >
-                                                                <a href="/crime/">Crime</a>
+                                                                <a href="/movie_cat/crime">Crime</a>
                                                             </li>
                                                         </ul>{' '}
                                                     </div>
@@ -209,101 +279,116 @@ function Footer() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-25">
-                                        <div
-                                            className="widget-wrapper"
-                                            style={{ marginLeft: '30px' }}
-                                        >
-                                            <div className="widget-element">
-                                                <div className="widget-container">
+                                    <div
+                                        className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-fdd25bb"
+                                        data-id="fdd25bb"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-1316ca3 elementor-widget elementor-widget-aovis_elementor_heading"
+                                                data-id="1316ca3"
+                                                data-element_type="widget"
+                                                data-widget_type="aovis_elementor_heading.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="ova-heading ova-heading-template1">
                                                         <div className="icon"></div>
 
                                                         <div className="top-heading has-square-corner">
-                                                            <h2
-                                                                className="title"
-                                                                style={{
-                                                                    fontSize: '20px',
-                                                                    lineHeight: '1em',
-                                                                }}
-                                                            >
-                                                                Links
-                                                            </h2>
+                                                            <h2 className="title">Links</h2>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="widget-element">
-                                                <div className="widget-container">
+                                            <div
+                                                className="elementor-element elementor-element-5dad860 elementor-widget elementor-widget-aovis_elementor_menu_footer"
+                                                data-id="5dad860"
+                                                data-element_type="widget"
+                                                data-widget_type="aovis_elementor_menu_footer.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="ova-menu-footer">
                                                         <ul
-                                                            id="menu-footer-menu-movies"
+                                                            id="menu-footer-menu-links"
                                                             className="menu"
                                                         >
                                                             <li
-                                                                id="menu-item-3203"
-                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3203"
+                                                                id="menu-item-3208"
+                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3208"
                                                             >
-                                                                <a href="/action/">About</a>
+                                                                <a href="/about">About</a>
                                                             </li>
                                                             <li
-                                                                id="menu-item-3204"
-                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3204"
+                                                                id="menu-item-3209"
+                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3209"
                                                             >
-                                                                <a href="/adventure/">My account</a>
+                                                                <a href="/my-account">My account</a>
                                                             </li>
                                                             <li
-                                                                id="menu-item-3205"
-                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3205"
+                                                                id="menu-item-3210"
+                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3210"
                                                             >
-                                                                <a href="/animation/">News</a>
+                                                                <a href="/news">News</a>
                                                             </li>
                                                             <li
-                                                                id="menu-item-3206"
-                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3206"
+                                                                id="menu-item-3629"
+                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"
                                                             >
-                                                                <a href="/comedy/">Latest Events</a>
+                                                                <a href="/events">Latest Events</a>
                                                             </li>
                                                             <li
-                                                                id="menu-item-3207"
-                                                                className="menu-item menu-item-type-taxonomy menu-item-object-movie_cat menu-item-3207"
+                                                                id="menu-item-3211"
+                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3211"
                                                             >
-                                                                <a href="/crime/">Contact</a>
+                                                                <a href="/contact">Contact</a>
                                                             </li>
-                                                        </ul>
+                                                        </ul>{' '}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-25">
-                                        <div className="widget-wrapper">
-                                            <div className="widget-element">
-                                                <div className="widget-container">
+                                    <div
+                                        className="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2222280"
+                                        data-id="2222280"
+                                        data-element_type="column"
+                                    >
+                                        <div className="elementor-widget-wrap elementor-element-populated">
+                                            <div
+                                                className="elementor-element elementor-element-37c9a21 elementor-widget elementor-widget-aovis_elementor_heading"
+                                                data-id="37c9a21"
+                                                data-element_type="widget"
+                                                data-widget_type="aovis_elementor_heading.default"
+                                            >
+                                                <div className="elementor-widget-container">
                                                     <div className="ova-heading ova-heading-template1">
                                                         <div className="icon"></div>
+
                                                         <div className="top-heading has-square-corner">
-                                                            <h2
-                                                                className="title"
-                                                                style={{
-                                                                    fontSize: '20px',
-                                                                    lineHeight: '1em',
-                                                                }}
-                                                            >
-                                                                Newsletter
-                                                            </h2>
+                                                            <h2 className="title">Newsletter</h2>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="widget-element">
-                                                <div className="widget-container">
-                                                    Subscribe to Leitmotif newsletter this very day.
+                                            <div
+                                                className="elementor-element elementor-element-384fdb7 elementor-widget elementor-widget-text-editor"
+                                                data-id="384fdb7"
+                                                data-element_type="widget"
+                                                data-widget_type="text-editor.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    Subscribe to Leitmotif newsletter this very day.{' '}
                                                 </div>
                                             </div>
-                                            <div className="widget-element">
-                                                <div className="widget-container">
-                                                    <div className="shortcode">
+                                            <div
+                                                className="elementor-element elementor-element-7bd170c elementor-widget elementor-widget-shortcode"
+                                                data-id="7bd170c"
+                                                data-element_type="widget"
+                                                data-widget_type="shortcode.default"
+                                            >
+                                                <div className="elementor-widget-container">
+                                                    <div className="elementor-shortcode">
                                                         <form
                                                             id="mc4wp-form-1"
                                                             className="mc4wp-form mc4wp-form-184"
@@ -335,7 +420,11 @@ function Footer() {
                                                                             value="1"
                                                                             required=""
                                                                         />
-                                                                        <a href="/privacy-policy/">
+                                                                        <a
+                                                                            href="https://demo.ovatheme.com/aovis/privacy-policy/"
+                                                                            target="_blank"
+                                                                            rel="noreferrer"
+                                                                        >
                                                                             I agree to all terms and
                                                                             policies of the company
                                                                         </a>
@@ -349,38 +438,11 @@ function Footer() {
                                                                             type="checkbox"
                                                                             value="Ovatheme"
                                                                             checked="true"
-                                                                        />
+                                                                        />{' '}
                                                                         <span>Ovatheme</span>
                                                                     </label>
                                                                 </p>
                                                             </div>
-                                                            <label style={{ display: 'none' }}>
-                                                                Leave this field empty if you are
-                                                                human:
-                                                                <input
-                                                                    type="text"
-                                                                    name="_mc4wp_honeypot"
-                                                                    value=""
-                                                                    tabIndex="-1"
-                                                                    autoComplete="off"
-                                                                />
-                                                            </label>
-                                                            <input
-                                                                type="hidden"
-                                                                name="_mc4wp_timestamp"
-                                                                value="1696249419"
-                                                            />
-                                                            <input
-                                                                type="hidden"
-                                                                name="_mc4wp_form_id"
-                                                                value="184"
-                                                            />
-                                                            <input
-                                                                type="hidden"
-                                                                name="_mc4wp_form_element_id"
-                                                                value="mc4wp-form-1"
-                                                            />
-                                                            <div className="mc4wp-response"></div>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -392,7 +454,34 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <section
+                className="elementor-section elementor-top-section elementor-element elementor-element-0c37c33 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                data-id="0c37c33"
+                data-element_type="section"
+                data-settings='{"background_background":"classic"}'
+            >
+                <div className="elementor-container elementor-column-gap-default">
+                    <div
+                        className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d190bc3"
+                        data-id="d190bc3"
+                        data-element_type="column"
+                    >
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                            <div
+                                className="elementor-element elementor-element-3ec9ecc elementor-widget elementor-widget-text-editor"
+                                data-id="3ec9ecc"
+                                data-element_type="widget"
+                                data-widget_type="text-editor.default"
+                            >
+                                <div className="elementor-widget-container">
+                                    © Copyright 2023 by CineWorld.com{' '}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </footer>
     );
 }

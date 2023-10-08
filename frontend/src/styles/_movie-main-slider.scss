@@ -142,7 +142,7 @@
                     bottom: -10px;
                     width: 110%;
                     height: 15px;
-                    background-image: url('../../img/underline-heading-entire.png');
+                    background-image: url('../assets/images/underline-heading-entire.png');
                     background-position: bottom;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -211,7 +211,7 @@
             @media (max-width: 1024px) {
                 margin-bottom: 260px;
             }
-            .btn {
+            .cs-btn {
                 margin: 0 15px 15px 0;
                 padding: 17px 50px;
                 font-size: 15px;
