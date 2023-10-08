@@ -1,16 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Header() {
+    const [query, setQuery] = useState('');
+
     useEffect(() => {
         window.onscroll = function () {
-            const header = document.getElementById('header');
-            if (document.documentElement.scrollTop > 100) {
+            const header = document.querySelector('.header_sticky');
+            const height = header.offsetHeight;
+            if (document.documentElement.scrollTop > height) {
                 header.classList.add('active_sticky', 'sticky_bg_dark');
             } else {
                 header.classList.remove('active_sticky', 'sticky_bg_dark');
             }
         };
     }, []);
+
+    function toggleSubMenu(button) {
+        const subMenu = button.parentElement.querySelector('.sub-menu');
+        if (subMenu) {
+            subMenu.classList.toggle('show');
+        }
+    }
 
     return (
         <header id="header" className="elementor elementor-34">
@@ -486,9 +496,6 @@ function Header() {
                                             <span></span>
                                         </button>
                                         <nav className="container-menu dir_left">
-                                            <div className="close-menu">
-                                                <i className="ovaicon-cancel"></i>
-                                            </div>
                                             <div className="primary-navigation">
                                                 <ul id="menu-primary-menu-1" className="menu">
                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-56">
@@ -498,7 +505,10 @@ function Header() {
                                                         >
                                                             Home
                                                         </a>
-                                                        <button className="dropdown-toggle"></button>
+                                                        <button
+                                                            className="dropdown-toggle"
+                                                            onClick={(e) => toggleSubMenu(e.target)}
+                                                        ></button>
                                                         <ul className="sub-menu">
                                                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item menu-item-2298">
                                                                 <a
@@ -524,11 +534,19 @@ function Header() {
                                                         <a href="https://demo.ovatheme.com/aovis/movies-all/">
                                                             Movies
                                                         </a>
-                                                        <button className="dropdown-toggle"></button>
-                                                        <ul className="sub-menu show">
+                                                        <button
+                                                            className="dropdown-toggle"
+                                                            onClick={(e) => toggleSubMenu(e.target)}
+                                                        ></button>
+                                                        <ul className="sub-menu">
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4151">
                                                                 <a href="#">Movie All</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4155">
                                                                         <a href="https://demo.ovatheme.com/aovis/movies-all/">
@@ -554,7 +572,12 @@ function Header() {
                                                             </li>
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4188">
                                                                 <a href="#">Movies Now Playing</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4189">
                                                                         <a href="https://demo.ovatheme.com/aovis/movies-now-playing-template-1/">
@@ -580,7 +603,12 @@ function Header() {
                                                             </li>
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4214">
                                                                 <a href="#">Movie Coming Soon</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4213">
                                                                         <a href="https://demo.ovatheme.com/aovis/movies-coming-soon-template-1/">
@@ -606,7 +634,12 @@ function Header() {
                                                             </li>
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4591">
                                                                 <a href="#">Movie Category</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617">
                                                                         <a href="https://demo.ovatheme.com/aovis/thriller-category-template-1/">
@@ -642,7 +675,12 @@ function Header() {
                                                             </li>
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4252">
                                                                 <a href="#">Movie Filter Ajax 1</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3652">
                                                                         <a href="https://demo.ovatheme.com/aovis/movie-filter-ajax-template-1/">
@@ -668,7 +706,12 @@ function Header() {
                                                             </li>
                                                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4275">
                                                                 <a href="#">Movie Filter Ajax 2</a>
-                                                                <button className="dropdown-toggle"></button>
+                                                                <button
+                                                                    className="dropdown-toggle"
+                                                                    onClick={(e) =>
+                                                                        toggleSubMenu(e.target)
+                                                                    }
+                                                                ></button>
                                                                 <ul className="sub-menu">
                                                                     <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-3661">
                                                                         <a href="https://demo.ovatheme.com/aovis/movie-filter-ajax-2-template-1/">
@@ -703,7 +746,10 @@ function Header() {
                                                         <a href="https://demo.ovatheme.com/aovis/news/">
                                                             News
                                                         </a>
-                                                        <button className="dropdown-toggle"></button>
+                                                        <button
+                                                            className="dropdown-toggle"
+                                                            onClick={(e) => toggleSubMenu(e.target)}
+                                                        ></button>
                                                         <ul className="sub-menu">
                                                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2312">
                                                                 <a href="https://demo.ovatheme.com/aovis/news/">
@@ -750,7 +796,12 @@ function Header() {
                                                 </ul>
                                             </div>{' '}
                                         </nav>
-                                        <div className="site-overlay"></div>
+                                        <div
+                                            className="site-overlay"
+                                            onClick={(e) =>
+                                                e.target.parentElement.classList.remove('toggled')
+                                            }
+                                        ></div>
                                     </nav>
                                 </div>
                             </div>
@@ -769,10 +820,22 @@ function Header() {
                                 data-widget_type="aovis_elementor_search_popup.default"
                             >
                                 <div className="elementor-widget-container">
-                                    <div className="ova_wrap_search_popup">
+                                    <div
+                                        className="ova_wrap_search_popup"
+                                        onClick={(e) => {
+                                            e.target.parentElement.classList.toggle('show');
+                                        }}
+                                    >
                                         <i className="ovaicon ovaicon-search"></i>
                                         <div className="ova_search_popup">
-                                            <div className="search-popup__overlay"></div>
+                                            <div
+                                                className="search-popup__overlay"
+                                                onClick={(e) =>
+                                                    e.target.parentElement.parentElement.classList.remove(
+                                                        'show',
+                                                    )
+                                                }
+                                            ></div>
                                             <div className="container">
                                                 <form
                                                     role="search"
@@ -784,9 +847,10 @@ function Header() {
                                                         type="search"
                                                         className="search-field"
                                                         placeholder="Search …"
-                                                        value=""
+                                                        value={query}
                                                         name="s"
                                                         title="Search for:"
+                                                        onChange={(e) => setQuery(e.target.value)}
                                                     />
                                                     <button type="submit" className="search-submit">
                                                         <i className="ovaicon ovaicon-search"></i>
@@ -805,14 +869,11 @@ function Header() {
                             >
                                 <div className="elementor-widget-container">
                                     <div className="elementor-icon-wrapper">
-                                        <a
-                                            className="elementor-icon"
-                                            href="https://demo.ovatheme.com/aovis/my-account/"
-                                        >
+                                        <a className="elementor-icon" href="/my-account">
                                             <i
                                                 aria-hidden="true"
                                                 className="ovaicon ovaicon-user-1"
-                                            ></i>{' '}
+                                            ></i>
                                         </a>
                                     </div>
                                 </div>

@@ -6,9 +6,9 @@ function Layout() {
     return (
         <div className="App">
             <Header />
-            <div className="inside-content">
-                <Outlet />
-            </div>
+
+            <Outlet />
+
             <Footer />
         </div>
     );
