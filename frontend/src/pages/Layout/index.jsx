@@ -9,7 +9,7 @@ function Layout() {
 
             <Outlet />
 
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }
