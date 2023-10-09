@@ -1,0 +1,8 @@
+.contact-image {
+    mix-blend-mode: luminosity;
+    opacity: 0.1;
+    background-size: cover;
+}
+.info-block:hover {
+    border: 2px solid var(--primary);
+}
