@@ -1,30 +1,18 @@
-// import scss files
+// import css files
 @import './fonts';
 @import './icons';
 @import '../components/layouts/Header/header';
-@import '../components/commons/MovieSlider/movie-slider';
 @import '../pages/News/news';
 @import '../pages/Home/home';
 @import '../pages/Contact/contact';
-@import '../components/commons/MovieSlider/slick';
 @import './mixins';
 @import './item-template1';
 @import './item-template2';
 @import './ova-counter';
 @import './odometer';
 @import './custom-icon-button';
-@import '../components/commons/Feedbacks/feedbacks';
-@import '../components/commons/Feedbacks/owlcarousel';
-@import '../components/commons/Feedbacks/FeedbackItem/heading';
-@import '../components/commons/Feedbacks/FeedbackItem/testimonial';
-@import '../components/commons/ComingSoon/coming-soon';
 @import '../styles/logo';
 @import './form';
-@import '../components/commons/Banner/banner';
-@import '../components/commons/PostHeading/post-heading';
-@import '../components/commons/Posts/posts';
-@import '../components/commons/Posts/blog';
-@import '../components/commons/Promotion/promotion';
 @import './elementor';
 @import './responsive';
 @import './menu';
@@ -33,11 +21,19 @@
 @import './menu-canvas';
 @import './sticky';
 @import './slick';
-@import './movie-main-slider';
 @import './layout';
 @import './animations';
-@import './custom-icon';
 @import './menu-footer';
+@import './custom-class-primary-background';
+@import './blog';
+@import './icon-box';
+@import './testimonial';
+@import './heading';
+@import './video';
+@import './gallery-slide';
+@import './movie-main-slider';
+@import './movie-slider';
+@import './slick-theme';
 
 // common styles
 :root {
@@ -221,16 +217,6 @@ ul {
     margin: 1em 0;
 }
 
-// .inside-content {
-//     transition:
-//         background 0.3s,
-//         border 0.3s,
-//         border-radius 0.3s,
-//         box-shadow 0.3s;
-//     margin-top: -100px;
-//     margin-bottom: 0px;
-// }
-
 .row {
     width: 100%;
     margin: 0;
@@ -312,32 +298,12 @@ ul {
     transition: all 0.3s;
 }
 
-// .container {
-//     max-width: 100%;
-//     margin: 0 !important;
-//     padding: 0 !important;
-// }
-
-.container-1500 {
-    max-width: 1500px;
+.owl-carousel.template5 {
+    .owl-dot:not(.active) {
+        background-color: var(--primary) !important;
+        opacity: 0.3;
+    }
 }
-
-.container-1440 {
-    max-width: 1440px;
-}
-
-.container-1190 {
-    max-width: 1190px;
-}
-
-// [class^='container-'] {
-//     display: flex;
-//     margin-right: auto;
-//     margin-left: auto;
-//     position: relative;
-//     justify-content: center;
-//     align-items: center;
-// }
 
 .background-overlay,
 .background-slideshow {

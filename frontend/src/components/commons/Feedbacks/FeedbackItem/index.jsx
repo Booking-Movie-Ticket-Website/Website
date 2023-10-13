@@ -1,26 +1,21 @@
-function FeedbackItem() {
+import PropTypes from 'prop-types';
+
+function FeedbackItem({ content, src, name, job }) {
     return (
         <div className="item">
             <div className="wrap-content">
-                <p className="content">
-                    Proin a lacus arcu nullam id dui eu orci maximus. Cras at auctor lectus, vel
-                    pretium tellus. Class aptent sociosqu ad litora torquent per conubia nostra.
-                </p>
+                <p className="content">{content}</p>
 
                 <div className="author">
                     <div className="wrap-image-info">
                         <div className="image">
-                            <img
-                                decoding="async"
-                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-3-our-team.jpg"
-                                alt="Mike Hardson"
-                            />
+                            <img decoding="async" src={src} alt={name} />
                         </div>
 
                         <div className="info">
-                            <h3 className="name">Mike Hardson</h3>
+                            <h3 className="name">{name}</h3>
 
-                            <p className="job">Customer</p>
+                            <p className="job">{job}</p>
                         </div>
                     </div>
 
@@ -39,3 +34,10 @@ function FeedbackItem() {
 }
 
 export default FeedbackItem;
+
+FeedbackItem.propTypes = {
+    content: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
+};

@@ -44,6 +44,14 @@
     .elementor-159 .elementor-element.elementor-element-2222280 {
         width: 25%;
     }
+
+    .elementor-24 .elementor-element.elementor-element-3edd1e7 {
+        width: 42%;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-a746694 {
+        width: 58%;
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
@@ -135,6 +143,37 @@
         --e-column-margin-right: 0px;
         --e-column-margin-left: 0px;
     }
+
+    .elementor-24 .elementor-element.elementor-element-3edd1e7 > .elementor-element-populated {
+        margin: 0px 0px 40px 0px;
+        --e-column-margin-right: 0px;
+        --e-column-margin-left: 0px;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-2b260a3 {
+        font-size: 30px;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-2b260a3 > .elementor-widget-container {
+        margin: 0px 40px 15px 0px;
+    }
+
+    .elementor-24
+        .elementor-element.elementor-element-a451da2:not(
+            .elementor-motion-effects-element-type-background
+        )
+        > .elementor-widget-wrap,
+    .elementor-24
+        .elementor-element.elementor-element-a451da2
+        > .elementor-widget-wrap
+        > .elementor-motion-effects-container
+        > .elementor-motion-effects-layer {
+        background-position: 0px 0px;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-92615d1 {
+        padding: 0px 10px 0px 10px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 99999px) {
@@ -183,5 +222,26 @@
     .elementor-element-571e2f5,
     .elementor-element-fdd25bb {
         width: 50%;
+    }
+
+    .elementor-24
+        .elementor-element.elementor-element-a451da2:not(
+            .elementor-motion-effects-element-type-background
+        )
+        > .elementor-widget-wrap,
+    .elementor-24
+        .elementor-element.elementor-element-a451da2
+        > .elementor-widget-wrap
+        > .elementor-motion-effects-container
+        > .elementor-motion-effects-layer {
+        background-position: 0px 0px;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-a451da2 > .elementor-element-populated {
+        padding: 55px 20px 35px 25px;
+    }
+
+    .elementor-24 .elementor-element.elementor-element-4c26a0e {
+        text-align: center;
     }
 }

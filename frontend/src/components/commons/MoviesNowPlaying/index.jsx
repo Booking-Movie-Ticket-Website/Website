@@ -4,7 +4,7 @@ import MovieItem from './MovieItem';
 
 function MoviesNowPlaying() {
     useEffect(() => {
-        $('.owl-carousel').owlCarousel({
+        $('.owl-carousel.template1').owlCarousel({
             items: 4,
             slideBy: 1,
             margin: 20,
@@ -228,7 +228,7 @@ function MoviesNowPlaying() {
                                             data-widget_type="movie_slider.default"
                                         >
                                             <div className="elementor-widget-container">
-                                                <div className="mb-movie-slider mb-movie-slider-template1 owl-carousel owl-theme owl-drag">
+                                                <div className="mb-movie-slider mb-movie-slider-template1 template1 owl-carousel owl-theme owl-drag">
                                                     <MovieItem
                                                         title="The Fifth Day"
                                                         src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/movie-image-12-768x513.jpg"

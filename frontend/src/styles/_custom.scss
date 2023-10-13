@@ -17,7 +17,7 @@ $spacers: (
 
 $theme-colors: map-merge($custom-colors, $theme-colors);
 
-@import '/node_modules/bootstrap/scss/bootstrap';
+// @import '/node_modules/bootstrap/scss/bootstrap';
 
 @import '/node_modules/bootstrap/scss/functions';
 @import '/node_modules/bootstrap/scss/variables';

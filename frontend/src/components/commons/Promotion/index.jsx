@@ -1,77 +1,48 @@
 function Promotion() {
     return (
-        <section id="promotion">
-            <div className="container row">
-                <div className="col-4">
-                    <div className="widget-wrapper">
-                        <div className="widget-element">
-                            <div className="widget-container">
-                                <div className="ova-icon-box template2 ">
-                                    <div className="background bg-1"></div>
-                                    <div className="overlay"></div>
-
-                                    <div className="content">
-                                        <h3 className="title">
-                                            Top 6 Movies in <br /> Theaters
-                                        </h3>
-                                    </div>
-
-                                    <span className="icon">
-                                        <i
-                                            aria-hidden="true"
-                                            className="flaticon flaticon-clapperboard"
-                                        ></i>
-                                    </span>
-                                </div>
+        <section
+            id="promotion"
+            className="elementor-section elementor-top-section elementor-element elementor-element-92615d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            data-id="92615d1"
+            data-element_type="section"
+        >
+            <div className="elementor-container elementor-column-gap-default">
+                <div
+                    className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a451da2 ova-column-primary-background "
+                    data-id="a451da2"
+                    data-element_type="column"
+                    data-settings='{"background_background":"classic"}'
+                >
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                        <div className="elementor-background-overlay"></div>
+                        <div
+                            className="elementor-element elementor-element-2b260a3 elementor-widget__width-auto elementor-widget elementor-widget-text-editor"
+                            data-id="2b260a3"
+                            data-element_type="widget"
+                            data-widget_type="text-editor.default"
+                        >
+                            <div className="elementor-widget-container">
+                                40% Discount for Students{' '}
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="col-4">
-                    <div className="widget-wrapper" style={{ padding: '0 2px' }}>
-                        <div className="widget-element">
-                            <div className="widget-container">
-                                <div className="ova-icon-box template2 ">
-                                    <div className="background bg-2"></div>
-                                    <div className="overlay primary"></div>
-
-                                    <div className="content">
-                                        <h3 className="title">
-                                            Watching Coming <br /> Soon Movies
-                                        </h3>
-                                    </div>
-
-                                    <span className="icon">
-                                        <i
-                                            aria-hidden="true"
-                                            className="flaticon flaticon-film"
-                                        ></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-4">
-                    <div className="widget-wrapper">
-                        <div className="widget-element">
-                            <div className="widget-container">
-                                <div className="ova-icon-box template2 ">
-                                    <div className="background bg-3"></div>
-                                    <div className="overlay"></div>
-
-                                    <div className="content">
-                                        <h3 className="title">
-                                            Hot Movies Trailers <br /> Live Now
-                                        </h3>
-                                    </div>
-
-                                    <span className="icon">
-                                        <i
-                                            aria-hidden="true"
-                                            className="flaticon flaticon-video-camera"
-                                        ></i>
-                                    </span>
+                        <div
+                            className="elementor-element elementor-element-fd99c8e elementor-widget__width-auto elementor-widget elementor-widget-button"
+                            data-id="fd99c8e"
+                            data-element_type="widget"
+                            data-widget_type="button.default"
+                        >
+                            <div className="elementor-widget-container">
+                                <div className="elementor-button-wrapper">
+                                    <a
+                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        href="#"
+                                    >
+                                        <span className="elementor-button-content-wrapper">
+                                            <span className="elementor-button-text">
+                                                Book Your Ticket
+                                            </span>
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

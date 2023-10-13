@@ -1,11 +1,25 @@
-function Posts() {
+function PostContent() {
     return (
-        <section id="posts">
-            <div className="container-1190 row">
-                <div className="col">
-                    <div className="widget-wrapper">
-                        <div className="widget-element">
-                            <div className="widget-container">
+        <section
+            id="post-content"
+            className="elementor-section elementor-top-section elementor-element elementor-element-d6d3eaf elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            data-id="d6d3eaf"
+            data-element_type="section"
+        >
+            <div className="elementor-container elementor-column-gap-no">
+                <div
+                    className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b5ae5da"
+                    data-id="b5ae5da"
+                    data-element_type="column"
+                >
+                    <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                            className="elementor-element elementor-element-f938164 elementor-widget elementor-widget-aovis_elementor_blog"
+                            data-id="f938164"
+                            data-element_type="widget"
+                            data-widget_type="aovis_elementor_blog.default"
+                        >
+                            <div className="elementor-widget-container">
                                 <ul className="ova-blog ova-column_3">
                                     <li className="item">
                                         <div className="media">
@@ -29,6 +43,7 @@ function Posts() {
                                                 <span className="date"> 23 Mar, 2023 </span>
                                             </div>
                                         </div>
+
                                         <div className="content">
                                             <ul className="post-meta">
                                                 <li className="item-meta wp-author">
@@ -55,7 +70,7 @@ function Posts() {
 
                                                 <li className="item-meta  post-comment">
                                                     <span className="left comment">
-                                                        <i className="fas fa-comments"></i>{' '}
+                                                        <i className="fas fa-comments"></i>
                                                     </span>
                                                     <span className="right comment">
                                                         <a
@@ -89,14 +104,14 @@ function Posts() {
                                         <div className="media">
                                             <div className="box-img">
                                                 <a
-                                                    href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/"
+                                                    href="https://demo.ovatheme.com/aovis/the-foreign-oscar-nominations/"
                                                     rel="bookmark"
-                                                    title="See Meila enjoyable capturing moment"
+                                                    title="The Foreign Oscar Nominations 2023"
                                                 >
                                                     <img
                                                         decoding="async"
-                                                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/blog-4.jpg"
-                                                        alt="See Meila enjoyable capturing moment"
+                                                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/blog-5.jpg"
+                                                        alt="The Foreign Oscar Nominations 2023"
                                                     />
                                                 </a>
 
@@ -107,6 +122,7 @@ function Posts() {
                                                 <span className="date"> 23 Mar, 2023 </span>
                                             </div>
                                         </div>
+
                                         <div className="content">
                                             <ul className="post-meta">
                                                 <li className="item-meta wp-author">
@@ -133,11 +149,11 @@ function Posts() {
 
                                                 <li className="item-meta  post-comment">
                                                     <span className="left comment">
-                                                        <i className="fas fa-comments"></i>{' '}
+                                                        <i className="fas fa-comments"></i>
                                                     </span>
                                                     <span className="right comment">
                                                         <a
-                                                            href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/#respond"
+                                                            href="https://demo.ovatheme.com/aovis/the-foreign-oscar-nominations/#respond"
                                                             className="Comments"
                                                         >
                                                             0 Comments
@@ -148,16 +164,16 @@ function Posts() {
 
                                             <h2 className="post-title">
                                                 <a
-                                                    href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/"
+                                                    href="https://demo.ovatheme.com/aovis/the-foreign-oscar-nominations/"
                                                     rel="bookmark"
-                                                    title="See Meila enjoyable capturing moment"
+                                                    title="The Foreign Oscar Nominations 2023"
                                                 >
-                                                    See Meila enjoyable capturing moment{' '}
+                                                    The Foreign Oscar Nominations 2023{' '}
                                                 </a>
                                             </h2>
 
                                             <div className="read-more">
-                                                <a href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/">
+                                                <a href="https://demo.ovatheme.com/aovis/the-foreign-oscar-nominations/">
                                                     Read More
                                                 </a>
                                             </div>
@@ -167,14 +183,14 @@ function Posts() {
                                         <div className="media">
                                             <div className="box-img">
                                                 <a
-                                                    href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/"
+                                                    href="https://demo.ovatheme.com/aovis/upcoming-new-season-5-just-flow-in/"
                                                     rel="bookmark"
-                                                    title="See Meila enjoyable capturing moment"
+                                                    title="Upcoming New Season 5 Just Flow in !"
                                                 >
                                                     <img
                                                         decoding="async"
-                                                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/blog-4.jpg"
-                                                        alt="See Meila enjoyable capturing moment"
+                                                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/blog-6.jpg"
+                                                        alt="Upcoming New Season 5 Just Flow in !"
                                                     />
                                                 </a>
 
@@ -185,6 +201,7 @@ function Posts() {
                                                 <span className="date"> 23 Mar, 2023 </span>
                                             </div>
                                         </div>
+
                                         <div className="content">
                                             <ul className="post-meta">
                                                 <li className="item-meta wp-author">
@@ -211,11 +228,11 @@ function Posts() {
 
                                                 <li className="item-meta  post-comment">
                                                     <span className="left comment">
-                                                        <i className="fas fa-comments"></i>{' '}
+                                                        <i className="fas fa-comments"></i>
                                                     </span>
                                                     <span className="right comment">
                                                         <a
-                                                            href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/#respond"
+                                                            href="https://demo.ovatheme.com/aovis/upcoming-new-season-5-just-flow-in/#respond"
                                                             className="Comments"
                                                         >
                                                             0 Comments
@@ -226,16 +243,16 @@ function Posts() {
 
                                             <h2 className="post-title">
                                                 <a
-                                                    href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/"
+                                                    href="https://demo.ovatheme.com/aovis/upcoming-new-season-5-just-flow-in/"
                                                     rel="bookmark"
-                                                    title="See Meila enjoyable capturing moment"
+                                                    title="Upcoming New Season 5 Just Flow in !"
                                                 >
-                                                    See Meila enjoyable capturing moment{' '}
+                                                    Upcoming New Season 5 Just Flow in !{' '}
                                                 </a>
                                             </h2>
 
                                             <div className="read-more">
-                                                <a href="https://demo.ovatheme.com/aovis/see-meila-enjoyable-capturing-moment/">
+                                                <a href="https://demo.ovatheme.com/aovis/upcoming-new-season-5-just-flow-in/">
                                                     Read More
                                                 </a>
                                             </div>
@@ -251,4 +268,4 @@ function Posts() {
     );
 }
 
-export default Posts;
+export default PostContent;

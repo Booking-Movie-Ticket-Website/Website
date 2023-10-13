@@ -60,19 +60,19 @@ function MovieSlider() {
                     <MovieSlick
                         src={banner1}
                         title="Wrong Turns Part 2"
-                        category="Thriller"
+                        category="Thriller Movie"
                         director="Aleesha Rose / Ireland 2023"
                     />
                     <MovieSlick
                         src={banner2}
                         title="The Witcher Season 2"
-                        category="Action"
+                        category="Action Movie"
                         director="Aleesha Rose / Ireland 2023"
                     />
                     <MovieSlick
                         src={banner3}
                         title="Love Nightmare"
-                        category="Adventure"
+                        category="Adventure Movie"
                         director="Aleesha Rose / Ireland 2023"
                     />
                 </Slider>

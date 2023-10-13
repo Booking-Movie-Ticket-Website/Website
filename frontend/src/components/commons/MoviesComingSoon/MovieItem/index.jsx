@@ -1,37 +1,29 @@
-function ComingSoonItem() {
+import PropTypes from 'prop-types';
+
+function MovieItem({ title, src, duration, category }) {
     return (
         <div className="mb-movie-item item-template1">
-            <a href="https://demo.ovatheme.com/aovis/movie/into-the-wild/" title="Into the Wild">
+            <a href="/into-the-wild/" title={title}>
                 <div className="movie-image">
-                    <img
-                        decoding="async"
-                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/movie-image-11-768x514.jpg"
-                        alt="Into the Wild"
-                    />
+                    <img decoding="async" src={src} alt={title} />
                 </div>
             </a>
 
             <div className="movie-info">
                 <div className="categories-and-time">
                     <div className="movie-category">
-                        <a
-                            href="https://demo.ovatheme.com/aovis/movie_cat/adventure/"
-                            title="Adventure"
-                        >
-                            Adventure
+                        <a href="/movie_cat/adventure" title={category}>
+                            {category}
                         </a>{' '}
                     </div>
 
                     <div className="separator">/</div>
 
-                    <span className="running-time">190 Mins</span>
+                    <span className="running-time">{duration} Mins</span>
                 </div>
 
-                <a
-                    href="https://demo.ovatheme.com/aovis/movie/into-the-wild/"
-                    title="Into the Wild"
-                >
-                    <h3 className="movie-title">Into the Wild </h3>
+                <a href="https://demo.ovatheme.com/aovis/movie/into-the-wild/" title={title}>
+                    <h3 className="movie-title">{title} </h3>
                 </a>
 
                 <div className="has-trailer">
@@ -49,4 +41,11 @@ function ComingSoonItem() {
     );
 }
 
-export default ComingSoonItem;
+export default MovieItem;
+
+MovieItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    duration: PropTypes.number.isRequired,
+    category: PropTypes.string.isRequired,
+};

@@ -1,8 +1,15 @@
-// import MovieSlider from '~/components/commons/MovieSlider';
-
+import Banner from '~/components/commons/Banner';
+import Documentary from '~/components/commons/Documentary';
+import Feedbacks from '~/components/commons/Feedbacks';
 import LinesHeader from '~/components/commons/LinesHeader';
 import MovieSlider from '~/components/commons/MovieSlider';
+import MoviesComingSoon from '~/components/commons/MoviesComingSoon';
 import MoviesNowPlaying from '~/components/commons/MoviesNowPlaying';
+import PhotoGallery from '~/components/commons/PhotoGallery';
+import PhotoGalleryHeading from '~/components/commons/PhotoGalleryHeading';
+import PostContent from '~/components/commons/PostContent';
+import PostHeading from '~/components/commons/PostHeading';
+import Promotion from '~/components/commons/Promotion';
 import TopFeaturedMovies from '~/components/commons/TopFeaturedMovies';
 
 function Home() {
@@ -45,6 +52,15 @@ function Home() {
             <LinesHeader />
             <MoviesNowPlaying />
             <TopFeaturedMovies />
+            <Documentary />
+            <PhotoGalleryHeading />
+            <PhotoGallery />
+            <Feedbacks />
+            <MoviesComingSoon />
+            <Promotion />
+            <PostHeading />
+            <PostContent />
+            <Banner />
         </div>
     );
 }

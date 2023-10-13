@@ -22,11 +22,12 @@ function MovieItem() {
                 <div className="categories-and-time">
                     <div className="movie-category">
                         <a href="https://demo.ovatheme.com/aovis/movie_cat/comedy/" title="Comedy">
+                            {' '}
                             Comedy
                         </a>{' '}
                     </div>
 
-                    <span className="running-time">180 Mins</span>
+                    <span className="running-time"> 180 Mins</span>
                 </div>
 
                 <div className="button-wrapper">

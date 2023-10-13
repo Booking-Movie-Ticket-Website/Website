@@ -3,7 +3,7 @@ import $ from 'jquery';
 import { useEffect } from 'react';
 function TopFeaturedMovies() {
     useEffect(() => {
-        $('.owl-carousel').owlCarousel({
+        $('.owl-carousel.template2').owlCarousel({
             items: 3,
             slideBy: 1,
             margin: 20,
@@ -14,6 +14,17 @@ function TopFeaturedMovies() {
             smartSpeed: 500,
             dots: true,
             nav: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                1250: {
+                    items: 3,
+                },
+            },
         });
     }, []);
 
@@ -106,7 +117,7 @@ function TopFeaturedMovies() {
                             data-widget_type="movie_slider.default"
                         >
                             <div className="elementor-widget-container">
-                                <div className="mb-movie-slider mb-movie-slider-template2 owl-carousel owl-theme owl-drag">
+                                <div className="mb-movie-slider mb-movie-slider-template2 template2 owl-carousel owl-theme owl-drag">
                                     <MovieItem />
                                     <MovieItem />
                                     <MovieItem />
