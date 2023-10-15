@@ -7,7 +7,6 @@ function Layout() {
         <div className="App">
             <div className="inside-content">
                 <Header />
-
                 <Outlet />
             </div>
             <div className="wrap_footer">
