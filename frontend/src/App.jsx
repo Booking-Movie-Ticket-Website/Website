@@ -6,6 +6,8 @@ import NoPage from './pages/NoPage';
 import Contact from './pages/Contact';
 import $ from 'jquery';
 import MyAccount from './pages/MyAccount';
+import MoviesAll from './pages/MoviesAll';
+import MovieDetail from './pages/MovieDetail';
 window.$ = $;
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
                     <Route path="news" element={<News />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="my-account" element={<MyAccount />} />
+                    <Route path="movies-all" element={<MoviesAll />} />
+                    <Route path="movie/*" element={<MovieDetail />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
             </Routes>
