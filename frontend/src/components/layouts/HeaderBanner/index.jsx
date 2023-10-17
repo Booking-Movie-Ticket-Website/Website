@@ -1,5 +1,5 @@
 function HeaderBanner() {
-    const routerName = window.location.pathname.substring(1).replace('-', ' ');
+    const routerName = window.location.pathname.substring(1).replaceAll('-', ' ');
     return (
         <section
             className="elementor-section elementor-top-section elementor-element elementor-element-4c25947 elementor-section-full_width elementor-section-height-default elementor-section-height-default"

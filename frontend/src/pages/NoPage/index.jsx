@@ -31,7 +31,7 @@ function NoPage() {
                     </form>
 
                     <div className="btn-back-home">
-                        <a href="https://demo.ovatheme.com/aovis/">Back to Home </a>
+                        <a href="/">Back to Home </a>
                     </div>
                 </div>
             </div>

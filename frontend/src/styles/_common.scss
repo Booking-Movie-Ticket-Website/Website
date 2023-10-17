@@ -2,9 +2,7 @@
 @import './fonts';
 @import './icons';
 @import '../components/layouts/Header/header';
-@import '../pages/News/news';
 @import '../pages/Home/home';
-@import '../pages/Contact/contact';
 @import './mixins';
 @import './item-template1';
 @import './item-template2';
@@ -44,6 +42,9 @@
 @import './single';
 @import './movie-cast-list';
 @import './404';
+@import './contact-info';
+@import './widgets';
+@import './latest-posts';
 
 // common styles
 :root {
@@ -252,7 +253,7 @@ ul {
     width: 25%;
 }
 
-.cs-btn,
+.btn,
 .button {
     border-radius: 0px;
     padding: 12px 25px;
