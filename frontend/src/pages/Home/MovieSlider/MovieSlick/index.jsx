@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom/client';
+import BookingTicket from '~/components/commons/BookingTicket';
 
 function MovieSlick({ src, category, title, director }) {
+    const openPortal = () => {
+        const portalRoot = document.getElementById('mb_booking_popup');
+        portalRoot.style.display = 'block';
+        ReactDOM.createRoot(portalRoot).render(<BookingTicket />);
+    };
+
     return (
         <div className="movie-main-item-wrapper" style={{ width: '100%', display: 'inline-block' }}>
             <img
@@ -77,7 +85,12 @@ function MovieSlick({ src, category, title, director }) {
                             </button>
                         </a>
 
-                        <button className="cs-btn btn-booking" data-movie-id="842" tabIndex="-1">
+                        <button
+                            onClick={openPortal}
+                            className="cs-btn btn-booking"
+                            data-movie-id="842"
+                            tabIndex="-1"
+                        >
                             Get Ticket{' '}
                         </button>
                     </div>

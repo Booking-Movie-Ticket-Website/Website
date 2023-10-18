@@ -1,8 +1,6 @@
 // import css files
 @import './fonts';
 @import './icons';
-@import '../components/layouts/Header/header';
-@import '../pages/Home/home';
 @import './mixins';
 @import './item-template1';
 @import './item-template2';
@@ -45,6 +43,8 @@
 @import './contact-info';
 @import './widgets';
 @import './latest-posts';
+@import './booking-popup';
+@import './watch-trailer-button';
 
 // common styles
 :root {

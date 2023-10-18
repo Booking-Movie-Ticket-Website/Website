@@ -1,16 +1,16 @@
-import Banner from '~/components/commons/Banner';
-import Documentary from '~/components/commons/Documentary';
-import Feedbacks from '~/components/commons/Feedbacks';
-import LinesHeader from '~/components/commons/LinesHeader';
-import MovieSlider from '~/components/commons/MovieSlider';
-import MoviesComingSoon from '~/components/commons/MoviesComingSoon';
-import MoviesNowPlaying from '~/components/commons/MoviesNowPlaying';
-import PhotoGallery from '~/components/commons/PhotoGallery';
-import PhotoGalleryHeading from '~/components/commons/PhotoGalleryHeading';
-import PostContent from '~/components/commons/PostContent';
-import PostHeading from '~/components/commons/PostHeading';
-import Promotion from '~/components/commons/Promotion';
-import TopFeaturedMovies from '~/components/commons/TopFeaturedMovies';
+import Banner from './Banner';
+import Documentary from './Documentary';
+import Feedbacks from './Feedbacks';
+import LinesHeader from './LinesHeader';
+import MovieSlider from './MovieSlider';
+import MoviesComingSoon from './MoviesComingSoon';
+import MoviesNowPlaying from './MoviesNowPlaying';
+import PhotoGallery from './PhotoGallery';
+import PhotoGalleryHeading from './PhotoGalleryHeading';
+import PostContent from './PostContent';
+import PostHeading from './PostHeading';
+import Promotion from './Promotion';
+import TopFeaturedMovies from './TopFeaturedMovies';
 
 function Home() {
     return (
