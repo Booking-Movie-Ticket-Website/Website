@@ -109,9 +109,7 @@ function Form() {
                                 </button>
                             </p>
                             <p className="woocommerce-LostPassword lost_password">
-                                <a href="https://demo.ovatheme.com/aovis/my-account/lost-password/">
-                                    Forgot your password?
-                                </a>
+                                <a href="/lost-password">Forgot your password?</a>
                             </p>
                         </form>
                     </div>
@@ -147,7 +145,7 @@ function Form() {
                                     throughout this website, to manage access to your account, and
                                     for other purposes described in our{' '}
                                     <a
-                                        href="https://demo.ovatheme.com/aovis/privacy-policy/"
+                                        href="privacy-policy"
                                         className="woocommerce-privacy-policy-link"
                                         rel="noreferrer"
                                         target="_blank"

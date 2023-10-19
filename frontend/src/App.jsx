@@ -8,6 +8,9 @@ import $ from 'jquery';
 import MyAccount from './pages/MyAccount';
 import MoviesAll from './pages/MoviesAll';
 import MovieDetail from './pages/MovieDetail';
+import LostPassword from './pages/LostPassword';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import NewsDetail from './pages/NewsDetail';
 window.$ = $;
 
 function App() {
@@ -18,8 +21,11 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />} />
                         <Route path="news" element={<News />} />
+                        <Route path="news/*" element={<NewsDetail />} />
                         <Route path="contact" element={<Contact />} />
                         <Route path="my-account" element={<MyAccount />} />
+                        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                        <Route path="lost-password" element={<LostPassword />} />
                         <Route path="movies-all" element={<MoviesAll />} />
                         <Route path="movie/*" element={<MovieDetail />} />
                         <Route path="*" element={<NoPage />} />
