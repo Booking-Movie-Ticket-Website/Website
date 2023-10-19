@@ -63,11 +63,12 @@
                 margin-bottom: 5px;
                 .left {
                     color: var(--primary);
-                    margin-right: 3px;
+                    margin-right: 5px;
                 }
                 .right {
                     a {
                         color: var(--text);
+                        margin-right: 5px;
                         &:hover {
                             color: var(--primary);
                         }

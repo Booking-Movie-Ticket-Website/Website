@@ -3,7 +3,8 @@ import { Outlet } from 'react-router-dom';
 import Footer from '~/components/layouts/Footer';
 import HeaderBanner from '~/components/layouts/HeaderBanner';
 import HeaderSeparator from '~/components/layouts/HeaderSeparator';
-
+import SecondaryHeader from '~/components/layouts/SecondaryHeader';
+import Breadcrumb from '~/components/layouts/Breadcrumbs';
 function Layout() {
     return (
         <div className="App">
@@ -18,6 +19,24 @@ function Layout() {
                             <Header />
                         </div>
                         <Outlet />
+                    </>
+                ) : window.location.pathname === '/blogs' ? (
+                    <>
+                        <div
+                            data-elementor-type="wp-post"
+                            data-elementor-id="108"
+                            className="elementor elementor-108"
+                        >
+                            <SecondaryHeader />
+                            <Breadcrumb />
+                        </div>
+                        <div
+                            data-elementor-type="wp-page"
+                            data-elementor-id="4156"
+                            className="elementor elementor-4156"
+                        >
+                            <Outlet />
+                        </div>
                     </>
                 ) : (
                     <>
