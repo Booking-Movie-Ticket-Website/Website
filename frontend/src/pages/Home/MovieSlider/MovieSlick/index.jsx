@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom/client';
-import BookingTicket from '~/components/commons/BookingTicket';
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 
 function MovieSlick({ src, category, title, director }) {
-    const openPortal = () => {
-        const portalRoot = document.getElementById('mb_booking_popup');
-        portalRoot.style.display = 'block';
-        ReactDOM.createRoot(portalRoot).render(<BookingTicket />);
+    console.log('render');
+    const dispatch = useDispatch();
+    const handleOpenModal = () => {
+        dispatch(openModal('3024'));
     };
-
     return (
         <div className="movie-main-item-wrapper" style={{ width: '100%', display: 'inline-block' }}>
             <img
@@ -17,7 +16,6 @@ function MovieSlick({ src, category, title, director }) {
                 style={{ visibility: 'visible', opacity: '1' }}
                 src={src}
             />
-
             <div className="movie-social-sharing">
                 <span className="text-share">Share</span>
                 <span className="line"></span>
@@ -86,7 +84,7 @@ function MovieSlick({ src, category, title, director }) {
                         </a>
 
                         <button
-                            onClick={openPortal}
+                            onClick={handleOpenModal}
                             className="cs-btn btn-booking"
                             data-movie-id="842"
                             tabIndex="-1"

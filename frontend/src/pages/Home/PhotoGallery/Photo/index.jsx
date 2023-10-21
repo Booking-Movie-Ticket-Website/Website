@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function Photo({ src }) {
     return (
         <div className="gallery-box ">
-            <a className="gallery-fancybox" data-index="1" href="javascript:;">
+            <a className="gallery-fancybox" data-index="1">
                 <div className="list-gallery">
                     <div className="decor-line-1"></div>
 

@@ -437,7 +437,6 @@ function Footer() {
                                                                             name="_mc4wp_lists[]"
                                                                             type="checkbox"
                                                                             value="Ovatheme"
-                                                                            checked="true"
                                                                         />{' '}
                                                                         <span>Ovatheme</span>
                                                                     </label>
