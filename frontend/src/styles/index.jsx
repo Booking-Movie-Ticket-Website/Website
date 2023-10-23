@@ -1,8 +1,7 @@
-import "./_common.scss";
-import "./_custom.scss";
+import './_common.scss';
 
 function Styles({ children }) {
-  return children;
+    return children;
 }
 
 export default Styles;

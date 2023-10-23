@@ -11,6 +11,7 @@ import MovieDetail from './pages/MovieDetail';
 import LostPassword from './pages/LostPassword';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NewsDetail from './pages/NewsDetail';
+import CartMovies from './pages/CartMovies';
 window.$ = $;
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                         <Route path="movies-all" element={<MoviesAll />} />
                         <Route path="movie/*" element={<MovieDetail />} />
                         <Route path="*" element={<NoPage />} />
+                        <Route path="cart-movies" element={<CartMovies />} />
                     </Route>
                 </Routes>
             </Router>
