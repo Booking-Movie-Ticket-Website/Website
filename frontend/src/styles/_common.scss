@@ -465,4 +465,19 @@ ul {
     border: 0;
 }
 
+.tippy-box {
+    border-radius: 8px;
+    background-color: rgb(34, 34, 34);
+}
+
+.tippy-content {
+    padding: 15px;
+
+    p {
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+}
+
 // end of common styles

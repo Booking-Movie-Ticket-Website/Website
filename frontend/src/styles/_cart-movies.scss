@@ -7,6 +7,17 @@
     z-index: 2;
 }
 
+.imp-object {
+    &:hover {
+        background-color: blue;
+        opacity: 0.5;
+    }
+}
+
+.imp-object.booked {
+    pointer-events: none;
+}
+
 .imp-scale {
     transform: scale(1, 1) translate(0, 0);
     transform-origin: 0% 0%;
