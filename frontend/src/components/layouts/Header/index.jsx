@@ -79,44 +79,11 @@ function Header() {
                                             <ul id="menu-primary-menu" className="menu">
                                                 <li
                                                     id="menu-item-56"
-                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-56"
+                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-56"
                                                 >
-                                                    <a
-                                                        href="https://demo.ovatheme.com/aovis/"
-                                                        aria-current="page"
-                                                    >
+                                                    <a href="/" aria-current="page">
                                                         Home
                                                     </a>
-                                                    <button className="dropdown-toggle"></button>
-                                                    <ul className="sub-menu">
-                                                        <li
-                                                            id="menu-item-2298"
-                                                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-24 current_page_item menu-item-2298"
-                                                        >
-                                                            <a
-                                                                href="https://demo.ovatheme.com/aovis/"
-                                                                aria-current="page"
-                                                            >
-                                                                Home 1
-                                                            </a>
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-63"
-                                                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"
-                                                        >
-                                                            <a href="https://demo.ovatheme.com/aovis/home-2/">
-                                                                Home 2
-                                                            </a>
-                                                        </li>
-                                                        <li
-                                                            id="menu-item-64"
-                                                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"
-                                                        >
-                                                            <a href="https://demo.ovatheme.com/aovis/home-3/">
-                                                                Home 3
-                                                            </a>
-                                                        </li>
-                                                    </ul>
                                                 </li>
                                                 <li
                                                     id="menu-item-2310"

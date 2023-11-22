@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react';
 import Seat from './Seat';
 import { vipSeats, premiumSeats, specialSeats, standardSeats, bookedList } from './seats';
 
+const discountCode = 'discount';
+
 function CartMovies() {
     const [bookingList, setBookingList] = useState([]);
     const [isBooking, setBooking] = useState(false);
+    const [visibleForm, setVisibleForm] = useState(false);
+    const [error, setError] = useState(false);
+    const [discountValue, setDiscountValue] = useState('');
 
     const updatedBookingList = (newBookingSeat) => {
         if (!isBooking) setBooking(true);
@@ -16,6 +21,13 @@ function CartMovies() {
                 return [...prev, newBookingSeat];
             }
         });
+    };
+
+    const handleApplyDiscountCode = (discountValue) => {
+        if (discountValue === discountCode) setError(false);
+        else {
+            setError(true);
+        }
     };
 
     useEffect(() => {
@@ -456,18 +468,26 @@ function CartMovies() {
                                                 <a
                                                     className="cart-discount-btn"
                                                     href="javascript:void(0)"
+                                                    onClick={() => setVisibleForm(true)}
+                                                    style={{ display: visibleForm ? 'none' : '' }}
                                                 >
                                                     Enter Discount Code
                                                 </a>
                                                 <div
                                                     className="form-discount"
-                                                    style={{ display: 'none' }}
+                                                    style={{
+                                                        display: visibleForm ? 'flex' : 'none',
+                                                    }}
                                                 >
                                                     <div className="input-discount-code">
                                                         <input
                                                             type="text"
                                                             className="discount-code"
                                                             placeholder="DISCOUNT CODE"
+                                                            value={discountValue}
+                                                            onChange={(e) =>
+                                                                setDiscountValue(e.target.value)
+                                                            }
                                                         />
                                                         <i
                                                             className="dashicons-before dashicons-update-alt"
@@ -477,16 +497,22 @@ function CartMovies() {
                                                     <button
                                                         data-movie-id="842"
                                                         className="cart-discount-submit-code"
+                                                        onClick={() =>
+                                                            handleApplyDiscountCode(discountValue)
+                                                        }
                                                     >
                                                         Apply{' '}
                                                     </button>
                                                     <i
                                                         className="fas fa-times"
                                                         id="cart-discount-close"
+                                                        onClick={() => setVisibleForm(false)}
                                                     ></i>
                                                     <p
                                                         className="error"
-                                                        style={{ display: 'block' }}
+                                                        style={{
+                                                            display: error ? 'block' : 'none',
+                                                        }}
                                                     >
                                                         Invalid Discount Code
                                                     </p>
