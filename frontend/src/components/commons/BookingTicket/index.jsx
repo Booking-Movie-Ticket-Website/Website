@@ -10,7 +10,6 @@ function BookingTicket() {
             dispatch(closeModal());
         }
     };
-    console.log(movieId);
 
     return (
         isModalOpen && (

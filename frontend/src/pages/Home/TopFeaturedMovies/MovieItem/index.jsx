@@ -1,22 +1,17 @@
-function MovieItem() {
+/* eslint-disable react/prop-types */
+
+function MovieItem({ data }) {
     return (
         <div className="mb-movie-item item-template2">
-            <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title="The Fifth Day">
+            <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={data.name}>
                 <div className="movie-image">
-                    <img
-                        decoding="async"
-                        src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/03/movie-image-12-768x513.jpg"
-                        alt="The Fifth Day"
-                    />
+                    <img decoding="async" src={data.moviePosters[0].link} alt="The Fifth Day" />
                 </div>
             </a>
 
             <div className="movie-info">
-                <a
-                    href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/"
-                    title="The Fifth Day"
-                >
-                    <h3 className="movie-title">The Fifth Day </h3>
+                <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={data.name}>
+                    <h3 className="movie-title">{data.name}</h3>
                 </a>
 
                 <div className="categories-and-time">
@@ -27,7 +22,7 @@ function MovieItem() {
                         </a>{' '}
                     </div>
 
-                    <span className="running-time"> 180 Mins</span>
+                    <span className="running-time"> {data.duration} Mins</span>
                 </div>
 
                 <div className="button-wrapper">

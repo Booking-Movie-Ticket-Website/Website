@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
+import getMonthName from '~/utils/getMonthName';
 
-function MovieSlick({ src, category, title, director }) {
-    console.log('render');
+function MovieSlick({ src, category, title, director, releaseDate }) {
     const dispatch = useDispatch();
     const handleOpenModal = () => {
         dispatch(openModal('3024'));
@@ -62,7 +62,9 @@ function MovieSlick({ src, category, title, director }) {
             <div className="movie-main-item-container row_site">
                 <div className="movie-release">
                     <span className="text">In theater</span>
-                    <h3 className="time">March 2023</h3>
+                    <h3 className="time">
+                        {getMonthName(releaseDate.slice(5, 7))} {releaseDate.slice(0, 4)}
+                    </h3>
                 </div>
 
                 <div className="movie-main-item">
@@ -103,6 +105,7 @@ MovieSlick.propTypes = {
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     director: PropTypes.string.isRequired,
+    releaseDate: PropTypes.string.isRequired,
 };
 
 export default MovieSlick;

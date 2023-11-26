@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import logo from '~/assets/images/logo.png';
 
 function Header() {
     const [query, setQuery] = useState('');
@@ -33,12 +34,12 @@ function Header() {
                                     <div className="brand_el">
                                         <a href="/ ">
                                             <img
-                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
+                                                src={logo}
                                                 alt="Aovis – Film &amp; Movie Booking"
                                                 className="logo_desktop"
                                                 style={{ width: '108px', height: 'auto' }}
                                             />
-
+                                            {/* 
                                             <img
                                                 src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
                                                 alt="Aovis – Film &amp; Movie Booking"
@@ -51,7 +52,7 @@ function Header() {
                                                 alt="Aovis – Film &amp; Movie Booking"
                                                 className="logo_sticky"
                                                 style={{ width: '108px', height: 'auto' }}
-                                            />
+                                            /> */}
                                         </a>
                                     </div>
                                 </div>

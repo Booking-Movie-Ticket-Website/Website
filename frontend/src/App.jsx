@@ -12,6 +12,9 @@ import LostPassword from './pages/LostPassword';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NewsDetail from './pages/NewsDetail';
 import CartMovies from './pages/CartMovies';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 window.$ = $;
 
 function App() {
@@ -33,6 +36,7 @@ function App() {
                         <Route path="cart-movies" element={<CartMovies />} />
                     </Route>
                 </Routes>
+                <ToastContainer />
             </Router>
         </>
     );
