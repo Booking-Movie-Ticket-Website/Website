@@ -86,7 +86,9 @@ function MoviesComingSoon({ data }) {
                                                 key={item.id}
                                                 title={item.name}
                                                 src={item.moviePosters[0].link}
-                                                category="Adventure"
+                                                category={item.movieCategories
+                                                    .map((movie) => movie.category.name)
+                                                    .join(', ')}
                                                 duration={item.duration}
                                             />
                                         ))}

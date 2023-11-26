@@ -32,27 +32,13 @@ function Header() {
                             <div className="elementor-element elementor-element-f2fecd8 elementor-widget elementor-widget-ova_logo">
                                 <div className="elementor-widget-container">
                                     <div className="brand_el">
-                                        <a href="/ ">
+                                        <a href="/">
                                             <img
                                                 src={logo}
                                                 alt="Aovis – Film &amp; Movie Booking"
                                                 className="logo_desktop"
-                                                style={{ width: '108px', height: 'auto' }}
+                                                style={{ width: '200px', height: 'auto' }}
                                             />
-                                            {/* 
-                                            <img
-                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                alt="Aovis – Film &amp; Movie Booking"
-                                                className="logo_mobile"
-                                                style={{ width: '108px', height: 'auto' }}
-                                            />
-
-                                            <img
-                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                alt="Aovis – Film &amp; Movie Booking"
-                                                className="logo_sticky"
-                                                style={{ width: '108px', height: 'auto' }}
-                                            /> */}
                                         </a>
                                     </div>
                                 </div>
@@ -88,12 +74,10 @@ function Header() {
                                                 </li>
                                                 <li
                                                     id="menu-item-2310"
-                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2310"
+                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2310"
                                                 >
-                                                    <a href="https://demo.ovatheme.com/aovis/movies-all/">
-                                                        Movies
-                                                    </a>
-                                                    <button className="dropdown-toggle"></button>
+                                                    <a href="/movies-all">Movies</a>
+                                                    {/* <button className="dropdown-toggle"></button>
                                                     <ul className="sub-menu">
                                                         <li
                                                             id="menu-item-4151"
@@ -365,16 +349,14 @@ function Header() {
                                                                 Movie Details
                                                             </a>
                                                         </li>
-                                                    </ul>
+                                                    </ul> */}
                                                 </li>
                                                 <li
                                                     id="menu-item-57"
-                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-57"
+                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-57"
                                                 >
-                                                    <a href="https://demo.ovatheme.com/aovis/news/">
-                                                        News
-                                                    </a>
-                                                    <button className="dropdown-toggle"></button>
+                                                    <a href="/news">News</a>
+                                                    {/* <button className="dropdown-toggle"></button>
                                                     <ul className="sub-menu">
                                                         <li
                                                             id="menu-item-2312"
@@ -432,7 +414,7 @@ function Header() {
                                                                 News Details
                                                             </a>
                                                         </li>
-                                                    </ul>
+                                                    </ul> */}
                                                 </li>
                                                 <li
                                                     id="menu-item-62"

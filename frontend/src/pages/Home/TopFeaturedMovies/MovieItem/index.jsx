@@ -1,16 +1,17 @@
-/* eslint-disable react/prop-types */
+import convertToLink from '~/utils/convertToLink';
 
+/* eslint-disable react/prop-types */
 function MovieItem({ data }) {
     return (
         <div className="mb-movie-item item-template2">
-            <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={data.name}>
+            <a href={`/movie/${convertToLink(data.name)}`} title={data.name}>
                 <div className="movie-image">
                     <img decoding="async" src={data.moviePosters[0].link} alt="The Fifth Day" />
                 </div>
             </a>
 
             <div className="movie-info">
-                <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={data.name}>
+                <a href={`/movie/${convertToLink(data.name)}`} title={data.name}>
                     <h3 className="movie-title">{data.name}</h3>
                 </a>
 
@@ -18,7 +19,7 @@ function MovieItem({ data }) {
                     <div className="movie-category">
                         <a href="https://demo.ovatheme.com/aovis/movie_cat/comedy/" title="Comedy">
                             {' '}
-                            Comedy
+                            {data.movieCategories.map((movie) => movie.category.name).join(', ')}
                         </a>{' '}
                     </div>
 

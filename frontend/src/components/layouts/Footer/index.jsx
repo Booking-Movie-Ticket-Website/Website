@@ -1,3 +1,5 @@
+import logo from '~/assets/images/logo.png';
+
 function Footer() {
     return (
         <footer
@@ -39,33 +41,13 @@ function Footer() {
                                             >
                                                 <div className="elementor-widget-container">
                                                     <div className="brand_el">
-                                                        <a href="https://demo.ovatheme.com/aovis/ ">
+                                                        <a href="/">
                                                             <img
-                                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
+                                                                src={logo}
+                                                                alt="CineWorld – Film &amp; Movie Booking"
                                                                 className="logo_desktop"
                                                                 style={{
-                                                                    width: '108px',
-                                                                    height: 'auto',
-                                                                }}
-                                                            />
-
-                                                            <img
-                                                                src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/logo-white.png"
-                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
-                                                                className="logo_mobile"
-                                                                style={{
-                                                                    width: '108px',
-                                                                    height: 'auto',
-                                                                }}
-                                                            />
-
-                                                            <img
-                                                                src="https://demo.ovatheme.com/aovis/wp-content/plugins/elementor/assets/images/placeholder.png"
-                                                                alt="Aovis – Film &amp; Movie Booking WordPress Theme"
-                                                                className="logo_sticky"
-                                                                style={{
-                                                                    width: 'auto',
+                                                                    width: '200px',
                                                                     height: 'auto',
                                                                 }}
                                                             />
