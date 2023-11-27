@@ -37,7 +37,7 @@ function Header() {
                                                 src={logo}
                                                 alt="Aovis – Film &amp; Movie Booking"
                                                 className="logo_desktop"
-                                                style={{ width: '200px', height: 'auto' }}
+                                                style={{ width: '180px', height: 'auto' }}
                                             />
                                         </a>
                                     </div>

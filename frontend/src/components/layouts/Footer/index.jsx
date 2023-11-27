@@ -47,7 +47,7 @@ function Footer() {
                                                                 alt="CineWorld – Film &amp; Movie Booking"
                                                                 className="logo_desktop"
                                                                 style={{
-                                                                    width: '200px',
+                                                                    width: '180px',
                                                                     height: 'auto',
                                                                 }}
                                                             />

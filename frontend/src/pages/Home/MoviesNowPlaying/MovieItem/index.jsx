@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import convertToLink from '~/utils/convertToLink';
 
 function MovieItem({ title, src, category, duration }) {
     return (
         <div className="mb-movie-item item-template1">
-            <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={title}>
+            <a href={`/movie/${convertToLink(title)}`} title={title}>
                 <div className="movie-image">
                     <img decoding="async" src={src} alt={title} />
                 </div>
@@ -22,7 +23,7 @@ function MovieItem({ title, src, category, duration }) {
                     <span className="running-time">{duration} Mins</span>
                 </div>
 
-                <a href="https://demo.ovatheme.com/aovis/movie/the-fifth-day/" title={title}>
+                <a href={`/movie/${convertToLink(title)}`} title={title}>
                     <h3 className="movie-title">{title} </h3>
                 </a>
 

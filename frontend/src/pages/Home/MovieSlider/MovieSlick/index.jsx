@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 import getMonthName from '~/utils/getMonthName';
+import convertToLink from '~/utils/convertToLink';
 
 function MovieSlick({ src, category, title, director, releaseDate }) {
     const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                             className="share-ico ico-twitter"
                             target="_blank"
                             rel="noreferrer"
-                            href="https://twitter.com/share?url=https://demo.ovatheme.com/aovis/movie/wrong-turns-part-2/&amp;text=Wrong+Turns+Part+2&amp;hashtags=simplesharebuttons"
+                            href="/"
                             tabIndex="-1"
                         >
                             <i className="fab fa-twitter"></i>
@@ -37,7 +38,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                             className="share-ico ico-facebook"
                             target="_blank"
                             rel="noreferrer"
-                            href="https://www.facebook.com/sharer.php?u=https://demo.ovatheme.com/aovis/movie/wrong-turns-part-2/"
+                            href="/"
                             tabIndex="-1"
                         >
                             <i className="fa fa-facebook"></i>
@@ -49,7 +50,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                             className="share-ico ico-pinterest"
                             target="_blank"
                             rel="noreferrer"
-                            href="https://pinterest.com/pin/create/button/?url=https://demo.ovatheme.com/aovis/movie/wrong-turns-part-2/"
+                            href="/"
                             title={title}
                             tabIndex="-1"
                         >
@@ -71,15 +72,15 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                     <div className="movie-heading">
                         <h3 className="movie-category">{category} </h3>
 
-                        <a href="/" title={title} tabIndex="-1">
+                        <a href={`/movie/${convertToLink(title)}`} title={title} tabIndex="-1">
                             <h1 className="movie-title">{title} </h1>
                         </a>
                     </div>
 
-                    <p className="movie-excerpt">Writen and Directed by {director} </p>
+                    <p className="movie-excerpt">Directed by {director} </p>
 
                     <div className="button-wrapper">
-                        <a href="/" title={title} tabIndex="-1">
+                        <a href={`/movie/${convertToLink(title)}`} title={title} tabIndex="-1">
                             <button className="cs-btn btn-more-info" tabIndex="-1">
                                 More Info{' '}
                             </button>
