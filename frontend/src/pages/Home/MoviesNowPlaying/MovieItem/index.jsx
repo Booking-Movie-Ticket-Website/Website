@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import convertToLink from '~/utils/convertToLink';
 
-function MovieItem({ title, src, category, duration }) {
+function MovieItem({ movieId, title, src, category, duration }) {
     return (
         <div className="mb-movie-item item-template1">
-            <a href={`/movie/${convertToLink(title)}`} title={title}>
+            <a href={`/movie/${convertToLink(movieId)}`} title={title}>
                 <div className="movie-image">
                     <img decoding="async" src={src} alt={title} />
                 </div>
@@ -23,7 +23,7 @@ function MovieItem({ title, src, category, duration }) {
                     <span className="running-time">{duration} Mins</span>
                 </div>
 
-                <a href={`/movie/${convertToLink(title)}`} title={title}>
+                <a href={`/movie/${convertToLink(movieId)}`} title={title}>
                     <h3 className="movie-title">{title} </h3>
                 </a>
 
@@ -39,6 +39,7 @@ export default MovieItem;
 
 MovieItem.propTypes = {
     title: PropTypes.string.isRequired,
+    movieId: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     duration: PropTypes.number.isRequired,

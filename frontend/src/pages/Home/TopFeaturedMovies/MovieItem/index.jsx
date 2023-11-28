@@ -4,14 +4,14 @@ import convertToLink from '~/utils/convertToLink';
 function MovieItem({ data }) {
     return (
         <div className="mb-movie-item item-template2">
-            <a href={`/movie/${convertToLink(data.name)}`} title={data.name}>
+            <a href={`/movie/${convertToLink(data.id)}`} title={data.name}>
                 <div className="movie-image">
                     <img decoding="async" src={data.moviePosters[0].link} alt="The Fifth Day" />
                 </div>
             </a>
 
             <div className="movie-info">
-                <a href={`/movie/${convertToLink(data.name)}`} title={data.name}>
+                <a href={`/movie/${convertToLink(data.id)}`} title={data.name}>
                     <h3 className="movie-title">{data.name}</h3>
                 </a>
 

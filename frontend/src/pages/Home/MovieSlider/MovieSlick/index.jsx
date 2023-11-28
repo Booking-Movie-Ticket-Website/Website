@@ -4,7 +4,7 @@ import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 import getMonthName from '~/utils/getMonthName';
 import convertToLink from '~/utils/convertToLink';
 
-function MovieSlick({ src, category, title, director, releaseDate }) {
+function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
     const dispatch = useDispatch();
     const handleOpenModal = () => {
         dispatch(openModal('3024'));
@@ -72,7 +72,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                     <div className="movie-heading">
                         <h3 className="movie-category">{category} </h3>
 
-                        <a href={`/movie/${convertToLink(title)}`} title={title} tabIndex="-1">
+                        <a href={`/movie/${convertToLink(movieId)}`} title={title} tabIndex="-1">
                             <h1 className="movie-title">{title} </h1>
                         </a>
                     </div>
@@ -80,7 +80,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
                     <p className="movie-excerpt">Directed by {director} </p>
 
                     <div className="button-wrapper">
-                        <a href={`/movie/${convertToLink(title)}`} title={title} tabIndex="-1">
+                        <a href={`/movie/${convertToLink(movieId)}`} title={title} tabIndex="-1">
                             <button className="cs-btn btn-more-info" tabIndex="-1">
                                 More Info{' '}
                             </button>
@@ -102,6 +102,7 @@ function MovieSlick({ src, category, title, director, releaseDate }) {
 }
 
 MovieSlick.propTypes = {
+    movieId: PropTypes.string.isRequired,
     src: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

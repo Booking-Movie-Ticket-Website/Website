@@ -77,6 +77,7 @@ function MovieSlider({ data }) {
                                             {data.map((item) => (
                                                 <MovieSlick
                                                     key={item.id}
+                                                    movieId={item.id}
                                                     src={item.moviePosters[0].link}
                                                     title={item.name}
                                                     category={item.movieCategories
