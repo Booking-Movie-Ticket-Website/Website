@@ -1,4 +1,11 @@
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieTopContent({ data }) {
+    const dispatch = useDispatch();
+    const openVideoTrailer = () => {
+        console.log(123);
+        dispatch(openModal(data.trailerLink));
+    };
     return (
         <>
             <div className="top-content">
@@ -44,7 +51,7 @@ function MovieTopContent({ data }) {
                         <img src={data.moviePosters[0].link} alt={data.name} />
                     </a>
 
-                    <div className="btn-trailer-video-wrapper">
+                    <div className="btn-trailer-video-wrapper" onClick={openVideoTrailer}>
                         <div
                             className="btn-video btn-trailer-video"
                             data-src="https://vimeo.com/252443587"

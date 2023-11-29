@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from '~/utils/axios';
 
-function MovieRelated({ movieCategories }) {
+function MovieRelated({ movieId, movieCategories }) {
     const [data, setData] = useState('');
     useEffect(() => {
         (async () => {
@@ -22,40 +22,42 @@ function MovieRelated({ movieCategories }) {
     const getAllMovies = () => {
         let result = '';
         for (const item of data) {
-            result += `
-                <div class="mb-movie-item item-template1">
-                    <a
-                        href=""
-                        title=${item.name}
-                    >
-                        <div class="movie-image">
-                            <img src=${item.moviePosters[0].link} alt=${item.name} />
-                        </div>
-                    </a>
-
-                    <div class="movie-info">
-                        <div class="categories-and-time">
-                            <div class="movie-category">
-                            ${item.movieCategories.map((item) => item.category.name).join(', ')}
-                            </div>
-
-                            <div class="separator">/</div>
-
-                            <span class="running-time">${item.duration} Mins</span>
-                        </div>
-
+            if (item.id != movieId) {
+                result += `
+                    <div class="mb-movie-item item-template1">
                         <a
                             href=""
                             title=${item.name}
                         >
-                            <h3 class="movie-title">${item.name} </h3>
+                            <div class="movie-image">
+                                <img src=${item.moviePosters[0].link} alt=${item.name} />
+                            </div>
                         </a>
 
-                        <button class="btn btn-booking" data-movie-id="4141">
-                            Get Ticket
-                        </button>
-                    </div>
-                </div>`;
+                        <div class="movie-info">
+                            <div class="categories-and-time">
+                                <div class="movie-category">
+                                ${item.movieCategories.map((item) => item.category.name).join(', ')}
+                                </div>
+
+                                <div class="separator">/</div>
+
+                                <span class="running-time">${item.duration} Mins</span>
+                            </div>
+
+                            <a
+                                href=""
+                                title=${item.name}
+                            >
+                                <h3 class="movie-title">${item.name} </h3>
+                            </a>
+
+                            <button class="btn btn-booking" data-movie-id="4141">
+                                Get Ticket
+                            </button>
+                        </div>
+                    </div>`;
+            }
         }
         return result;
     };

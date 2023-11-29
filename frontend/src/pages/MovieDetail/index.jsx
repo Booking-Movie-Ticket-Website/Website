@@ -4,10 +4,12 @@ import axios from '~/utils/axios';
 import MovieTopCast from './MovieTopCast';
 import MovieRelated from './MovieRelated';
 import MovieTopContent from './MovieTopContent';
-
+import { useDispatch } from 'react-redux';
+import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 function MovieDetail() {
     const [data, setData] = useState('');
     const location = useLocation();
+    const dispatch = useDispatch();
     const currentPath = location.pathname;
     const movieId = currentPath.slice(currentPath.lastIndexOf('/') + 1);
     useEffect(() => {
@@ -18,6 +20,7 @@ function MovieDetail() {
                 })
                 .then((response) => {
                     setData(response);
+                    dispatch(getMovieData(response));
                 })
                 .catch((error) => console.error(error));
         })();
@@ -34,7 +37,10 @@ function MovieDetail() {
                                 <h2 className="movie-title-h2 story-title">Story Line</h2>
                                 <p>{data.description}</p>
                             </div>
-                            <MovieRelated movieCategories={data.movieCategories} />
+                            <MovieRelated
+                                movieId={data.id}
+                                movieCategories={data.movieCategories}
+                            />
                         </div>
                     </div>
                 </div>
