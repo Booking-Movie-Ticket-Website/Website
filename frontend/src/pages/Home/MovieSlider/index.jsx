@@ -4,7 +4,6 @@ import arrowArrowWatchTrailer from '~/assets/images/arrow-watch-trailer.png';
 import MovieSlick from './MovieSlick';
 import TrailerSlick from './TrailerSlick';
 import PropTypes from 'prop-types';
-
 function MovieSlider({ data }) {
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
@@ -108,6 +107,7 @@ function MovieSlider({ data }) {
                                                 <TrailerSlick
                                                     key={item.id}
                                                     src={item.moviePosters[0].link}
+                                                    trailerLink={item.trailerLink}
                                                 />
                                             ))}
                                         </Slider>

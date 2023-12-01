@@ -3,7 +3,6 @@ import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieTopContent({ data }) {
     const dispatch = useDispatch();
     const openVideoTrailer = () => {
-        console.log(123);
         dispatch(openModal(data.trailerLink));
     };
     return (

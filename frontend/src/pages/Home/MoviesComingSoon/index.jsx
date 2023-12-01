@@ -87,6 +87,7 @@ function MoviesComingSoon({ data }) {
                                                 movieId={item.id}
                                                 title={item.name}
                                                 src={item.moviePosters[0].link}
+                                                trailerLink={item.trailerLink}
                                                 category={item.movieCategories
                                                     .map((movie) => movie.category.name)
                                                     .join(', ')}

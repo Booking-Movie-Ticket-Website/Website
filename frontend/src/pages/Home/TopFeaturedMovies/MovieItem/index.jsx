@@ -1,7 +1,11 @@
 import convertToLink from '~/utils/convertToLink';
-
-/* eslint-disable react/prop-types */
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieItem({ data }) {
+    const dispatch = useDispatch();
+    const openVideoTrailer = () => {
+        dispatch(openModal(data.trailerLink));
+    };
     return (
         <div className="mb-movie-item item-template2">
             <a href={`/movie/${convertToLink(data.id)}`} title={data.name}>
@@ -32,6 +36,7 @@ function MovieItem({ data }) {
                             className="btn btn-trailer-video"
                             data-src="https://www.youtube.com/watch?v=MLpWrANjFbI"
                             data-movie-id="4311"
+                            onClick={openVideoTrailer}
                         >
                             <span className="text-trailer">Watch Trailer </span>
                             <i aria-hidden="true" className="fas fa-play"></i>

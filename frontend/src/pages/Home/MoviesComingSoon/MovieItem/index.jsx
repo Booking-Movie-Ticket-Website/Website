@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
-
-function MovieItem({ title, src, duration, category }) {
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
+function MovieItem({ title, src, trailerLink, duration, category }) {
+    const dispatch = useDispatch();
+    const openVideoTrailer = () => {
+        dispatch(openModal(trailerLink));
+    };
     return (
         <div className="mb-movie-item item-template1">
             <a href="/into-the-wild/" title={title}>
@@ -31,6 +36,7 @@ function MovieItem({ title, src, duration, category }) {
                         className="btn btn-trailer-video"
                         data-src="https://www.youtube.com/watch?v=MLpWrANjFbI"
                         data-movie-id="4315"
+                        onClick={openVideoTrailer}
                     >
                         <span className="text-trailer">Watch Trailer </span>
                         <i aria-hidden="true" className="fas fa-play"></i>
