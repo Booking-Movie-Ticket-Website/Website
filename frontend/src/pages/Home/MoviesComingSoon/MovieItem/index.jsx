@@ -17,9 +17,28 @@ function MovieItem({ title, src, trailerLink, duration, category }) {
             <div className="movie-info">
                 <div className="categories-and-time">
                     <div className="movie-category">
-                        <a href="/movie_cat/adventure" title={category}>
-                            {category}
-                        </a>{' '}
+                        {category.map((item, index) =>
+                            index != category.length - 1 ? (
+                                <>
+                                    <a
+                                        key={index}
+                                        href={`/categories/${item.categoryId}`}
+                                        title={item.category.name}
+                                    >
+                                        {item.category.name}
+                                    </a>
+                                    {', '}
+                                </>
+                            ) : (
+                                <a
+                                    key={index}
+                                    href={`/categories/${item.categoryId}`}
+                                    title={item.category.name}
+                                >
+                                    {item.category.name}
+                                </a>
+                            ),
+                        )}
                     </div>
 
                     <div className="separator">/</div>

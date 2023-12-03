@@ -1,4 +1,3 @@
-import convertToLink from '~/utils/convertToLink';
 import { useDispatch } from 'react-redux';
 import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieItem({ data }) {
@@ -8,23 +7,41 @@ function MovieItem({ data }) {
     };
     return (
         <div className="mb-movie-item item-template2">
-            <a href={`/movie/${convertToLink(data.id)}`} title={data.name}>
+            <a href={`/movie/${data.id}`} title={data.name}>
                 <div className="movie-image">
                     <img decoding="async" src={data.moviePosters[0].link} alt="The Fifth Day" />
                 </div>
             </a>
 
             <div className="movie-info">
-                <a href={`/movie/${convertToLink(data.id)}`} title={data.name}>
+                <a href={`/movie/${data.id}`} title={data.name}>
                     <h3 className="movie-title">{data.name}</h3>
                 </a>
 
                 <div className="categories-and-time">
                     <div className="movie-category">
-                        <a href="https://demo.ovatheme.com/aovis/movie_cat/comedy/" title="Comedy">
-                            {' '}
-                            {data.movieCategories.map((movie) => movie.category.name).join(', ')}
-                        </a>{' '}
+                        {data.movieCategories.map((item, index) =>
+                            index != data.movieCategories.length - 1 ? (
+                                <>
+                                    <a
+                                        key={index}
+                                        href={`/categories/${item.categoryId}`}
+                                        title={item.category.name}
+                                    >
+                                        {item.category.name}
+                                    </a>
+                                    {', '}
+                                </>
+                            ) : (
+                                <a
+                                    key={index}
+                                    href={`/categories/${item.categoryId}`}
+                                    title={item.category.name}
+                                >
+                                    {item.category.name}
+                                </a>
+                            ),
+                        )}
                     </div>
 
                     <span className="running-time"> {data.duration} Mins</span>

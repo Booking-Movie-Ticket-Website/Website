@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 import getMonthName from '~/utils/getMonthName';
-import convertToLink from '~/utils/convertToLink';
 
 function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
     const dispatch = useDispatch();
@@ -72,7 +71,7 @@ function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
                     <div className="movie-heading">
                         <h3 className="movie-category">{category} </h3>
 
-                        <a href={`/movie/${convertToLink(movieId)}`} title={title} tabIndex="-1">
+                        <a href={`/movie/${movieId}`} title={title} tabIndex="-1">
                             <h1 className="movie-title">{title} </h1>
                         </a>
                     </div>
@@ -80,7 +79,7 @@ function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
                     <p className="movie-excerpt">Directed by {director} </p>
 
                     <div className="button-wrapper">
-                        <a href={`/movie/${convertToLink(movieId)}`} title={title} tabIndex="-1">
+                        <a href={`/movie/${movieId}`} title={title} tabIndex="-1">
                             <button className="cs-btn btn-more-info" tabIndex="-1">
                                 More Info{' '}
                             </button>

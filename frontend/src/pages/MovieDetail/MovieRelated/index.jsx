@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from '~/utils/axios';
-import convertToLink from '~/utils/convertToLink';
 function MovieRelated({ movieId, movieCategories }) {
     const [data, setData] = useState('');
 
@@ -29,7 +28,7 @@ function MovieRelated({ movieId, movieCategories }) {
                         if (item.id != movieId) {
                             return (
                                 <div className="mb-movie-item item-template1" key={index}>
-                                    <a href={`/movie/${convertToLink(item.id)}`} title={item.name}>
+                                    <a href={`/movie/${item.id}`} title={item.name}>
                                         <div className="movie-image">
                                             <img src={item.moviePosters[0].link} alt={item.name} />
                                         </div>

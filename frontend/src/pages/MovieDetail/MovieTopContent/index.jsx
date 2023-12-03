@@ -15,13 +15,21 @@ function MovieTopContent({ data }) {
                             {data.movieCategories.map((item, index) =>
                                 index != data.movieCategories.length - 1 ? (
                                     <>
-                                        <a key={index} href="" title={item.category.name}>
+                                        <a
+                                            key={index}
+                                            href={`/categories/${item.categoryId}`}
+                                            title={item.category.name}
+                                        >
                                             {item.category.name}
                                         </a>
                                         {', '}
                                     </>
                                 ) : (
-                                    <a key={index} href="" title={item.category.name}>
+                                    <a
+                                        key={index}
+                                        href={`/categories/${item.categoryId}`}
+                                        title={item.category.name}
+                                    >
                                         {item.category.name}
                                     </a>
                                 ),

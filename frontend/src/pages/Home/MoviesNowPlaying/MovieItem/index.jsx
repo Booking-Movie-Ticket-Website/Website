@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import convertToLink from '~/utils/convertToLink';
 
 function MovieItem({ movieId, title, src, category, duration }) {
     return (
         <div className="mb-movie-item item-template1">
-            <a href={`/movie/${convertToLink(movieId)}`} title={title}>
+            <a href={`/movie/${movieId}`} title={title}>
                 <div className="movie-image">
                     <img decoding="async" src={src} alt={title} />
                 </div>
@@ -13,9 +12,28 @@ function MovieItem({ movieId, title, src, category, duration }) {
             <div className="movie-info">
                 <div className="categories-and-time">
                     <div className="movie-category">
-                        <a href={`/${category.toLowerCase()}`} title={category}>
-                            {category}
-                        </a>{' '}
+                        {category.map((item, index) =>
+                            index != category.length - 1 ? (
+                                <>
+                                    <a
+                                        key={index}
+                                        href={`/categories/${item.categoryId}`}
+                                        title={item.category.name}
+                                    >
+                                        {item.category.name}
+                                    </a>
+                                    {', '}
+                                </>
+                            ) : (
+                                <a
+                                    key={index}
+                                    href={`/categories/${item.categoryId}`}
+                                    title={item.category.name}
+                                >
+                                    {item.category.name}
+                                </a>
+                            ),
+                        )}
                     </div>
 
                     <div className="separator">/</div>
@@ -23,7 +41,7 @@ function MovieItem({ movieId, title, src, category, duration }) {
                     <span className="running-time">{duration} Mins</span>
                 </div>
 
-                <a href={`/movie/${convertToLink(movieId)}`} title={title}>
+                <a href={`/movie/${movieId}`} title={title}>
                     <h3 className="movie-title">{title} </h3>
                 </a>
 

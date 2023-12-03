@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react';
 import axios from '~/utils/axios';
 import MovieItem from '../Home/TopFeaturedMovies/MovieItem';
-
+import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
+import { useDispatch } from 'react-redux';
 function MoviesAll() {
     const [data, setData] = useState('');
-
+    const dispatch = useDispatch();
     useEffect(() => {
         (async () => {
             await axios
                 .get('/movies?page=1&take=10', { headers: { 'Content-Type': 'application/json' } })
                 .then((response) => {
                     setData(response.data);
+                    const randomNum = Math.round(Math.random() * (response.data.length - 1));
+                    dispatch(getMovieData(response.data[randomNum]));
                 })
                 .catch((error) => console.error(error));
         })();
