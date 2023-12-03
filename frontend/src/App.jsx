@@ -14,6 +14,7 @@ import NewsDetail from './pages/NewsDetail';
 import CartMovies from './pages/CartMovies';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MoviesCategory from './pages/MoviesCategory';
 
 window.$ = $;
 
@@ -31,6 +32,7 @@ function App() {
                         <Route path="privacy-policy" element={<PrivacyPolicy />} />
                         <Route path="lost-password" element={<LostPassword />} />
                         <Route path="movies-all" element={<MoviesAll />} />
+                        <Route path="categories/*" element={<MoviesCategory />} />
                         <Route path="movie/*" element={<MovieDetail />} />
                         <Route path="*" element={<NoPage />} />
                         <Route path="cart-movies" element={<CartMovies />} />

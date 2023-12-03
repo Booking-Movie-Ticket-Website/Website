@@ -12,7 +12,7 @@ function HeaderBanner() {
             >
                 <div
                     className="elementor-background-overlay"
-                    style={{ backgroundImage: `url(${movieData.moviePosters[0].link})` }}
+                    style={{ backgroundImage: `url(${movieData.movieSrc})` }}
                 ></div>
                 <div className="elementor-container elementor-column-gap-no">
                     <div
@@ -48,12 +48,14 @@ function HeaderBanner() {
                                                                 <i className="ovaicon-next"></i>
                                                             </span>
                                                         </li>
-                                                        <li>{movieData.name}</li>
+                                                        <li>{movieData.bannerRoute}</li>
                                                     </ul>
                                                 </div>
                                             </div>
 
-                                            <h1 className="header_title">{movieData.name}</h1>
+                                            <h1 className="header_title">
+                                                {movieData.bannerRoute}
+                                            </h1>
                                         </div>
                                     </div>
                                 </div>

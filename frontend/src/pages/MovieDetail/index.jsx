@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import axios from '~/utils/axios';
 import MovieTopCast from './MovieTopCast';
 import MovieRelated from './MovieRelated';
@@ -8,10 +7,8 @@ import { useDispatch } from 'react-redux';
 import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 function MovieDetail() {
     const [data, setData] = useState('');
-    const location = useLocation();
     const dispatch = useDispatch();
-    const currentPath = location.pathname;
-    const movieId = currentPath.slice(currentPath.lastIndexOf('/') + 1);
+    const movieId = window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1);
     useEffect(() => {
         (async () => {
             await axios
@@ -20,7 +17,12 @@ function MovieDetail() {
                 })
                 .then((response) => {
                     setData(response);
-                    dispatch(getMovieData(response));
+                    const movieData = {
+                        movieId: response.id,
+                        bannerRoute: response.name,
+                        movieSrc: response.moviePosters[0].link,
+                    };
+                    dispatch(getMovieData(movieData));
                 })
                 .catch((error) => console.error(error));
         })();

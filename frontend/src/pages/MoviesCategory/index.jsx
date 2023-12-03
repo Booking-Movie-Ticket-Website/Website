@@ -3,19 +3,26 @@ import axios from '~/utils/axios';
 import MovieItem from '../Home/TopFeaturedMovies/MovieItem';
 import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 import { useDispatch } from 'react-redux';
-function MoviesAll() {
+function MoviesCategory() {
     const [data, setData] = useState('');
     const dispatch = useDispatch();
+    const categoryId = window.location.pathname.slice(
+        window.location.pathname.lastIndexOf('/') + 1,
+    );
     useEffect(() => {
         (async () => {
             await axios
-                .get('/movies?page=1&take=10', { headers: { 'Content-Type': 'application/json' } })
+                .get(`/movies?page=1&take=10&categoryId=${categoryId}&filterMovies=NOW_PLAYING/`, {
+                    headers: { 'Content-Type': 'application/json' },
+                })
                 .then((response) => {
                     setData(response.data);
                     const randomNum = Math.round(Math.random() * (response.data.length - 1));
                     const movieData = {
                         movieId: null,
-                        bannerRoute: 'All Movies',
+                        bannerRoute: response.data[randomNum].movieCategories.find(
+                            (item) => item.categoryId == categoryId,
+                        ).category.name,
                         movieSrc: response.data[randomNum].moviePosters[0].link,
                     };
                     dispatch(getMovieData(movieData));
@@ -60,4 +67,4 @@ function MoviesAll() {
     );
 }
 
-export default MoviesAll;
+export default MoviesCategory;
