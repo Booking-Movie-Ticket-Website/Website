@@ -1,4 +1,14 @@
+import { useDispatch } from 'react-redux';
+import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 function PrivacyPolicy() {
+    const dispatch = useDispatch();
+    dispatch(
+        getMovieData({
+            bannerRoute: 'Privacy Policy',
+            movieSrc:
+                'https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/background-header-2.jpg',
+        }),
+    );
     return (
         <>
             <div className="row_site">

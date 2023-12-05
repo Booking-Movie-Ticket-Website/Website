@@ -1,8 +1,18 @@
 import Article from './Article';
-
+import { useDispatch } from 'react-redux';
+import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 function News() {
+    const dispatch = useDispatch();
+    dispatch(
+        getMovieData({
+            bannerRoute: 'News',
+            movieSrc:
+                'https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/background-header-2.jpg',
+        }),
+    );
     document.getElementsByTagName('body')[0].className =
         'blog wp-embed-responsive theme-aovis woocommerce-js chrome group-blog has-post-thumbnail layout_2r woo_layout_1c elementor-default elementor-kit-6 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit';
+
     return (
         <div className="row_site">
             <div className="container_site">

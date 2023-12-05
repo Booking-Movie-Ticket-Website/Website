@@ -403,9 +403,7 @@ function SecondaryHeader() {
                                         id="menu-item-62"
                                         className="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"
                                     >
-                                        <a href="https://demo.ovatheme.com/aovis/contact/">
-                                            Contact
-                                        </a>
+                                        <a href="/contact/">Contact</a>
                                     </li>
                                 </ul>
                             </div>{' '}

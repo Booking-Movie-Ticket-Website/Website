@@ -552,18 +552,18 @@ h1.page-title {
     hyphens: unset;
 }
 
-.search {
-    .page-header {
-        .page-title {
-            margin-bottom: 60px;
-            border-bottom: 1px solid #e1e1e1;
-            padding-bottom: 15px;
-            span {
-                color: var(--primary);
-            }
+// .search {
+.page-header {
+    .page-title {
+        margin-bottom: 60px;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 15px;
+        span {
+            color: var(--primary);
         }
     }
 }
+// }
 
 /*Blogs Detail ***************************************************/
 article.post-wrap ul.post-meta li i {
