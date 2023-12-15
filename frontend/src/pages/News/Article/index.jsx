@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Article({ id, title, srcImg, excerpt, category, releaseDate, author, numOfComments }) {
-    const linkText = title.toLowerCase().replaceAll(' ', '-');
+function Article({ id, title, srcImg, excerpt, releaseDate }) {
     return (
         <article
             id={`post-${id}`}
@@ -18,7 +17,7 @@ function Article({ id, title, srcImg, excerpt, category, releaseDate, author, nu
                 />
             </div>
 
-            <a href={`/${linkText}`} rel="bookmark" title={title}>
+            <a href={`/blogs/${id}`} rel="bookmark" title={title}>
                 <h2 className="post-title">{title}</h2>
             </a>
 
@@ -27,19 +26,9 @@ function Article({ id, title, srcImg, excerpt, category, releaseDate, author, nu
                     <i className="ovaicon-calendar-1"></i> {releaseDate}
                 </li>
 
-                <li className="category">
-                    <i className="ovaicon-folder-1"></i>
-                    <a href="/category/fantasy"> {category}</a>
-                </li>
-
-                <li className="author">
-                    <i className="ovaicon-user-1"></i>
-                    <a href="/author/duong"> {author}</a>
-                </li>
-
                 <li className="comment">
                     <i className="ovaicon-chat-comment-oval-speech-bubble-with-text-lines"></i>
-                    <a href={`/${linkText}/#respond`}> {numOfComments} Comments</a>
+                    <a href=""> 0 Comments</a>
                 </li>
             </ul>
 
@@ -47,7 +36,7 @@ function Article({ id, title, srcImg, excerpt, category, releaseDate, author, nu
                 <p>{excerpt}</p>
             </div>
 
-            <a href={`/${linkText}`} className="btn readmore">
+            <a href={`/blogs/${id}`} className="btn readmore">
                 Read more
             </a>
         </article>
