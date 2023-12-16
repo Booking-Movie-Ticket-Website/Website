@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getData } from '~/redux-toolkit/Blogs/BlogsSlice';
 import axios from '~/utils/axios';
 
 function NewsDetail() {
     const [data, setData] = useState('');
     const [posts, setPosts] = useState('');
+    const dispatch = useDispatch();
     const postId = window.location.pathname.slice(window.location.pathname.lastIndexOf('/') + 1);
     useEffect(() => {
         (async () => {
@@ -13,6 +16,7 @@ function NewsDetail() {
                 })
                 .then((response) => {
                     setData(response);
+                    dispatch(getData(response.title));
                 })
                 .catch((error) => console.error(error));
         })();
@@ -57,7 +61,7 @@ function NewsDetail() {
                                 <ul className="post-meta">
                                     <li className="date">
                                         <i className="ovaicon-calendar-1"></i>
-                                        March 23, 2023
+                                        December 4, 2023
                                     </li>
                                     <li className="comment">
                                         <i className="ovaicon-chat-comment-oval-speech-bubble-with-text-lines"></i>

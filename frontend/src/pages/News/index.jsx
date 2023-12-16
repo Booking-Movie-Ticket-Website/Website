@@ -42,7 +42,7 @@ function News() {
                                     id={item.id}
                                     srcImg={item.newsPictures[0].link}
                                     title={item.title}
-                                    releaseDate={item.createdAt.slice(0, 10)}
+                                    releaseDate="December 4, 2023"
                                     excerpt={item.shortDesc}
                                 />
                             ))}
