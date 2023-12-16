@@ -3,8 +3,8 @@ import { closeModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 
 function BookingTicket() {
     const dispatch = useDispatch();
-    const isModalOpen = useSelector((state) => state.isOpen);
-    const movieId = useSelector((state) => state.movieId);
+    const isModalOpen = useSelector((state) => state.bookingticket.isOpen);
+    const movieId = useSelector((state) => state.bookingticket.movieId);
     const handleClickOutside = (e) => {
         if (e.target.id === 'mb_booking_popup') {
             dispatch(closeModal());

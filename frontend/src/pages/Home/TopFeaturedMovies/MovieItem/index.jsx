@@ -61,7 +61,7 @@ function MovieItem({ data }) {
                     </div>
 
                     <button className="btn btn-booking" data-movie-id="4311">
-                        Get Ticket{' '}
+                        Get Ticket
                     </button>
                 </div>
             </div>
