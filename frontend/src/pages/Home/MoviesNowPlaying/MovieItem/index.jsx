@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 
 function MovieItem({ movieId, title, src, category, duration }) {
     return (
@@ -52,7 +53,32 @@ function MovieItem({ movieId, title, src, category, duration }) {
         </div>
     );
 }
+const Loading = () => {
+    return (
+        <div className="mb-movie-item item-template1">
+            <a href="">
+                <div className="movie-image">
+                    <LoadingSkeleton styles={{ height: '389px' }} />
+                </div>
+            </a>
 
+            <div className="movie-info">
+                <div className="categories-and-time">
+                    <LoadingSkeleton styles={{ height: '17px', width: '150px' }} />
+                </div>
+
+                <a href="">
+                    <h3 className="movie-title">
+                        <LoadingSkeleton styles={{ height: '26px', width: '200px' }} />
+                    </h3>
+                </a>
+
+                <LoadingSkeleton styles={{ height: '36px', width: '103px' }} />
+            </div>
+        </div>
+    );
+};
+MovieItem.Loading = Loading;
 export default MovieItem;
 
 MovieItem.propTypes = {

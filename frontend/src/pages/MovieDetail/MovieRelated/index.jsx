@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
+import MovieItem from '~/pages/Home/MoviesNowPlaying/MovieItem';
 import axios from '~/utils/axios';
 function MovieRelated({ movieId, movieCategories }) {
     const [data, setData] = useState('');
@@ -65,4 +67,28 @@ function MovieRelated({ movieId, movieCategories }) {
         </div>
     );
 }
+const Loading = () => {
+    return (
+        <div className="movie-related">
+            <h2 className="movie-title-h2 related-title">
+                <LoadingSkeleton styles={{ height: '36px', width: '300px' }} />
+            </h2>
+            <div className="mb-movie-list mb-movie-list-template1 four_column">
+                <div className="mb-movie-item item-template1">
+                    <MovieItem.Loading />
+                </div>
+                <div className="mb-movie-item item-template1">
+                    <MovieItem.Loading />
+                </div>
+                <div className="mb-movie-item item-template1">
+                    <MovieItem.Loading />
+                </div>
+                <div className="mb-movie-item item-template1">
+                    <MovieItem.Loading />
+                </div>
+            </div>
+        </div>
+    );
+};
+MovieRelated.Loading = Loading;
 export default MovieRelated;

@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieItem({ data }) {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ function MovieItem({ data }) {
         <div className="mb-movie-item item-template2">
             <a href={`/movie/${data.id}`} title={data.name}>
                 <div className="movie-image">
-                    <img decoding="async" src={data.moviePosters[0].link} alt="The Fifth Day" />
+                    <img decoding="async" src={data.moviePosters[0].link} alt={data.name} />
                 </div>
             </a>
 
@@ -69,4 +70,34 @@ function MovieItem({ data }) {
     );
 }
 
+const Loading = () => {
+    return (
+        <div className="mb-movie-item item-template2">
+            <a href="">
+                <div className="movie-image">
+                    <LoadingSkeleton styles={{ height: '246px' }} />
+                </div>
+            </a>
+
+            <div className="movie-info">
+                <a href="">
+                    <h3 className="movie-title">
+                        <LoadingSkeleton styles={{ height: '26px' }} />
+                    </h3>
+                </a>
+
+                <div className="categories-and-time">
+                    <LoadingSkeleton styles={{ width: '150px', height: '18px' }} />
+                    <LoadingSkeleton styles={{ width: '70px', height: '18px' }} />
+                </div>
+
+                <div className="button-wrapper">
+                    <LoadingSkeleton styles={{ width: '120px', height: '36px' }} />
+                    <LoadingSkeleton styles={{ width: '120px', height: '36px' }} />
+                </div>
+            </div>
+        </div>
+    );
+};
+MovieItem.Loading = Loading;
 export default MovieItem;

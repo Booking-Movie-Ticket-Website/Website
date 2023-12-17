@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
 function MovieTopContent({ data }) {
     const dispatch = useDispatch();
@@ -103,4 +104,47 @@ function MovieTopContent({ data }) {
         </>
     );
 }
+const Loading = () => {
+    return (
+        <>
+            <div className="top-content">
+                <div className="movie-heading">
+                    <h1 className="movie-title">
+                        <LoadingSkeleton styles={{ height: '40px', width: '360px' }} />
+                    </h1>
+                    <div className="categories-and-time">
+                        <LoadingSkeleton styles={{ height: '20px', width: '150px' }} />
+                    </div>
+                </div>
+                <LoadingSkeleton styles={{ height: '60px', width: '180px' }} />
+            </div>
+
+            <div className="movie-media has-trailer">
+                <div className="movie-featured-image" style={{ width: '50vw' }}>
+                    <a className="gallery-fancybox">
+                        <LoadingSkeleton styles={{ height: '520px' }} />
+                    </a>
+                </div>
+            </div>
+
+            <ul className="info-list">
+                {Array(4)
+                    .fill(0)
+                    .map((item, index) => {
+                        return (
+                            <li className="item item-0" key={index}>
+                                <h4 className="title">
+                                    <LoadingSkeleton styles={{ height: '20px', width: '70px' }} />
+                                </h4>
+                                <span className="value">
+                                    <LoadingSkeleton styles={{ height: '20px', width: '120px' }} />
+                                </span>
+                            </li>
+                        );
+                    })}
+            </ul>
+        </>
+    );
+};
+MovieTopContent.Loading = Loading;
 export default MovieTopContent;

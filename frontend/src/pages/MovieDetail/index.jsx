@@ -5,6 +5,7 @@ import MovieRelated from './MovieRelated';
 import MovieTopContent from './MovieTopContent';
 import { useDispatch } from 'react-redux';
 import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
+import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 function MovieDetail() {
     const [data, setData] = useState('');
     const dispatch = useDispatch();
@@ -47,7 +48,25 @@ function MovieDetail() {
                     </div>
                 </div>
             ) : (
-                ''
+                <div className="row_site">
+                    <div className="container_site">
+                        <div className="ova_movie_single">
+                            <MovieTopContent.Loading />
+                            <MovieTopCast.Loading />
+                            <div className="main-content">
+                                <h2 className="movie-title-h2 story-title">
+                                    <LoadingSkeleton styles={{ height: '36px', width: '170px' }} />
+                                </h2>
+                                <p>
+                                    <LoadingSkeleton
+                                        styles={{ height: '150px', width: '1170px' }}
+                                    />
+                                </p>
+                            </div>
+                            <MovieRelated.Loading />
+                        </div>
+                    </div>
+                </div>
             )}
         </>
     );
