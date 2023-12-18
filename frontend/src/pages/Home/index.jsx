@@ -15,19 +15,58 @@ import axios from '~/utils/axios';
 import { useState, useEffect } from 'react';
 
 function Home() {
-    const [data, setData] = useState('');
-
+    const [bannerData, setBannerData] = useState('');
+    const [nowPlayingData, setNowPlayingData] = useState('');
+    const [topData, setTopData] = useState('');
+    const [comingSoongData, setComingSoonData] = useState('');
     useEffect(() => {
         (async () => {
             await axios
-                .get('/movies?page=1&take=10', { headers: { 'Content-Type': 'application/json' } })
+                .get('/movies?page=1&take=10&filterMovies=BANNER', {
+                    headers: { 'Content-Type': 'application/json' },
+                })
                 .then((response) => {
-                    setData(response.data);
+                    setBannerData(response.data);
                 })
                 .catch((error) => console.error(error));
         })();
     }, []);
-
+    useEffect(() => {
+        (async () => {
+            await axios
+                .get('/movies?page=1&take=10&filterMovies=NOW_PLAYING', {
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                .then((response) => {
+                    setNowPlayingData(response.data);
+                })
+                .catch((error) => console.error(error));
+        })();
+    }, []);
+    useEffect(() => {
+        (async () => {
+            await axios
+                .get('/movies?page=1&take=10&filterMovies=TOP_FEATURED', {
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                .then((response) => {
+                    setTopData(response.data);
+                })
+                .catch((error) => console.error(error));
+        })();
+    }, []);
+    useEffect(() => {
+        (async () => {
+            await axios
+                .get('/movies?page=1&take=10&filterMovies=COMING_SOON', {
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                .then((response) => {
+                    setComingSoonData(response.data);
+                })
+                .catch((error) => console.error(error));
+        })();
+    }, []);
     return (
         <div
             id="main-page"
@@ -35,15 +74,15 @@ function Home() {
             data-elementor-type="wp-page"
             data-element-id="24"
         >
-            <MovieSlider data={data ? data.slice(0, 3) : ''} />
+            <MovieSlider data={bannerData ? bannerData.slice(0, 3) : ''} />
             <LinesHeader />
-            <MoviesNowPlaying data={data ? data : ''} />
-            <TopFeaturedMovies data={data ? data : ''} />
+            <MoviesNowPlaying data={nowPlayingData ? nowPlayingData : ''} />
+            <TopFeaturedMovies data={topData ? topData : ''} />
             <Documentary />
             <PhotoGalleryHeading />
             <PhotoGallery />
             <Feedbacks />
-            <MoviesComingSoon data={data ? data : ''} />
+            <MoviesComingSoon data={comingSoongData ? comingSoongData : ''} />
             <Promotion />
             <PostHeading />
             <PostContent />

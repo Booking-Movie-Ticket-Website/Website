@@ -32,7 +32,14 @@ function MovieRelated({ movieId, movieCategories }) {
                                 <div className="mb-movie-item item-template1" key={index}>
                                     <a href={`/movie/${item.id}`} title={item.name}>
                                         <div className="movie-image">
-                                            <img src={item.moviePosters[0].link} alt={item.name} />
+                                            <img
+                                                src={
+                                                    item.moviePosters.filter(
+                                                        (item) => item.isThumb,
+                                                    )[0].link
+                                                }
+                                                alt={item.name}
+                                            />
                                         </div>
                                     </a>
 

@@ -22,7 +22,9 @@ function SearchResult() {
                         const movieData = {
                             movieId: null,
                             bannerRoute: 'All Movies',
-                            movieSrc: response.data[randomNum].moviePosters[0].link,
+                            movieSrc: response.data[randomNum].moviePosters.filter(
+                                (item) => item.isThumb,
+                            )[0].link,
                         };
                         dispatch(getMovieData(movieData));
                     } else if (!response.data[0]) {

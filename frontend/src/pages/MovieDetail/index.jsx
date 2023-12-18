@@ -21,7 +21,7 @@ function MovieDetail() {
                     const movieData = {
                         movieId: response.id,
                         bannerRoute: response.name,
-                        movieSrc: response.moviePosters[0].link,
+                        movieSrc: response.moviePosters.filter((item) => item.isThumb)[0].link,
                     };
                     dispatch(getMovieData(movieData));
                 })

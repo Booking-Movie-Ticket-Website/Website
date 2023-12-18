@@ -50,13 +50,11 @@ function MovieTopContent({ data }) {
 
             <div className="movie-media has-trailer">
                 <div className="movie-featured-image" style={{ width: '50vw' }}>
-                    <a
-                        className="gallery-fancybox"
-                        data-src={data.moviePosters[0].link}
-                        data-fancybox="movie-gallery-fancybox"
-                        data-caption={data.name}
-                    >
-                        <img src={data.moviePosters[0].link} alt={data.name} />
+                    <a className="gallery-fancybox">
+                        <img
+                            src={data.moviePosters.filter((item) => item.isThumb)[0].link}
+                            alt={data.name}
+                        />
                     </a>
 
                     <div className="btn-trailer-video-wrapper" onClick={openVideoTrailer}>

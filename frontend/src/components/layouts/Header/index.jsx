@@ -1,9 +1,24 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import logo from '~/assets/images/logo.png';
 import SearchUser from './SearchUser';
+import axios from '~/utils/axios';
+
 function Header() {
+    const [cateData, setCateData] = useState('');
     const headerRef = useRef();
     const headerMobiRef = useRef();
+    useEffect(() => {
+        (async () => {
+            await axios
+                .get('/categories/no-pagination', {
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                .then((response) => {
+                    setCateData(response);
+                })
+                .catch((error) => console.error(error));
+        })();
+    }, []);
     useEffect(() => {
         window.onscroll = function () {
             const header = document.querySelector('.header_sticky');
@@ -113,9 +128,43 @@ function Header() {
                                                 </li>
                                                 <li
                                                     id="menu-item-2310"
-                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2310"
+                                                    className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2310  menu-item-has-children"
                                                 >
                                                     <a href="/movies-all">Movies</a>
+                                                    <button className="dropdown-toggle"></button>
+                                                    <ul className="sub-menu">
+                                                        <li
+                                                            id="menu-item-4151"
+                                                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4151"
+                                                        >
+                                                            <a href="/movies-all">Movie All</a>
+                                                        </li>
+                                                        <li
+                                                            id="menu-item-4591"
+                                                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4591"
+                                                        >
+                                                            <a href="/">Movie Category</a>
+                                                            <button className="dropdown-toggle"></button>
+                                                            <ul className="sub-menu">
+                                                                {cateData &&
+                                                                    cateData.map((item) => {
+                                                                        return (
+                                                                            <li
+                                                                                id="menu-item-4617"
+                                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617"
+                                                                                key={item.id}
+                                                                            >
+                                                                                <a
+                                                                                    href={`/categories/${item.id}`}
+                                                                                >
+                                                                                    {item.name}
+                                                                                </a>
+                                                                            </li>
+                                                                        );
+                                                                    })}
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
                                                 </li>
                                                 <li
                                                     id="menu-item-57"

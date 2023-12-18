@@ -77,7 +77,11 @@ function MovieSlider({ data }) {
                                                 <MovieSlick
                                                     key={item.id}
                                                     movieId={item.id}
-                                                    src={item.moviePosters[0].link}
+                                                    src={
+                                                        item.moviePosters.filter(
+                                                            (item) => item.isThumb,
+                                                        )[0].link
+                                                    }
                                                     title={item.name}
                                                     category={item.movieCategories
                                                         .map((movie) => movie.category.name)
@@ -106,7 +110,11 @@ function MovieSlider({ data }) {
                                             {data.map((item) => (
                                                 <TrailerSlick
                                                     key={item.id}
-                                                    src={item.moviePosters[0].link}
+                                                    src={
+                                                        item.moviePosters.filter(
+                                                            (item) => item.isThumb,
+                                                        )[0].link
+                                                    }
                                                     trailerLink={item.trailerLink}
                                                 />
                                             ))}

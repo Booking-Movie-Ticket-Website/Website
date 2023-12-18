@@ -23,7 +23,9 @@ function MoviesCategory() {
                         bannerRoute: response.data[randomNum].movieCategories.find(
                             (item) => item.categoryId == categoryId,
                         ).category.name,
-                        movieSrc: response.data[randomNum].moviePosters[0].link,
+                        movieSrc: response.data[randomNum].moviePosters.filter(
+                            (item) => item.isThumb,
+                        )[0].link,
                     };
                     dispatch(getMovieData(movieData));
                 })

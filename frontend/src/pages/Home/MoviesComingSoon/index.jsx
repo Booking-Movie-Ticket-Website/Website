@@ -86,7 +86,11 @@ function MoviesComingSoon({ data }) {
                                                 key={item.id}
                                                 movieId={item.id}
                                                 title={item.name}
-                                                src={item.moviePosters[0].link}
+                                                src={
+                                                    item.moviePosters.filter(
+                                                        (item) => item.isThumb,
+                                                    )[0].link
+                                                }
                                                 trailerLink={item.trailerLink}
                                                 category={item.movieCategories}
                                                 duration={item.duration}

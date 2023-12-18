@@ -10,7 +10,11 @@ function MovieItem({ data }) {
         <div className="mb-movie-item item-template2">
             <a href={`/movie/${data.id}`} title={data.name}>
                 <div className="movie-image">
-                    <img decoding="async" src={data.moviePosters[0].link} alt={data.name} />
+                    <img
+                        decoding="async"
+                        src={data.moviePosters.filter((item) => item.isThumb)[0].link}
+                        alt={data.name}
+                    />
                 </div>
             </a>
 
