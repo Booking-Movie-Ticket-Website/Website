@@ -6,7 +6,7 @@ import getMonthName from '~/utils/getMonthName';
 function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
     const dispatch = useDispatch();
     const handleOpenModal = () => {
-        dispatch(openModal('3024'));
+        dispatch(openModal(movieId));
     };
     return (
         <div className="movie-main-item-wrapper" style={{ width: '100%', display: 'inline-block' }}>
@@ -81,7 +81,7 @@ function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
                     <div className="button-wrapper">
                         <a href={`/movie/${movieId}`} title={title} tabIndex="-1">
                             <button className="cs-btn btn-more-info" tabIndex="-1">
-                                More Info{' '}
+                                More Info
                             </button>
                         </a>
 
@@ -91,7 +91,7 @@ function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
                             data-movie-id="842"
                             tabIndex="-1"
                         >
-                            Get Ticket{' '}
+                            Get Ticket
                         </button>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ function MovieItem({ data }) {
                 <div className="movie-image">
                     <img
                         decoding="async"
-                        src={data.moviePosters.filter((item) => item.isThumb)[0].link}
+                        src={data.moviePosters.filter((item) => item.isThumb)[0]?.link}
                         alt={data.name}
                     />
                 </div>
