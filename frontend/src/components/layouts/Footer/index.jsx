@@ -70,8 +70,8 @@ function Footer() {
                                                 data-widget_type="text-editor.default"
                                             >
                                                 <div className="elementor-widget-container">
-                                                    <a href="/about">Help</a> /{' '}
-                                                    <a href="/privacy-policy">Privacy Policy</a>{' '}
+                                                    <a href="/about">Help</a> /
+                                                    <a href="/privacy-policy">Privacy Policy</a>
                                                 </div>
                                             </div>
                                             <div
@@ -91,7 +91,7 @@ function Footer() {
                                                                 <span className="elementor-screen-only">
                                                                     Twitter
                                                                 </span>
-                                                                <i className="fab fa-twitter"></i>{' '}
+                                                                <i className="fab fa-twitter"></i>
                                                             </a>
                                                         </span>
                                                         <span className="elementor-grid-item">
@@ -103,7 +103,7 @@ function Footer() {
                                                                 <span className="elementor-screen-only">
                                                                     Facebook
                                                                 </span>
-                                                                <i className="fab fa-facebook"></i>{' '}
+                                                                <i className="fab fa-facebook"></i>
                                                             </a>
                                                         </span>
                                                         <span className="elementor-grid-item">
@@ -115,7 +115,7 @@ function Footer() {
                                                                 <span className="elementor-screen-only">
                                                                     Pinterest
                                                                 </span>
-                                                                <i className="fab fa-pinterest"></i>{' '}
+                                                                <i className="fab fa-pinterest"></i>
                                                             </a>
                                                         </span>
                                                         <span className="elementor-grid-item">
@@ -127,7 +127,7 @@ function Footer() {
                                                                 <span className="elementor-screen-only">
                                                                     Ovaicon-instagram-1
                                                                 </span>
-                                                                <i className="ovaicon ovaicon-instagram-1"></i>{' '}
+                                                                <i className="ovaicon ovaicon-instagram-1"></i>
                                                             </a>
                                                         </span>
                                                     </div>
@@ -157,7 +157,7 @@ function Footer() {
                                             >
                                                 <div className="elementor-widget-container">
                                                     Buy movie tickets easily with CineWorld system
-                                                    nationwide{' '}
+                                                    nationwide
                                                 </div>
                                             </div>
                                             <div
@@ -255,7 +255,7 @@ function Footer() {
                                                             >
                                                                 <a href="/movie_cat/crime">Crime</a>
                                                             </li>
-                                                        </ul>{' '}
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -325,7 +325,7 @@ function Footer() {
                                                             >
                                                                 <a href="/contact">Contact</a>
                                                             </li>
-                                                        </ul>{' '}
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
@@ -360,7 +360,7 @@ function Footer() {
                                                 data-widget_type="text-editor.default"
                                             >
                                                 <div className="elementor-widget-container">
-                                                    Subscribe to Leitmotif newsletter this very day.{' '}
+                                                    Subscribe to Leitmotif newsletter this very day.
                                                 </div>
                                             </div>
                                             <div
@@ -419,7 +419,7 @@ function Footer() {
                                                                             name="_mc4wp_lists[]"
                                                                             type="checkbox"
                                                                             value="Ovatheme"
-                                                                        />{' '}
+                                                                        />
                                                                         <span>Ovatheme</span>
                                                                     </label>
                                                                 </p>
@@ -456,7 +456,7 @@ function Footer() {
                                 data-widget_type="text-editor.default"
                             >
                                 <div className="elementor-widget-container">
-                                    © Copyright 2023 by CineWorld.com{' '}
+                                    © Copyright 2023 by CineWorld.com
                                 </div>
                             </div>
                         </div>

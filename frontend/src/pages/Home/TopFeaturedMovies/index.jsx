@@ -70,7 +70,7 @@ function TopFeaturedMovies({ data }) {
                                                             <i
                                                                 aria-hidden="true"
                                                                 className="flaticon flaticon-film-roll"
-                                                            ></i>{' '}
+                                                            ></i>
                                                         </div>
 
                                                         <div className="top-heading ">
@@ -105,7 +105,7 @@ function TopFeaturedMovies({ data }) {
                                                         in cinematic entertainment, offering an
                                                         exciting array of must-watch films for your
                                                         ultimate movie experience.
-                                                    </p>{' '}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@ function TopFeaturedMovies({ data }) {
                                                     <p>
                                                         more comedy &amp; horror movies you can
                                                         explore
-                                                    </p>{' '}
+                                                    </p>
                                                 </div>
                                             </div>
                                             <div

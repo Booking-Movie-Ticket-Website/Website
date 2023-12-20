@@ -21,18 +21,14 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">Who we are</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 Our website address is: http://ovapt.com/aovis/wp.
                             </p>
 
                             <h2 className="wp-block-heading">Comments</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 When visitors leave comments on the site we collect the data shown
                                 in the comments form, and also the visitor’s IP address and browser
                                 user agent string to help spam detection.
@@ -49,9 +45,7 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">Media</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 If you upload images to the website, you should avoid uploading
                                 images with embedded location data (EXIF GPS) included. Visitors to
                                 the website can download and extract any location data from images
@@ -61,9 +55,7 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">Cookies</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 If you leave a comment on our site you may opt-in to saving your
                                 name, email address and website in cookies. These are for your
                                 convenience so that you do not have to fill in your details again
@@ -97,9 +89,7 @@ function PrivacyPolicy() {
                             </h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 Articles on this site may include embedded content (e.g. videos,
                                 images, articles, etc.). Embedded content from other websites
                                 behaves in the exact same way as if the visitor has visited the
@@ -117,9 +107,7 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">Who we share your data with</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 If you request a password reset, your IP address will be included in
                                 the reset email.
                             </p>
@@ -127,9 +115,7 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">How long we retain your data</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 If you leave a comment, the comment and its metadata are retained
                                 indefinitely. This is so we can recognize and approve any follow-up
                                 comments automatically instead of holding them in a moderation
@@ -149,9 +135,7 @@ function PrivacyPolicy() {
                             </h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 If you have an account on this site, or have left comments, you can
                                 request to receive an exported file of the personal data we hold
                                 about you, including any data you have provided to us. You can also
@@ -163,9 +147,7 @@ function PrivacyPolicy() {
                             <h2 className="wp-block-heading">Where your data is sent</h2>
 
                             <p>
-                                <strong className="privacy-policy-tutorial">
-                                    Suggested text:{' '}
-                                </strong>
+                                <strong className="privacy-policy-tutorial">Suggested text:</strong>
                                 Visitor comments may be checked through an automated spam detection
                                 service.
                             </p>

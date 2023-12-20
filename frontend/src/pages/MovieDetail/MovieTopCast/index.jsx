@@ -15,7 +15,7 @@ function MovieTopCast({ data }) {
                         </div>
                     </div>
                 ))}
-            </div>{' '}
+            </div>
         </div>
     );
 }

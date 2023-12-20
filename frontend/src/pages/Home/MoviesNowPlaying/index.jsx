@@ -207,7 +207,7 @@ function MoviesNowPlaying({ data }) {
                                                             <i
                                                                 aria-hidden="true"
                                                                 className="flaticon flaticon-film-roll"
-                                                            ></i>{' '}
+                                                            ></i>
                                                         </div>
 
                                                         <div className="top-heading ">

@@ -182,7 +182,7 @@ function SignUp() {
         //             id="reg_email"
         //             autoComplete="email"
         //             value=""
-        //         />{' '}
+        //         />
         //     </p>
 
         //     <p>A link to set a new password will be sent to your email address.</p>
@@ -191,7 +191,7 @@ function SignUp() {
         //         <p>
         //             Your personal data will be used to support your experience throughout this
         //             website, to manage access to your account, and for other purposes described in
-        //             our{' '}
+        //             our
         //             <a
         //                 href="privacy-policy"
         //                 className="woocommerce-privacy-policy-link"
@@ -210,7 +210,7 @@ function SignUp() {
         //             name="woocommerce-register-nonce"
         //             value="1427c930ad"
         //         />
-        //         <input type="hidden" name="_wp_http_referer" value="/aovis/my-account/" />{' '}
+        //         <input type="hidden" name="_wp_http_referer" value="/aovis/my-account/" />
         //         <button
         //             type="submit"
         //             className="woocommerce-Button woocommerce-button button woocommerce-form-register__submit"

@@ -84,7 +84,7 @@ function Login() {
                         type="checkbox"
                         id="rememberme"
                         value="forever"
-                    />{' '}
+                    />
                     <span>Remember me</span>
                 </label>
                 <input
@@ -93,7 +93,7 @@ function Login() {
                     name="woocommerce-login-nonce"
                     value="58aff3586c"
                 />
-                <input type="hidden" name="_wp_http_referer" value="/aovis/my-account/" />{' '}
+                <input type="hidden" name="_wp_http_referer" value="/aovis/my-account/" />
                 <button
                     type="submit"
                     className="woocommerce-button button woocommerce-form-login__submit"

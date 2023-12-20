@@ -63,7 +63,7 @@ function SearchResult() {
                             <div className="elementor-widget-container">
                                 <header className="page-header">
                                     <h1 className="page-title">
-                                        Search Results for: <span>{searchName}</span>{' '}
+                                        Search Results for: <span>{searchName}</span>
                                     </h1>
                                 </header>
                                 <div className="mb-movie-list mb-movie-list-template2 three_column">
@@ -99,7 +99,7 @@ function SearchResult() {
                             <div className="elementor-widget-container">
                                 <header className="page-header">
                                     <h1 className="page-title">
-                                        Search Results for: <span>{searchName}</span>{' '}
+                                        Search Results for: <span>{searchName}</span>
                                     </h1>
                                 </header>
                                 <div>No data</div>

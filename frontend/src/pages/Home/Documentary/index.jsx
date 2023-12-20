@@ -27,7 +27,7 @@ function Documentary() {
                                         <i
                                             aria-hidden="true"
                                             className="flaticon flaticon-film-roll"
-                                        ></i>{' '}
+                                        ></i>
                                     </div>
 
                                     <div className="top-heading ">
@@ -57,7 +57,7 @@ function Documentary() {
                                     src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/awards-banner-01.png"
                                     className="attachment-large size-large wp-image-463"
                                     alt=""
-                                />{' '}
+                                />
                             </div>
                         </div>
                         <div
@@ -74,7 +74,7 @@ function Documentary() {
                                     src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/awards-banner-02.png"
                                     className="attachment-large size-large wp-image-464"
                                     alt=""
-                                />{' '}
+                                />
                             </div>
                         </div>
                         <div
@@ -126,7 +126,7 @@ function Documentary() {
                                             data-show_info="no 
         "
                                         >
-                                            <i aria-hidden="true" className="fas fa-play"></i>{' '}
+                                            <i aria-hidden="true" className="fas fa-play"></i>
                                         </div>
                                     </div>
 
@@ -160,7 +160,7 @@ function Documentary() {
                                     alt=""
                                     srcSet="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-arrow-video.png 311w, https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-arrow-video-300x120.png 300w"
                                     sizes="(max-width: 311px) 100vw, 311px"
-                                />{' '}
+                                />
                             </div>
                         </div>
                     </div>

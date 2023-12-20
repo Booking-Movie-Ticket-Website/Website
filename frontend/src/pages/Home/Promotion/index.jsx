@@ -22,7 +22,7 @@ function Promotion() {
                             data-widget_type="text-editor.default"
                         >
                             <div className="elementor-widget-container">
-                                40% Discount for Students{' '}
+                                40% Discount for Students
                             </div>
                         </div>
                         <div

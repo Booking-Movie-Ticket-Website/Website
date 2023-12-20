@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getData } from '~/redux-toolkit/Blogs/BlogsSlice';
+import { getData } from '~/redux-toolkit/Breadcrumb/BreadcrumbSlice';
 import axios from '~/utils/axios';
 
 function NewsDetail() {

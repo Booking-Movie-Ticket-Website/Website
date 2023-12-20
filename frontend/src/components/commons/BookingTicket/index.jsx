@@ -218,7 +218,9 @@ function BookingTicket() {
                                                                                                                             index
                                                                                                                         }
                                                                                                                     >
-                                                                                                                        <a href="">
+                                                                                                                        <a
+                                                                                                                            href={`/cart-movies/${showing.id}`}
+                                                                                                                        >
                                                                                                                             <span>
                                                                                                                                 {
                                                                                                                                     showTime

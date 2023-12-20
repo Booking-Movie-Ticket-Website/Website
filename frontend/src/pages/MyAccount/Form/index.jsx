@@ -20,7 +20,7 @@ function Form() {
                             data-type="login"
                             onClick={() => handleItemClick('login')}
                         >
-                            Login{' '}
+                            Login
                         </a>
                     </li>
                     <li className={activeItem === 'register' ? 'active' : ''}>
@@ -29,7 +29,7 @@ function Form() {
                             data-type="register"
                             onClick={() => handleItemClick('register')}
                         >
-                            Register{' '}
+                            Register
                         </a>
                     </li>
                 </ul>

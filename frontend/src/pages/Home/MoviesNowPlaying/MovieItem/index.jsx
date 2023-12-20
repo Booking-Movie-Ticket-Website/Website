@@ -47,7 +47,7 @@ function MovieItem({ movieId, title, src, category, duration }) {
                 </a>
 
                 <button className="btn btn-booking" data-movie-id="4311">
-                    Get Ticket{' '}
+                    Get Ticket
                 </button>
             </div>
         </div>

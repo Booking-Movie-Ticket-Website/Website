@@ -22,7 +22,9 @@ function Layout() {
                             </div>
                             <Outlet />
                         </>
-                    ) : window.location.pathname.includes('/blogs') ? (
+                    ) : window.location.pathname.includes('/blogs') ||
+                      window.location.pathname.includes('/checkout') ||
+                      window.location.pathname.includes('/cart-movies') ? (
                         <>
                             <div
                                 data-elementor-type="wp-post"

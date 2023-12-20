@@ -56,7 +56,7 @@ function MovieSlick({ movieId, src, category, title, director, releaseDate }) {
                             <i className="fab fa-pinterest-p"></i>
                         </a>
                     </li>
-                </ul>{' '}
+                </ul>
             </div>
 
             <div className="movie-main-item-container row_site">

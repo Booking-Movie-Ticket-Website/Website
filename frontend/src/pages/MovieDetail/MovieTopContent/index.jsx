@@ -44,7 +44,7 @@ function MovieTopContent({ data }) {
                 </div>
 
                 <button className="btn btn-booking" data-movie-id="842">
-                    Get Ticket{' '}
+                    Get Ticket
                 </button>
             </div>
 
@@ -68,10 +68,10 @@ function MovieTopContent({ data }) {
                     </div>
 
                     <span className="text-trailer">
-                        Watch the Trailer{' '}
+                        Watch the Trailer
                         <i aria-hidden="true" className="ovaicon ovaicon-diagonal-arrow"></i>
                     </span>
-                </div>{' '}
+                </div>
             </div>
 
             <ul className="info-list">

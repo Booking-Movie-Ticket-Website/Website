@@ -73,9 +73,8 @@ function News() {
                             </form>
                         </div>
                         <div id="text-2" className="widget widget_text">
-                            <h4 className="widget-title">Latest Posts</h4>{' '}
+                            <h4 className="widget-title">Latest Posts</h4>
                             <div className="textwidget">
-                                {' '}
                                 <div
                                     data-elementor-type="section"
                                     data-elementor-id="3709"

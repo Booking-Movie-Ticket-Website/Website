@@ -39,7 +39,7 @@ function Contact() {
                                             <i
                                                 aria-hidden="true"
                                                 className="flaticon flaticon-film-roll"
-                                            ></i>{' '}
+                                            ></i>
                                         </div>
 
                                         <div className="top-heading ">
@@ -71,7 +71,7 @@ function Contact() {
                                                     role="status"
                                                     aria-live="polite"
                                                     aria-atomic="true"
-                                                ></p>{' '}
+                                                ></p>
                                                 <ul></ul>
                                             </div>
                                             <form

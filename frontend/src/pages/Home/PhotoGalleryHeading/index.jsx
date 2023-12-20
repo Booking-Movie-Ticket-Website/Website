@@ -18,7 +18,7 @@ function PhotoGalleryHeading() {
                         className="elementor-shape-fill"
                         d="M360 0L350 9.9 340 0 0 0 0 10 700 10 700 0"
                     ></path>
-                </svg>{' '}
+                </svg>
             </div>
             <div className="elementor-container elementor-column-gap-default">
                 <div

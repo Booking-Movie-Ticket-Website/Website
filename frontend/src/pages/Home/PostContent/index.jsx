@@ -57,13 +57,13 @@ function PostContent() {
                                                             width="96"
                                                             loading="lazy"
                                                             decoding="async"
-                                                        />{' '}
+                                                        />
                                                     </span>
                                                     <span className="right post-author">
                                                         <span className="by">by</span>
 
                                                         <a href="https://demo.ovatheme.com/aovis/author/duong/">
-                                                            Duno{' '}
+                                                            Duno
                                                         </a>
                                                     </span>
                                                 </li>
@@ -89,7 +89,7 @@ function PostContent() {
                                                     rel="bookmark"
                                                     title="See Meila enjoyable capturing moment"
                                                 >
-                                                    See Meila enjoyable capturing moment{' '}
+                                                    See Meila enjoyable capturing moment
                                                 </a>
                                             </h2>
 
@@ -136,13 +136,13 @@ function PostContent() {
                                                             width="96"
                                                             loading="lazy"
                                                             decoding="async"
-                                                        />{' '}
+                                                        />
                                                     </span>
                                                     <span className="right post-author">
                                                         <span className="by">by</span>
 
                                                         <a href="https://demo.ovatheme.com/aovis/author/duong/">
-                                                            Duno{' '}
+                                                            Duno
                                                         </a>
                                                     </span>
                                                 </li>
@@ -168,7 +168,7 @@ function PostContent() {
                                                     rel="bookmark"
                                                     title="The Foreign Oscar Nominations 2023"
                                                 >
-                                                    The Foreign Oscar Nominations 2023{' '}
+                                                    The Foreign Oscar Nominations 2023
                                                 </a>
                                             </h2>
 
@@ -215,13 +215,13 @@ function PostContent() {
                                                             width="96"
                                                             loading="lazy"
                                                             decoding="async"
-                                                        />{' '}
+                                                        />
                                                     </span>
                                                     <span className="right post-author">
                                                         <span className="by">by</span>
 
                                                         <a href="https://demo.ovatheme.com/aovis/author/duong/">
-                                                            Duno{' '}
+                                                            Duno
                                                         </a>
                                                     </span>
                                                 </li>
@@ -247,7 +247,7 @@ function PostContent() {
                                                     rel="bookmark"
                                                     title="Upcoming New Season 5 Just Flow in !"
                                                 >
-                                                    Upcoming New Season 5 Just Flow in !{' '}
+                                                    Upcoming New Season 5 Just Flow in !
                                                 </a>
                                             </h2>
 
