@@ -9,6 +9,7 @@ function CartMovies() {
     const [showingData, setShowingData] = useState('');
     const [bookingList, setBookingList] = useState([]);
     const [isBooking, setBooking] = useState(false);
+    const [discount, setDiscount] = useState(0);
     const [visibleForm, setVisibleForm] = useState(false);
     const [error, setError] = useState(false);
     const [discountValue, setDiscountValue] = useState('');
@@ -30,22 +31,27 @@ function CartMovies() {
         })();
     }, []);
     const handleApplyDiscountCode = (discountValue) => {
-        if (discountValue === discountCode) setError(false);
-        else {
+        if (discountValue === discountCode) {
+            setError(false);
+            setDiscount(40000);
+        } else {
             setError(true);
+            discount != 0 ? setDiscount(discount) : setDiscount(0);
         }
     };
-    const handleChooseSeat = (seatId, index) => {
+    const handleChooseSeat = (seatData, index) => {
         seatRefs[index].classList.value.includes('');
         if (seatRefs[index].classList.value.includes('booked')) window.alert('seat booked');
         if (seatRefs[index].classList.value.includes('checked')) {
             seatRefs[index].classList.remove('checked');
-            const newBookingList = bookingList.filter((item) => item != seatId);
+            const newBookingList = bookingList.filter(
+                (item) => item.seatRow + item.seatColumn != seatData.seatRow + seatData.seatColumn,
+            );
             setBookingList(newBookingList);
         } else {
             seatRefs[index].classList.add('checked');
             setBooking(true);
-            setBookingList((pre) => [...pre, seatId]);
+            setBookingList((pre) => [...pre, seatData]);
         }
     };
     useEffect(() => {
@@ -105,14 +111,9 @@ function CartMovies() {
                                                                     <div
                                                                         key={index}
                                                                         className="seat-item"
-                                                                        data-id={
-                                                                            item.seatRow +
-                                                                            item.seatColumn
-                                                                        }
                                                                         onClick={() =>
                                                                             handleChooseSeat(
-                                                                                item.seatRow +
-                                                                                    item.seatColumn,
+                                                                                item,
                                                                                 index,
                                                                             )
                                                                         }
@@ -180,57 +181,48 @@ function CartMovies() {
                                                                                         key={index}
                                                                                         className="seat-0"
                                                                                     >
-                                                                                        {seat}
+                                                                                        {seat.seatRow +
+                                                                                            seat.seatColumn}
                                                                                     </span>
                                                                                 ),
                                                                             )}
                                                                         </div>
                                                                     </div>
                                                                     <div className="info-sub-price">
-                                                                        $
-                                                                        {bookingList.reduce(
-                                                                            (total, seat) =>
-                                                                                total + seat.price,
-                                                                            0,
-                                                                        )}
-                                                                        .00
+                                                                        {bookingList
+                                                                            .reduce(
+                                                                                (total, seat) =>
+                                                                                    total +
+                                                                                    Number(
+                                                                                        seat.price,
+                                                                                    ),
+                                                                                0,
+                                                                            )
+                                                                            .toLocaleString(
+                                                                                'en-US',
+                                                                            )}{' '}
+                                                                        VNĐ
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div
                                                                 className="cart-fee total-discount"
-                                                                style={{ display: 'none' }}
+                                                                style={
+                                                                    discount != 0
+                                                                        ? { display: 'block' }
+                                                                        : { display: 'none' }
+                                                                }
                                                             >
                                                                 <p className="text">Discount</p>
                                                                 <p
                                                                     className="discount-number"
                                                                     data-discount="0"
                                                                     data-discount-code=""
-                                                                ></p>
-                                                            </div>
-
-                                                            <div
-                                                                className="cart-fee total-tax"
-                                                                style={{ display: 'none' }}
-                                                            >
-                                                                <p className="text">Tax</p>
-                                                                <p
-                                                                    className="tax-number"
-                                                                    data-tax="0"
                                                                 >
-                                                                    +$0.00
-                                                                </p>
-                                                            </div>
-                                                            <div
-                                                                className="cart-fee ticket-fee"
-                                                                style={{ display: 'none' }}
-                                                            >
-                                                                <p className="text">Ticket Fee</p>
-                                                                <p
-                                                                    className="ticket-fee-number"
-                                                                    data-ticket-fee="0"
-                                                                >
-                                                                    +$0.00
+                                                                    {discount.toLocaleString(
+                                                                        'en-US',
+                                                                    )}{' '}
+                                                                    VNĐ
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -238,12 +230,23 @@ function CartMovies() {
                                                     <div className="total-cart-info" data-total="0">
                                                         <span className="text">Total</span>
                                                         <span className="total-price">
-                                                            $
                                                             {bookingList.reduce(
-                                                                (total, seat) => total + seat.price,
+                                                                (total, seat) =>
+                                                                    total + Number(seat.price),
                                                                 0,
-                                                            )}
-                                                            .00
+                                                            ) -
+                                                                discount <=
+                                                            0
+                                                                ? 0
+                                                                : (
+                                                                      bookingList.reduce(
+                                                                          (total, seat) =>
+                                                                              total +
+                                                                              Number(seat.price),
+                                                                          0,
+                                                                      ) - discount
+                                                                  ).toLocaleString('en-US')}{' '}
+                                                            VNĐ
                                                         </span>
                                                     </div>
                                                 </div>
@@ -338,9 +341,9 @@ function CartMovies() {
                                                     <input
                                                         type="hidden"
                                                         name="login-required"
-                                                        value="https://demo.ovatheme.com/aovis/ "
+                                                        value=""
                                                     />
-                                                    <a id="btn-checkout" href="javascript:void(0)">
+                                                    <a id="btn-checkout" href="">
                                                         Proceed to checkout
                                                     </a>
                                                 </div>
@@ -351,7 +354,7 @@ function CartMovies() {
                                                     <a
                                                         className="mb-auto-reload"
                                                         onClick="window.location.reload(true);"
-                                                        href="javascript:void(0)"
+                                                        href=""
                                                     ></a>
                                                 </div>
                                             </div>
