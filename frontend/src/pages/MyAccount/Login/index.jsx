@@ -25,8 +25,8 @@ function Login() {
                             position: toast.POSITION.TOP_CENTER,
                             hideProgressBar: true,
                         });
-                        // const timeout = setTimeout(navigate('/'), 2000);
-                        // clearTimeout(timeout);
+                        localStorage.setItem('accessToken', response.accessToken);
+                        location.reload();
                     } else {
                         console.log(response);
                     }
@@ -38,7 +38,9 @@ function Login() {
     return (
         <form
             className="woocommerce-form woocommerce-form-login login"
-            onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
+            onSubmit={handleSubmit((data) => {
+                setData(data);
+            })}
             style={{ display: 'block' }}
         >
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">

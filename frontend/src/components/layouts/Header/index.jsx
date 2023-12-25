@@ -137,33 +137,24 @@ function Header() {
                                                             id="menu-item-4151"
                                                             className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4151"
                                                         >
-                                                            <a href="/movies-all">Movie All</a>
+                                                            <a href="/movies-all">All Movies</a>
                                                         </li>
-                                                        <li
-                                                            id="menu-item-4591"
-                                                            className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4591"
-                                                        >
-                                                            <a href="/">Movie Category</a>
-                                                            <button className="dropdown-toggle"></button>
-                                                            <ul className="sub-menu">
-                                                                {cateData &&
-                                                                    cateData.map((item) => {
-                                                                        return (
-                                                                            <li
-                                                                                id="menu-item-4617"
-                                                                                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617"
-                                                                                key={item.id}
-                                                                            >
-                                                                                <a
-                                                                                    href={`/categories/${item.id}`}
-                                                                                >
-                                                                                    {item.name}
-                                                                                </a>
-                                                                            </li>
-                                                                        );
-                                                                    })}
-                                                            </ul>
-                                                        </li>
+                                                        {cateData &&
+                                                            cateData.map((item) => {
+                                                                return (
+                                                                    <li
+                                                                        id="menu-item-4617"
+                                                                        className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4617"
+                                                                        key={item.id}
+                                                                    >
+                                                                        <a
+                                                                            href={`/categories/${item.id}`}
+                                                                        >
+                                                                            {item.name}
+                                                                        </a>
+                                                                    </li>
+                                                                );
+                                                            })}
                                                     </ul>
                                                 </li>
                                                 <li

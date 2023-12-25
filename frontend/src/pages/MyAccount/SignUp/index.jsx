@@ -52,9 +52,18 @@ function SignUp() {
                     className="woocommerce-Input woocommerce-Input--text input-text"
                     name="email"
                     id="reg_email"
-                    {...register('email', { required: true })}
+                    {...register('email', {
+                        required: {
+                            value: true,
+                            message: 'Email is required',
+                        },
+                        pattern: {
+                            value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+                            message: 'Email wrong syntax',
+                        },
+                    })}
                 />
-                {errors.email && <span>Email không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.email?.message}</span>
             </p>
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
                 <label htmlFor="reg_password">
@@ -67,41 +76,68 @@ function SignUp() {
                     name="password"
                     id="reg_password"
                     autoComplete="password"
-                    {...register('password', { required: true })}
+                    {...register('password', {
+                        required: {
+                            value: true,
+                            message: 'Password is required',
+                        },
+                        minLength: {
+                            value: 8,
+                            message: 'Password must contain more than 8 characters',
+                        },
+                    })}
                 />
                 <span className="show-password-input" onClick={() => setVisible(!isVisible)}></span>
-                {errors.password && <span>Password không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.password?.message}</span>
             </p>
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label htmlFor="reg_firstname">
-                    First name&nbsp;
+                <label htmlFor="reg_firstName">
+                    First Name&nbsp;
                     <span className="required">*</span>
                 </label>
                 <input
                     type="text"
                     className="woocommerce-Input woocommerce-Input--text input-text"
-                    name="firstname"
-                    id="reg_firstname"
-                    {...register('firstName', { required: true })}
+                    name="firstName"
+                    id="reg_firstName"
+                    autoComplete="firstName"
+                    {...register('firstName', {
+                        required: {
+                            value: true,
+                            message: 'First Name is required',
+                        },
+                        pattern: {
+                            value: /^[a-zA-Z][a-zA-Z '-.,]{0,30}$/,
+                            message: 'First Name wrong syntax',
+                        },
+                    })}
                 />
-
-                {errors.firstname && <span>Firstname không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.firstName?.message}</span>
             </p>
 
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label htmlFor="reg_lastname">
-                    Last name&nbsp;
+                <label htmlFor="reg_lastName">
+                    Last Name&nbsp;
                     <span className="required">*</span>
                 </label>
                 <input
                     type="text"
                     className="woocommerce-Input woocommerce-Input--text input-text"
-                    name="lastname"
-                    id="reg_lastname"
-                    {...register('lastName', { required: true })}
+                    name="lastName"
+                    id="reg_lastName"
+                    autoComplete="lastName"
+                    {...register('lastName', {
+                        required: {
+                            value: true,
+                            message: 'Last Name is required',
+                        },
+                        pattern: {
+                            value: /^[a-zA-Z][a-zA-Z '-.,]{0,30}$/,
+                            message: 'Last Name wrong syntax',
+                        },
+                    })}
                 />
-
-                {errors.lastname && <span>Last name không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.lastName?.message}</span>
             </p>
 
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -116,19 +152,28 @@ function SignUp() {
             </p>
 
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label htmlFor="reg_phonenumber">
+                <label htmlFor="reg_phonename">
                     Phone number&nbsp;
                     <span className="required">*</span>
                 </label>
                 <input
                     type="text"
                     className="woocommerce-Input woocommerce-Input--text input-text"
-                    name="phonenumber"
-                    id="reg_phonenumber"
-                    {...register('phoneNumber', { required: true })}
+                    name="phoneNumber"
+                    id="reg_phoneNumber"
+                    autoComplete="phoneNumber"
+                    {...register('phoneNumber', {
+                        required: {
+                            value: true,
+                            message: 'Phone Number is required',
+                        },
+                        pattern: {
+                            value: /^0\d{9,}$/,
+                            message: 'Wrong Phone Number',
+                        },
+                    })}
                 />
-
-                {errors.phoneNumber && <span>Phone number không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.phoneNumber?.message}</span>
             </p>
 
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -141,10 +186,19 @@ function SignUp() {
                     className="woocommerce-Input woocommerce-Input--text input-text"
                     name="address"
                     id="reg_address"
-                    {...register('address', { required: true })}
+                    {...register('address', {
+                        required: {
+                            value: true,
+                            message: 'Address is required',
+                        },
+                        pattern: {
+                            value: /^[\w\s,.'-]+[\r\n]?[\w\s,.'-]+$/,
+                            message: 'Address wrong syntax',
+                        },
+                    })}
                 />
 
-                {errors.address && <span>Address không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.address?.message}</span>
             </p>
 
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -157,10 +211,15 @@ function SignUp() {
                     className="woocommerce-Input woocommerce-Input--text input-text"
                     name="dateOfBirth"
                     id="reg_dateOfBirth"
-                    {...register('dateOfBirth', { required: true })}
+                    {...register('dateOfBirth', {
+                        required: {
+                            value: true,
+                            message: 'Date of birth is required',
+                        },
+                    })}
                 />
 
-                {errors.dateOfBirth && <span>Date of birth không được để trống</span>}
+                <span style={{ color: 'red' }}>{errors.dateOfBirth?.message}</span>
             </p>
 
             <button type="submit">Sign Up</button>

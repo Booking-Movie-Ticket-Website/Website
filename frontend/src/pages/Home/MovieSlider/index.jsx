@@ -80,7 +80,7 @@ function MovieSlider({ data }) {
                                                     src={
                                                         item.moviePosters.filter(
                                                             (item) => item.isThumb,
-                                                        )[0].link
+                                                        )[0]?.link
                                                     }
                                                     title={item.name}
                                                     category={item.movieCategories
@@ -113,7 +113,7 @@ function MovieSlider({ data }) {
                                                     src={
                                                         item.moviePosters.filter(
                                                             (item) => item.isThumb,
-                                                        )[0].link
+                                                        )[0]?.link
                                                     }
                                                     trailerLink={item.trailerLink}
                                                 />
