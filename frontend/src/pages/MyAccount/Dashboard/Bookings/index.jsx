@@ -1,4 +1,24 @@
+import { useState, useEffect } from 'react';
+import axios from '~/utils/axios';
+
 function Booking() {
+    const [data, setData] = useState('');
+    const accessToken = localStorage.getItem('accessToken');
+    useEffect(() => {
+        (async () => {
+            await axios
+                .get(`/bookings/my-bookings`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${accessToken}`,
+                    },
+                })
+                .then((response) => {
+                    setData(response);
+                })
+                .catch((error) => console.error(error));
+        })();
+    }, []);
     return (
         <div className="woocommerce-MyAccount-content">
             <div className="woocommerce-notices-wrapper"></div>
@@ -25,48 +45,53 @@ function Booking() {
                 </thead>
 
                 <tbody>
-                    <tr className="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
-                        <td
-                            className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
-                            data-title="Order"
-                        >
-                            <a href="https://demo.ovatheme.com/aovis/my-account/view-order/10741/">
-                                #10741{' '}
-                            </a>
-                        </td>
-                        <td
-                            className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date"
-                            data-title="Date"
-                        >
-                            <time dateTime="2023-12-25T15:54:54+00:00">December 25, 2023</time>
-                        </td>
-                        <td
-                            className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status"
-                            data-title="Status"
-                        >
-                            Processing
-                        </td>
-                        <td
-                            className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
-                            data-title="Total"
-                        >
-                            <span className="woocommerce-Price-amount amount">
-                                <span className="woocommerce-Price-currencySymbol">$</span>20.00
-                            </span>{' '}
-                            for 2 items
-                        </td>
-                        <td
-                            className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
-                            data-title="Actions"
-                        >
-                            <a
-                                href="https://demo.ovatheme.com/aovis/my-account/view-order/10741/"
-                                className="woocommerce-button button view"
-                            >
-                                View
-                            </a>{' '}
-                        </td>
-                    </tr>
+                    {data &&
+                        data.map((item, index) => {
+                            const formatteDate = new Date(item.createdAt).toLocaleDateString();
+                            return (
+                                <tr
+                                    key={index}
+                                    className="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order"
+                                >
+                                    <td
+                                        className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
+                                        data-title="Order"
+                                    >
+                                        <a href="">#{item.id}</a>
+                                    </td>
+                                    <td
+                                        className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date"
+                                        data-title="Date"
+                                    >
+                                        <time dateTime="2023-12-25T15:54:54+00:00">
+                                            {formatteDate}
+                                        </time>
+                                    </td>
+                                    <td
+                                        className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status"
+                                        data-title="Status"
+                                    >
+                                        {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+                                    </td>
+                                    <td
+                                        className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
+                                        data-title="Total"
+                                    >
+                                        <span className="woocommerce-Price-amount amount">
+                                            {item.totalPrice.toLocaleString('en-US')} VNĐ
+                                        </span>
+                                    </td>
+                                    <td
+                                        className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
+                                        data-title="Actions"
+                                    >
+                                        <a href="" className="woocommerce-button button view">
+                                            View
+                                        </a>
+                                    </td>
+                                </tr>
+                            );
+                        })}
                 </tbody>
             </table>
         </div>

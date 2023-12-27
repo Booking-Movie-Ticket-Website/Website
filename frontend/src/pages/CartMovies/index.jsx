@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getData } from '~/redux-toolkit/Breadcrumb/BreadcrumbSlice';
 import axios from '~/utils/axios';
+import { toast } from 'react-toastify';
+
 function CartMovies() {
     const [showingData, setShowingData] = useState('');
     const [bookingList, setBookingList] = useState([]);
@@ -22,17 +24,38 @@ function CartMovies() {
                 .catch((error) => console.error(error));
         })();
     }, []);
-    const handleChooseSeat = (seatData, index) => {
-        seatRefs[index].classList.value.includes('');
-        if (seatRefs[index].classList.value.includes('booked')) window.alert('seat booked');
-        if (seatRefs[index].classList.value.includes('checked')) {
-            seatRefs[index].classList.remove('checked');
-            const newBookingList = bookingList.filter(
-                (item) => item.seatRow + item.seatColumn != seatData.seatRow + seatData.seatColumn,
-            );
+    const handleChooseSeat = (seatData) => {
+        if (seatRefs[seatData.id].classList.value.includes('booked')) {
+            toast.error('Seat booked!', {
+                position: toast.POSITION.TOP_CENTER,
+                hideProgressBar: true,
+            });
+        } else if (
+            seatRefs[seatData.id].classList.value.includes('checked') &&
+            seatData.type == 'standard'
+        ) {
+            seatRefs[seatData.id].classList.remove('checked');
+            const newBookingList = bookingList.filter((item) => item.id != seatData.id);
             setBookingList(newBookingList);
+        } else if (
+            seatRefs[seatData.id].classList.value.includes('checked') &&
+            seatData.type == 'couple'
+        ) {
+            seatRefs[seatData.id].classList.remove('checked');
+            seatRefs[seatData.pairWith].classList.remove('checked');
+            let newBookingList = bookingList.filter((item) => item.id != seatData.id);
+            newBookingList = newBookingList.filter((item) => item.id != seatData.pairWith);
+            setBookingList(newBookingList);
+        } else if (seatData.type == 'couple') {
+            seatRefs[seatData.id].classList.add('checked');
+            seatRefs[seatData.pairWith].classList.add('checked');
+            const coupleSeatData = showingData.showingSeats.filter(
+                (item) => item.id == seatData.pairWith,
+            );
+            setBooking(true);
+            setBookingList((pre) => [...pre, seatData, coupleSeatData[0]]);
         } else {
-            seatRefs[index].classList.add('checked');
+            seatRefs[seatData.id].classList.add('checked');
             setBooking(true);
             setBookingList((pre) => [...pre, seatData]);
         }
@@ -48,18 +71,25 @@ function CartMovies() {
     };
     const handleCheckout = () => {
         const movieDate = new Date(showingData.startTime);
-        let showTime = movieDate.getUTCHours() + ':' + movieDate.getUTCMinutes();
+        let utcHours =
+            movieDate.getUTCHours() >= 10 ? movieDate.getUTCHours() : '0' + movieDate.getUTCHours();
+        let utcMinutes =
+            movieDate.getUTCMinutes() >= 10
+                ? movieDate.getUTCMinutes()
+                : '0' + movieDate.getUTCMinutes();
+        let showTime = utcHours + ':' + utcMinutes;
         showTime += movieDate.getUTCHours() <= 11 ? ' AM' : ' PM';
         const bookingData = {
+            showingId: showingId,
             movieId: showingData.movie.id,
             quantity: bookingList.length,
             name: showingData.movie.name,
             roomName: showingData.room.name,
             movieDate:
                 movieDate.getDate() +
-                '-' +
-                movieDate.getMonth() +
-                '-' +
+                '/' +
+                (movieDate.getMonth() + 1) +
+                '/' +
                 movieDate.getFullYear() +
                 ' ' +
                 showTime,
@@ -115,15 +145,16 @@ function CartMovies() {
                                                                 return (
                                                                     <div
                                                                         key={index}
-                                                                        className="seat-item"
+                                                                        className={
+                                                                            item.type == 'couple'
+                                                                                ? 'seat-item couple'
+                                                                                : 'seat-item'
+                                                                        }
                                                                         onClick={() =>
-                                                                            handleChooseSeat(
-                                                                                item,
-                                                                                index,
-                                                                            )
+                                                                            handleChooseSeat(item)
                                                                         }
                                                                         ref={(e) =>
-                                                                            (seatRefs[index] = e)
+                                                                            (seatRefs[item.id] = e)
                                                                         }
                                                                     >
                                                                         {item.seatRow +
@@ -133,6 +164,20 @@ function CartMovies() {
                                                             },
                                                         )}
                                                     </div>
+                                                    <ul className="seat-instruction">
+                                                        <li className="available">
+                                                            <span className="box"></span>
+                                                            <span className="text">Available</span>
+                                                        </li>
+                                                        <li className="booked">
+                                                            <span className="box"></span>
+                                                            <span className="text">Booked</span>
+                                                        </li>
+                                                        <li className="couple">
+                                                            <span className="box"></span>
+                                                            <span className="text">Couple</span>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                             <div className="cart-sidebar">

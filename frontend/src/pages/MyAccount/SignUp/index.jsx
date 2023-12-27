@@ -38,7 +38,7 @@ function SignUp() {
 
     return (
         <form
-            onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}
+            onSubmit={handleSubmit((data) => setData(data))}
             className="woocommerce-form woocommerce-form-register register"
             style={{ display: 'block' }}
         >
@@ -66,28 +66,34 @@ function SignUp() {
                 <span style={{ color: 'red' }}>{errors.email?.message}</span>
             </p>
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label htmlFor="reg_password">
+                <label htmlFor="password">
                     Password&nbsp;
                     <span className="required">*</span>
                 </label>
-                <input
-                    type="password"
-                    className="woocommerce-Input woocommerce-Input--text input-text"
-                    name="password"
-                    id="reg_password"
-                    autoComplete="password"
-                    {...register('password', {
-                        required: {
-                            value: true,
-                            message: 'Password is required',
-                        },
-                        minLength: {
-                            value: 8,
-                            message: 'Password must contain more than 8 characters',
-                        },
-                    })}
-                />
-                <span className="show-password-input" onClick={() => setVisible(!isVisible)}></span>
+                <span className="password-input">
+                    <input
+                        className="woocommerce-Input woocommerce-Input--text input-text"
+                        type={isVisible ? 'text' : 'password'}
+                        name="password"
+                        id="password"
+                        autoComplete="current-password"
+                        {...register('password', {
+                            required: {
+                                value: true,
+                                message: 'Password is required',
+                            },
+                            minLength: {
+                                value: 8,
+                                message: 'Password must contain more than 8 characters',
+                            },
+                        })}
+                    />
+                    <span></span>
+                    <span
+                        className="show-password-input"
+                        onClick={() => setVisible(!isVisible)}
+                    ></span>
+                </span>
                 <span style={{ color: 'red' }}>{errors.password?.message}</span>
             </p>
             <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">

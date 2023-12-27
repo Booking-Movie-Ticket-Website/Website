@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getData } from '~/redux-toolkit/Breadcrumb/BreadcrumbSlice';
+import axios from '~/utils/axios';
+import { toast } from 'react-toastify';
 
 function Checkout() {
     const bookingDataString = localStorage.getItem('booking') || '';
@@ -9,6 +11,37 @@ function Checkout() {
     useEffect(() => {
         dispatch(getData('Checkout'));
     }, []);
+    const handleCheckout = async () => {
+        const accessToken = localStorage.getItem('accessToken');
+        const bookingDataString = localStorage.getItem('booking') || '';
+        const bookingData = bookingDataString.length > 0 ? JSON.parse(bookingDataString) : '';
+        const postData = {
+            showingId: bookingData.showingId,
+            seatIds: bookingData.seats.map((item) => item.id),
+        };
+        await axios
+            .post(`/bookings`, postData, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            })
+            .then(() => {
+                toast.success('Booking successfully!', {
+                    position: toast.POSITION.TOP_CENTER,
+                    hideProgressBar: true,
+                });
+                setTimeout(function () {
+                    window.location.href = '/my-account';
+                }, 1000); //
+            })
+            .catch((error) => {
+                toast.error(error.response.data.message, {
+                    position: toast.POSITION.TOP_CENTER,
+                    hideProgressBar: true,
+                });
+            });
+    };
     return bookingDataString.length > 0 ? (
         <div className="row_site">
             <div className="container_site">
@@ -130,6 +163,7 @@ function Checkout() {
                                 id="place_order"
                                 value="Place order"
                                 data-value="Place order"
+                                onClick={handleCheckout}
                             >
                                 Place order
                             </button>

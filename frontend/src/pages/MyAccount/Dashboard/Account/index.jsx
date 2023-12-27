@@ -32,29 +32,7 @@ function Account({ userData }) {
                 <div className="clear"></div>
 
                 <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                    <label htmlFor="account_display_name">
-                        Display name&nbsp;<span className="required">*</span>
-                    </label>
-                    <input
-                        type="text"
-                        className="woocommerce-Input woocommerce-Input--text input-text"
-                        name="account_display_name"
-                        id="account_display_name"
-                        value={userData.firstName + ' ' + userData.lastName}
-                    />{' '}
-                    <span>
-                        <em>
-                            This will be how your name will be displayed in the account section and
-                            in reviews
-                        </em>
-                    </span>
-                </p>
-                <div className="clear"></div>
-
-                <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                    <label htmlFor="account_email">
-                        Email address&nbsp;<span className="required">*</span>
-                    </label>
+                    <label htmlFor="account_email">Email address</label>
                     <input
                         type="email"
                         className="woocommerce-Input woocommerce-Input--email input-text"
@@ -62,6 +40,7 @@ function Account({ userData }) {
                         id="account_email"
                         autoComplete="email"
                         value={userData.email}
+                        readOnly
                     />
                 </p>
 

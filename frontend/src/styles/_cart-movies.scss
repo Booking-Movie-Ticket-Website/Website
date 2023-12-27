@@ -118,11 +118,68 @@
                     justify-content: center;
                     cursor: pointer;
                 }
+
                 .checked {
-                    background-color: lightgreen;
+                    background-color: lightgreen !important;
+                }
+                .couple {
+                    background-color: pink;
                 }
                 .booked {
                     background-color: red;
+                }
+            }
+            .seat-instruction {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                .available {
+                    margin: 0px 30px;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .box {
+                        border: 1px solid black;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                    .text {
+                    }
+                }
+                .booked {
+                    margin: 0px 30px;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .box {
+                        border: 1px solid black;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        background-color: red;
+                    }
+                    .text {
+                    }
+                }
+                .couple {
+                    margin: 0px 30px;
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .box {
+                        border: 1px solid black;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                        background-color: pink;
+                    }
+                    .text {
+                    }
                 }
             }
         }
