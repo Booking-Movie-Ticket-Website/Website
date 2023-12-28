@@ -146,7 +146,10 @@ function CartMovies() {
                                                                     <div
                                                                         key={index}
                                                                         className={
-                                                                            item.type == 'couple'
+                                                                            item.isBooked == true
+                                                                                ? 'seat-item booked'
+                                                                                : item.type ==
+                                                                                  'couple'
                                                                                 ? 'seat-item couple'
                                                                                 : 'seat-item'
                                                                         }

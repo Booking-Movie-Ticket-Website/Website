@@ -17,7 +17,8 @@ function BookingTicket() {
         return currentDate.getFullYear() + '-' + currentMonth + '-' + currentDay;
     });
     const dateRefs = useRef([]);
-
+    const theaterRefs = useRef([]);
+    const theaterLabelRefs = useRef([]);
     const dispatch = useDispatch();
     const isModalOpen = useSelector((state) => state.bookingticket.isOpen);
     const movieId = useSelector((state) => state.bookingticket.movieId);
@@ -49,6 +50,14 @@ function BookingTicket() {
         }
         dateRefs[index].classList.add('current');
         setShowingDate(handleDateConfig(dateRefs[index].dataset.id));
+    };
+    const handleChangeTheater = (maxTheater, index) => {
+        for (let i = 0; i < maxTheater; i++) {
+            theaterLabelRefs[i].classList.remove('current');
+            theaterRefs[i].classList.remove('current');
+        }
+        theaterLabelRefs[index].classList.add('current');
+        theaterRefs[index].classList.add('current');
     };
     useEffect(() => {
         (async () => {
@@ -121,6 +130,16 @@ function BookingTicket() {
                                                                             : 'mb-city-name'
                                                                     }
                                                                     key={index}
+                                                                    ref={(e) =>
+                                                                        (theaterLabelRefs[index] =
+                                                                            e)
+                                                                    }
+                                                                    onClick={() =>
+                                                                        handleChangeTheater(
+                                                                            theater.length,
+                                                                            index,
+                                                                        )
+                                                                    }
                                                                 >
                                                                     <span>{item.city}</span>
                                                                 </li>
@@ -147,6 +166,9 @@ function BookingTicket() {
                                                                         index == 0
                                                                             ? 'tab-container current'
                                                                             : 'tab-container'
+                                                                    }
+                                                                    ref={(e) =>
+                                                                        (theaterRefs[index] = e)
                                                                     }
                                                                 >
                                                                     <div className="tab-content mb-room-types">
