@@ -26,8 +26,6 @@ function SignUp() {
                             position: toast.POSITION.TOP_CENTER,
                             hideProgressBar: true,
                         });
-                        // const timeout = setTimeout(navigate('/'), 2000);
-                        // clearTimeout(timeout);
                     } else {
                         console.log(response);
                     }

@@ -2,7 +2,6 @@
 import $ from 'jquery';
 import { useEffect } from 'react';
 import MovieItem from './MovieItem';
-
 function MoviesNowPlaying({ data }) {
     useEffect(() => {
         $('.owl-carousel.template1').owlCarousel({

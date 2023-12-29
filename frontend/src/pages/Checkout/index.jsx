@@ -71,7 +71,7 @@ function Checkout() {
                                     <table className="shop_table woocommerce-checkout-review-order-table">
                                         <thead>
                                             <tr>
-                                                <th className="product-name">Product</th>
+                                                <th className="product-name">Ticket</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -165,7 +165,7 @@ function Checkout() {
                                 data-value="Place order"
                                 onClick={handleCheckout}
                             >
-                                Place order
+                                Book Tickets
                             </button>
                         </div>
                     </article>

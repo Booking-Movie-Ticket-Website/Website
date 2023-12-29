@@ -57,7 +57,7 @@ function Booking() {
                                         className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number"
                                         data-title="Order"
                                     >
-                                        <a href="">#{item.id}</a>
+                                        <a href={`/orderdetails/${item.id}`}>#{item.id}</a>
                                     </td>
                                     <td
                                         className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date"
@@ -71,7 +71,7 @@ function Booking() {
                                         className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status"
                                         data-title="Status"
                                     >
-                                        {item.status.charAt(0).toUpperCase() + item.status.slice(1)}
+                                        Booked
                                     </td>
                                     <td
                                         className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total"
@@ -85,7 +85,10 @@ function Booking() {
                                         className="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions"
                                         data-title="Actions"
                                     >
-                                        <a href="" className="woocommerce-button button view">
+                                        <a
+                                            href={`/orderdetails/${item.id}`}
+                                            className="woocommerce-button button view"
+                                        >
                                             View
                                         </a>
                                     </td>

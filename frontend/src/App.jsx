@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MoviesCategory from './pages/MoviesCategory';
 import SearchResult from './pages/SearchResult';
 import Checkout from './pages/Checkout';
+import OrderDetails from './pages/OrderDetails';
 window.$ = $;
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                         <Route path="*" element={<NoPage />} />
                         <Route path="cart-movies/*" element={<CartMovies />} />
                         <Route path="checkout" element={<Checkout />} />
+                        <Route path="orderdetails/*" element={<OrderDetails />} />
                     </Route>
                 </Routes>
                 <ToastContainer />

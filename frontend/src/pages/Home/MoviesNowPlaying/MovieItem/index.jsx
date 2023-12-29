@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
-
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 function MovieItem({ movieId, title, src, category, duration }) {
+    const dispatch = useDispatch();
+    const handleOpenModal = () => {
+        dispatch(openModal(movieId));
+    };
     return (
         <div className="mb-movie-item item-template1">
             <a href={`/movie/${movieId}`} title={title}>
@@ -46,7 +51,7 @@ function MovieItem({ movieId, title, src, category, duration }) {
                     <h3 className="movie-title">{title} </h3>
                 </a>
 
-                <button className="btn btn-booking" data-movie-id="4311">
+                <button className="btn btn-booking" data-movie-id="4311" onClick={handleOpenModal}>
                     Get Ticket
                 </button>
             </div>
