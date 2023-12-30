@@ -75,7 +75,7 @@ function TopFeaturedMovies({ data }) {
 
                                                         <div className="top-heading ">
                                                             <h3 className="sub-title ">
-                                                                Checkout Movies
+                                                                Top Featured Movies
                                                             </h3>
 
                                                             <h2 className="title">

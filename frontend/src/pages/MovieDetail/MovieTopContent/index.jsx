@@ -1,10 +1,15 @@
 import { useDispatch } from 'react-redux';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import { openModal } from '~/redux-toolkit/TrailerVideo/TrailerVideoSlice';
+import { openModal as openBookingModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
+
 function MovieTopContent({ data }) {
     const dispatch = useDispatch();
     const openVideoTrailer = () => {
         dispatch(openModal(data.trailerLink));
+    };
+    const handleOpenModal = () => {
+        dispatch(openBookingModal(data.id));
     };
     return (
         <>
@@ -43,7 +48,7 @@ function MovieTopContent({ data }) {
                     </div>
                 </div>
 
-                <button className="btn btn-booking" data-movie-id="842">
+                <button className="btn btn-booking" data-movie-id="842" onClick={handleOpenModal}>
                     Get Ticket
                 </button>
             </div>

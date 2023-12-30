@@ -252,4 +252,40 @@
     .movie-related {
         margin-bottom: 47px;
     }
+    .movie-review {
+        .main-content {
+            .content {
+                display: flex;
+                flex-direction: row;
+                margin: 1em 0px;
+                padding: 1em 0px;
+                border-bottom: 1px solid var(--light);
+                .left {
+                    margin-right: 10px;
+                    .user-image {
+                        width: 3.5vw;
+                    }
+                }
+                .right {
+                    .username {
+                        font-size: large;
+                        font-weight: 600;
+                    }
+                    .review-description {
+                        font-size: 18px;
+                        color: black;
+                        font-weight: bold;
+                        margin: 5px 0px;
+                    }
+                    .review-date {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .no-review {
+                font-size: 20px;
+                margin: 20px 0px;
+            }
+        }
+    }
 }

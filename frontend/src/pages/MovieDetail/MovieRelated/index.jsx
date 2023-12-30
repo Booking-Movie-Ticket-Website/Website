@@ -2,9 +2,14 @@ import { useEffect, useState } from 'react';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import MovieItem from '~/pages/Home/MoviesNowPlaying/MovieItem';
 import axios from '~/utils/axios';
+import { useDispatch } from 'react-redux';
+import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
 function MovieRelated({ movieId, movieCategories }) {
     const [data, setData] = useState('');
-
+    const dispatch = useDispatch();
+    const handleOpenModal = (id) => {
+        dispatch(openModal(id));
+    };
     useEffect(() => {
         (async () => {
             const movieCategory = movieCategories.map((item) => item.categoryId);
@@ -21,6 +26,7 @@ function MovieRelated({ movieId, movieCategories }) {
                 .catch((error) => console.error(error));
         })();
     }, [movieCategories]);
+
     return (
         <div className="movie-related">
             <h2 className="movie-title-h2 related-title">More Movies Like This</h2>
@@ -62,7 +68,11 @@ function MovieRelated({ movieId, movieCategories }) {
                                             <h3 className="movie-title">{item.name} </h3>
                                         </a>
 
-                                        <button className="btn btn-booking" data-movie-id="4141">
+                                        <button
+                                            className="btn btn-booking"
+                                            data-movie-id="4141"
+                                            onClick={() => handleOpenModal(item.id)}
+                                        >
                                             Get Ticket
                                         </button>
                                     </div>

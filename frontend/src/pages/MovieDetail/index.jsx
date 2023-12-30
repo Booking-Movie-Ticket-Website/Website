@@ -6,6 +6,7 @@ import MovieTopContent from './MovieTopContent';
 import { useDispatch } from 'react-redux';
 import { getMovieData } from '~/redux-toolkit/HeaderBanner/HeaderBannerSlice';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
+import MovieReview from './MovieReview';
 function MovieDetail() {
     const [data, setData] = useState('');
     const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function MovieDetail() {
                                 <h2 className="movie-title-h2 story-title">Story Line</h2>
                                 <p>{data.description}</p>
                             </div>
+                            <MovieReview movieId={movieId} />
                             <MovieRelated
                                 movieId={data.id}
                                 movieCategories={data.movieCategories}
