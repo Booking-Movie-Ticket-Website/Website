@@ -53,12 +53,7 @@ function News() {
 
                     <aside id="sidebar" className="sidebar">
                         <div id="search-2" className="widget widget_search">
-                            <form
-                                role="search"
-                                method="get"
-                                className="search-form"
-                                action="https://demo.ovatheme.com/aovis/"
-                            >
+                            <form className="search-form">
                                 <label>
                                     <span className="screen-reader-text">Search for:</span>
                                     <input

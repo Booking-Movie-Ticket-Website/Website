@@ -22,7 +22,12 @@ function MovieItem({ data }) {
                     />
                 </div>
             </a>
-
+            <div className="movie-review">
+                <span>
+                    <i className="fa fa-star" style={{ color: '#f3da35', marginRight: '5px' }}></i>
+                </span>
+                <span className="review-text">{Math.round(data.avrStars)}/5</span>
+            </div>
             <div className="movie-info">
                 <a href={`/movie/${data.id}`} title={data.name}>
                     <h3 className="movie-title">{data.name}</h3>

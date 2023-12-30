@@ -403,7 +403,7 @@ function Footer() {
                                                                             required=""
                                                                         />
                                                                         <a
-                                                                            href="https://demo.ovatheme.com/aovis/privacy-policy/"
+                                                                            href="/privacy-policy/"
                                                                             target="_blank"
                                                                             rel="noreferrer"
                                                                         >

@@ -233,6 +233,7 @@ function MoviesNowPlaying({ data }) {
                                                         {data.map((item) => (
                                                             <MovieItem
                                                                 key={item.id}
+                                                                data={item}
                                                                 movieId={item.id}
                                                                 title={item.name}
                                                                 src={

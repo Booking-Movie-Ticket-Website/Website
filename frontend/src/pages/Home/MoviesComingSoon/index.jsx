@@ -85,6 +85,7 @@ function MoviesComingSoon({ data }) {
                                             <MovieItem
                                                 key={item.id}
                                                 movieId={item.id}
+                                                data={item}
                                                 title={item.name}
                                                 src={
                                                     item.moviePosters.filter(

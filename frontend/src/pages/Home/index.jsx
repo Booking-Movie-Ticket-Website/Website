@@ -1,12 +1,12 @@
 import Banner from './Banner';
-import Documentary from './Documentary';
 import Feedbacks from './Feedbacks';
 import LinesHeader from './LinesHeader';
 import MovieSlider from './MovieSlider';
 import MoviesComingSoon from './MoviesComingSoon';
 import MoviesNowPlaying from './MoviesNowPlaying';
-import PhotoGallery from './PhotoGallery';
-import PhotoGalleryHeading from './PhotoGalleryHeading';
+// import Documentary from './Documentary';
+// import PhotoGallery from './PhotoGallery';
+// import PhotoGalleryHeading from './PhotoGalleryHeading';
 import PostContent from './PostContent';
 import PostHeading from './PostHeading';
 import Promotion from './Promotion';
@@ -78,9 +78,9 @@ function Home() {
             <LinesHeader />
             <MoviesNowPlaying data={nowPlayingData ? nowPlayingData : ''} />
             <TopFeaturedMovies data={topData ? topData : ''} />
-            <Documentary />
+            {/* <Documentary />
             <PhotoGalleryHeading />
-            <PhotoGallery />
+            <PhotoGallery /> */}
             <Feedbacks />
             <MoviesComingSoon data={comingSoongData ? comingSoongData : ''} />
             <Promotion />

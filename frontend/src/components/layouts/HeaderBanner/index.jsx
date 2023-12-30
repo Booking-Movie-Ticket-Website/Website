@@ -36,10 +36,7 @@ function HeaderBanner() {
                                             <div id="breadcrumbs">
                                                 <ul className="breadcrumb">
                                                     <li>
-                                                        <a
-                                                            href="https://demo.ovatheme.com/aovis/"
-                                                            title="Home"
-                                                        >
+                                                        <a href="/" title="Home">
                                                             Home
                                                         </a>
                                                     </li>

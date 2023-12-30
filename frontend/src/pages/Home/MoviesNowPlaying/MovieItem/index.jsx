@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import LoadingSkeleton from '~/components/loading/LoadingSkeleton';
 import { useDispatch } from 'react-redux';
 import { openModal } from '~/redux-toolkit/BookingTicket/BookingTicketSlice';
-function MovieItem({ movieId, title, src, category, duration }) {
+function MovieItem({ data, movieId, title, src, category, duration }) {
     const dispatch = useDispatch();
     const handleOpenModal = () => {
         dispatch(openModal(movieId));
@@ -14,7 +14,12 @@ function MovieItem({ movieId, title, src, category, duration }) {
                     <img decoding="async" src={src} alt={title} />
                 </div>
             </a>
-
+            <div className="movie-review">
+                <span>
+                    <i className="fa fa-star" style={{ color: '#f3da35', marginRight: '5px' }}></i>
+                </span>
+                <span className="review-text">{Math.round(data.avrStars)}/5</span>
+            </div>
             <div className="movie-info">
                 <div className="categories-and-time">
                     <div className="movie-category">
