@@ -1,8 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from '~/utils/axios';
 import userImage from '~/assets/images/user-img.png';
 function MovieReview({ movieId }) {
     const [data, setData] = useState('');
+    const [review, setReview] = useState();
+    const [star, setStar] = useState();
+    const reviewStar = useRef([]);
+    const accessToken = localStorage.getItem('accessToken');
     useEffect(() => {
         (async () => {
             await axios
@@ -15,6 +19,34 @@ function MovieReview({ movieId }) {
                 .catch((error) => console.error(error));
         })();
     }, []);
+    const handleReview = async () => {
+        const data = {
+            movieId: movieId,
+            description: review,
+            star: Number(star),
+        };
+        await axios
+            .post(`/reviews`, data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${accessToken}`,
+                },
+            })
+            .then((response) => {
+                console.log(response);
+                location.reload();
+            })
+            .catch((error) => console.error(error));
+    };
+    const handleStar = (index) => {
+        for (let i = 0; i < 5; i++) {
+            reviewStar[i].classList.remove('active-star');
+        }
+        for (let i = 0; i <= index; i++) {
+            reviewStar[i].classList.add('active-star');
+        }
+        setStar(index + 1);
+    };
     return (
         <div className="movie-review">
             <h2 className="movie-title-h2 related-title">Movie Reviews</h2>
@@ -27,12 +59,16 @@ function MovieReview({ movieId }) {
                                     <img className="user-image" src={userImage} />
                                 </div>
                                 <div className="right">
-                                    <div className="username">User {item.id}</div>
+                                    <div className="username">
+                                        {item.createdUser.firstName +
+                                            ' ' +
+                                            item.createdUser.lastName}
+                                    </div>
                                     <div className="star-content">
                                         {Array(5)
                                             .fill(0)
                                             .map((ele, index) => {
-                                                return index < item.star - 1 ? (
+                                                return index < item.star ? (
                                                     <i
                                                         className="fa fa-star"
                                                         style={{
@@ -63,6 +99,41 @@ function MovieReview({ movieId }) {
                 ) : (
                     <div className="no-review">No reviews have been posted for this movie yet</div>
                 )}
+            </div>
+            <div>
+                <div className="" style={{ display: 'flex' }}>
+                    <img
+                        style={{ width: '3.5vw', height: '3.5vw', marginRight: '1vw' }}
+                        src={userImage}
+                    />
+                    <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '1vw' }}>
+                        <div
+                            style={{
+                                marginBottom: '10px',
+                            }}
+                        >
+                            {Array(5)
+                                .fill(0)
+                                .map((item, index) => {
+                                    return (
+                                        <i
+                                            className="fa fa-star"
+                                            key={index}
+                                            style={{ marginRight: '2px' }}
+                                            ref={(e) => (reviewStar[index] = e)}
+                                            onClick={() => handleStar(index)}
+                                        ></i>
+                                    );
+                                })}
+                        </div>
+                        <textarea
+                            placeholder="Type your review..."
+                            value={review}
+                            onChange={(e) => setReview(e.target.value)}
+                        />
+                    </div>
+                </div>
+                <button onClick={handleReview}>Comment</button>
             </div>
         </div>
     );

@@ -3,6 +3,7 @@ import Booking from './Bookings';
 import Account from './Account';
 import { useState, useEffect, useRef } from 'react';
 import axios from '~/utils/axios';
+import PasswordChange from './PasswordChange';
 
 function DashBoard() {
     const [currentTab, setCurrentTab] = useState(0);
@@ -29,6 +30,10 @@ function DashBoard() {
                 setCurrentTab(2);
                 break;
             case 3:
+                tabRef[3].classList.add('is-active');
+                setCurrentTab(3);
+                break;
+            case 4:
                 tabRef[3].classList.add('is-active');
                 localStorage.removeItem('accessToken');
                 location.reload();
@@ -75,10 +80,16 @@ function DashBoard() {
                             <a onClick={(e) => hanldeClick(e, 2)}>Account details</a>
                         </li>
                         <li
-                            className="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout"
+                            className="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-account"
                             ref={(e) => (tabRef[3] = e)}
                         >
-                            <a onClick={(e) => hanldeClick(e, 3)}>Log out</a>
+                            <a onClick={(e) => hanldeClick(e, 3)}>Change Password</a>
+                        </li>
+                        <li
+                            className="woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--customer-logout"
+                            ref={(e) => (tabRef[4] = e)}
+                        >
+                            <a onClick={(e) => hanldeClick(e, 4)}>Log out</a>
                         </li>
                     </ul>
                 </nav>
@@ -86,8 +97,10 @@ function DashBoard() {
                     <Main userData={userData} />
                 ) : currentTab == 1 ? (
                     <Booking />
-                ) : (
+                ) : currentTab == 2 ? (
                     <Account userData={userData} />
+                ) : (
+                    <PasswordChange />
                 )}
             </div>
         </article>

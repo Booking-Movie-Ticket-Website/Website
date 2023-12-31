@@ -41,11 +41,11 @@ function MovieDetail() {
                                 <h2 className="movie-title-h2 story-title">Story Line</h2>
                                 <p>{data.description}</p>
                             </div>
-                            <MovieReview movieId={movieId} />
                             <MovieRelated
                                 movieId={data.id}
                                 movieCategories={data.movieCategories}
                             />
+                            <MovieReview movieId={movieId} />
                         </div>
                     </div>
                 </div>

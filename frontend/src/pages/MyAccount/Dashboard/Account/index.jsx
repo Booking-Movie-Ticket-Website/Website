@@ -159,55 +159,6 @@ function Account({ userData }) {
 
                     <span style={{ color: 'red' }}>{errors.dateOfBirth?.message}</span>
                 </p>
-                {/* <fieldset>
-                    <legend>Password change</legend>
-
-                    <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label htmlFor="password_current">
-                            Current password (leave blank to leave unchanged)
-                        </label>
-                        <span className="password-input">
-                            <input
-                                type="password"
-                                className="woocommerce-Input woocommerce-Input--password input-text"
-                                name="password_current"
-                                id="password_current"
-                                autoComplete="off"
-                            />
-                            <span className="show-password-input"></span>
-                        </span>
-                    </p>
-                    <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label htmlFor="password_1">
-                            New password (leave blank to leave unchanged)
-                        </label>
-                        <span className="password-input">
-                            <input
-                                type="password"
-                                className="woocommerce-Input woocommerce-Input--password input-text"
-                                name="password_1"
-                                id="password_1"
-                                autoComplete="off"
-                            />
-                            <span className="show-password-input"></span>
-                        </span>
-                    </p>
-                    <p className="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                        <label htmlFor="password_2">Confirm new password</label>
-                        <span className="password-input">
-                            <input
-                                type="password"
-                                className="woocommerce-Input woocommerce-Input--password input-text"
-                                name="password_2"
-                                id="password_2"
-                                autoComplete="off"
-                            />
-                            <span className="show-password-input"></span>
-                        </span>
-                    </p>
-                </fieldset>
-                <div className="clear"></div> */}
-
                 <button
                     type="submit"
                     className="woocommerce-Button button"
