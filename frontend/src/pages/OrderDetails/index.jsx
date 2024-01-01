@@ -25,13 +25,13 @@ function OrderDetails() {
         })();
     }, [orderId]);
     return (
-        data && (
-            <div className="row_site">
-                <div className="container_site">
-                    <div id="main-content" className="main">
-                        <header className="page-header">
-                            <h1 className="page-title">Order Details</h1>
-                        </header>
+        <div className="row_site">
+            <div className="container_site">
+                <div id="main-content" className="main">
+                    <header className="page-header">
+                        <h1 className="page-title">Order Details</h1>
+                    </header>
+                    {data ? (
                         <article
                             id="post-11"
                             className="post-wrap  post-11 page type-page status-publish hentry"
@@ -166,10 +166,12 @@ function OrderDetails() {
                                 </form>
                             </div>
                         </article>
-                    </div>
+                    ) : (
+                        <div>No data to show</div>
+                    )}
                 </div>
             </div>
-        )
+        </div>
     );
 }
 export default OrderDetails;

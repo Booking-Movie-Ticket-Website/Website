@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from '~/utils/axios';
 import userImage from '~/assets/images/user-img.png';
+import { toast } from 'react-toastify';
+
 function MovieReview({ movieId }) {
     const [data, setData] = useState('');
     const [review, setReview] = useState();
@@ -32,11 +34,19 @@ function MovieReview({ movieId }) {
                     Authorization: `Bearer ${accessToken}`,
                 },
             })
-            .then((response) => {
-                console.log(response);
+            .then(() => {
+                toast.success('Comment successfully!', {
+                    position: toast.POSITION.TOP_CENTER,
+                    hideProgressBar: true,
+                });
                 location.reload();
             })
-            .catch((error) => console.error(error));
+            .catch((error) => {
+                toast.error(error.response.data.message, {
+                    position: toast.POSITION.TOP_CENTER,
+                    hideProgressBar: true,
+                });
+            });
     };
     const handleStar = (index) => {
         for (let i = 0; i < 5; i++) {
