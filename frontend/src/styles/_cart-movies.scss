@@ -125,6 +125,16 @@
                 .couple {
                     background-color: pink;
                 }
+                .left-seat {
+                    border-right: 0px;
+                    margin-right: 0px;
+                    padding-right: 27px;
+                }
+                .right-seat {
+                    border-left: 0px;
+                    margin-left: 0px;
+                    padding-left: 27px;
+                }
                 .booked {
                     background-color: red !important;
                 }

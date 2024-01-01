@@ -142,17 +142,35 @@ function CartMovies() {
                                                     >
                                                         {showingData.showingSeats.map(
                                                             (item, index) => {
+                                                                let itemClass = 'seat-item';
+                                                                if (item.isBooked) {
+                                                                    itemClass += ' booked';
+                                                                    if (
+                                                                        item.type == 'couple' &&
+                                                                        index % 2 == 0
+                                                                    ) {
+                                                                        itemClass += ' left-seat';
+                                                                    } else if (
+                                                                        item.type == 'couple' &&
+                                                                        index % 2 != 0
+                                                                    ) {
+                                                                        itemClass += ' right-seat';
+                                                                    }
+                                                                } else if (item.type != 'couple') {
+                                                                    // No change needed, "seat-item" is already assigned
+                                                                } else {
+                                                                    if (index % 2 == 0) {
+                                                                        itemClass +=
+                                                                            ' couple left-seat';
+                                                                    } else {
+                                                                        itemClass +=
+                                                                            ' couple right-seat';
+                                                                    }
+                                                                }
                                                                 return (
                                                                     <div
                                                                         key={index}
-                                                                        className={
-                                                                            item.isBooked == true
-                                                                                ? 'seat-item booked'
-                                                                                : item.type ==
-                                                                                  'couple'
-                                                                                ? 'seat-item couple'
-                                                                                : 'seat-item'
-                                                                        }
+                                                                        className={itemClass}
                                                                         onClick={() =>
                                                                             handleChooseSeat(item)
                                                                         }

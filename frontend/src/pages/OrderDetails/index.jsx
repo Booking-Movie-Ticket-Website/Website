@@ -27,7 +27,7 @@ function OrderDetails() {
     return (
         <div className="row_site">
             <div className="container_site">
-                <div id="main-content" className="main">
+                <div className="main">
                     <header className="page-header">
                         <h1 className="page-title">Order Details</h1>
                     </header>
@@ -35,16 +35,14 @@ function OrderDetails() {
                         <article
                             id="post-11"
                             className="post-wrap  post-11 page type-page status-publish hentry"
+                            style={{ display: 'flex' }}
                         >
-                            <div className="woocommerce">
+                            <div
+                                className="woocommerce"
+                                style={{ width: '45%', marginRight: '5%' }}
+                            >
                                 <div className="woocommerce-notices-wrapper"></div>
-                                <form
-                                    name="checkout"
-                                    method="post"
-                                    className="checkout woocommerce-checkout"
-                                    encType="multipart/form-data"
-                                    noValidate="novalidate"
-                                >
+                                <div name="checkout" className="checkout woocommerce-checkout">
                                     <div
                                         id="order_review"
                                         className="woocommerce-checkout-review-order"
@@ -163,8 +161,17 @@ function OrderDetails() {
                                             </tfoot>
                                         </table>
                                     </div>
-                                </form>
+                                </div>
                             </div>
+                            <img
+                                alt={data.showing.movie.moviePosters.name}
+                                src={
+                                    data.showing.movie.moviePosters.filter(
+                                        (item) => item.isThumb,
+                                    )[0]?.link
+                                }
+                                style={{ width: '50%' }}
+                            ></img>
                         </article>
                     ) : (
                         <div>No data to show</div>
