@@ -108,15 +108,14 @@
             .seat-content {
                 display: grid;
                 .seat-item {
+                    color: black;
                     margin: 5px;
-                    width: 20px;
-                    height: 20px;
                     border: 2px solid black;
-                    padding: 20px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    font-size: 20px;
                 }
 
                 .checked {
@@ -128,15 +127,15 @@
                 .left-seat {
                     border-right: 0px;
                     margin-right: 0px;
-                    padding-right: 27px;
+                    // padding-right: 27px;
                 }
                 .right-seat {
                     border-left: 0px;
                     margin-left: 0px;
-                    padding-left: 27px;
+                    // padding-left: 27px;
                 }
                 .booked {
-                    background-color: red !important;
+                    background-color: #ff0000a6 !important;
                 }
             }
             .seat-instruction {
@@ -612,5 +611,55 @@
     }
     100% {
         opacity: 0;
+    }
+}
+@media (min-width: 676px) and (max-width: 1024px) {
+    .wrap_breadcrumbs {
+        &:before {
+            width: fit-content;
+        }
+    }
+    .post-wrap {
+        flex-direction: column-reverse;
+        img {
+            width: 100% !important;
+            margin-bottom: 10vw;
+        }
+        .woocommerce {
+            width: 100% !important;
+        }
+    }
+}
+@media (max-width: 676px) {
+    .wrap_breadcrumbs {
+        &:before {
+            width: fit-content;
+        }
+    }
+    .cart_detail .cart-content .box .seat-content .seat-item {
+        margin: 0;
+        font-size: 16px;
+    }
+    .post-wrap {
+        flex-direction: column-reverse;
+        img {
+            width: 100% !important;
+            margin-bottom: 10vw;
+        }
+        .woocommerce {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            .woocommerce-MyAccount-content {
+                width: 100%;
+            }
+            .woocommerce-MyAccount-navigation {
+                width: 100%;
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
     }
 }
