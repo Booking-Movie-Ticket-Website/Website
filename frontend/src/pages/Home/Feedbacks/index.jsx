@@ -52,10 +52,9 @@ function Feedbacks() {
 
                                         <h2 className="title">What They are Talking About us?</h2>
                                     </div>
-
                                     <p className="description">
-                                        Proin a lacus arcu. Nullam id dui eu orci maximus. Cras at
-                                        auctor lectus, pretium tellus.
+                                        The website was beautifully designed and easy to navigate,
+                                        even on my phone.
                                     </p>
                                 </div>
                             </div>
@@ -100,19 +99,19 @@ function Feedbacks() {
                                 <div className="ova-testimonial template2">
                                     <div className="slide-testimonials owl-carousel template4 owl-theme owl-loaded owl-drag">
                                         <FeedbackItem
-                                            content="Proin a lacus arcu nullam id dui eu orci maximus. Cras at auctor lectus, vel pretium tellus. Class aptent sociosqu ad litora torquent per conubia nostra."
+                                            content="CineWord sent me clear and timely email updates about my booking, which I really appreciated."
                                             src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-1-our-team.jpg"
                                             job="Customer"
                                             name="Hubert J. Johnso"
                                         />
                                         <FeedbackItem
-                                            content="Proin a lacus arcu nullam id dui eu orci maximus. Cras at auctor lectus, vel pretium tellus. Class aptent sociosqu ad litora torquent per conubia nostra."
+                                            content="I loved the variety of payment options available on CineWord. It made the checkout process even more convenient."
                                             src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-2-our-team.jpg"
                                             job="Customer"
                                             name="Pacific D. Lee"
                                         />
                                         <FeedbackItem
-                                            content="Proin a lacus arcu nullam id dui eu orci maximus. Cras at auctor lectus, vel pretium tellus. Class aptent sociosqu ad litora torquent per conubia nostra."
+                                            content="Booking my tickets on CineWord was a breeze! The interface was clean and intuitive, and the whole process took only a few minutes."
                                             src="https://demo.ovatheme.com/aovis/wp-content/uploads/2023/02/image-3-our-team.jpg"
                                             job="Customer"
                                             name="Mike Hardson"
